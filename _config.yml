@@ -14,10 +14,9 @@ site.description: "A flexible multi-scale protein docking framework"
 repository: "brianjimenez/lightdock"
 logo: "/assets/images/luciferin_88x88.png"
 
-include: ["_pages"]
+include: ["tutorials"]
 
 defaults:
-  # _pages
   - scope:
       path: ""
       type: pages
