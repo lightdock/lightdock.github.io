@@ -1,0 +1,6 @@
+main:
+  - title: "Tutorials"
+    url: /pages/tutorials
+  - title: "About"
+    url: /pages/about
+
