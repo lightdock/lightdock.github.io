@@ -8,3 +8,7 @@ plugins:
   - jemoji
   - jekyll-include-cache
 
+title: "LightDock"
+title_separator: "|"
+site.description: "A flexible multi-scale protein docking framework"
+repository: "brianjimenez/lightdock"
