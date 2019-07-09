@@ -15,7 +15,7 @@ intro:
   - excerpt: 'Protein-Protein, Protein-DNA and Protein-Peptide docking made easy'
 
 tutorials:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
+  - image_path: /assets/images/tutorials.jpg
     alt: "Tutorials image"
     title: "Tutorials"
     excerpt: 'How to use LightDock'
@@ -24,7 +24,7 @@ tutorials:
     btn_class: "btn--primary"
 
 information:
-  - image_path: /assets/images/unsplash-gallery-image-2-th.jpg
+  - image_path: /assets/images/swarms.png
     alt: "Information image"
     title: "More information"
     excerpt: 'How to install'
