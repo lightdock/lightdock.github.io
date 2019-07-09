@@ -5,11 +5,10 @@ permalink: /
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/unsplash-image-1.jpg
+  overlay_image: /assets/images/code.png
   actions:
     - label: "Download Latest Release"
       url: "https://github.com/brianjimenez/lightdock/releases/tag/0.7.0"
-  caption: "Photo credit: [**Unsplash**](https://unsplash.com)"
 excerpt: "The flexible protein docking framework written in Python"
 
 intro: 
