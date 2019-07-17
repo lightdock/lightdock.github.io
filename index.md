@@ -12,13 +12,13 @@ header:
 excerpt: "The flexible protein docking framework written in Python"
 
 intro: 
-  - excerpt: 'Protein-Protein, Protein-DNA and Protein-Peptide docking made easy'
+  - excerpt: '*Protein-Protein, Protein-DNA and Protein-Peptide docking made easy*'
 
 tutorials:
   - image_path: /assets/images/tutorials.jpg
     alt: "Tutorials image"
     title: "Tutorials"
-    excerpt: 'How to use LightDock'
+    excerpt: 'How to use LightDock in different macromolecular systems.'
     url: "/tutorials/"
     btn_label: "Read More"
     btn_class: "btn--primary"
@@ -26,10 +26,10 @@ tutorials:
 information:
   - image_path: /assets/images/swarms.png
     alt: "Information image"
-    title: "More information"
-    excerpt: 'How to install'
-    url: "#test-link"
-    btn_label: "Read More"
+    title: "How to install LightDock"
+    excerpt: 'LightDock is straightforward to install as it only depends in a few Python libraries.'
+    url: "https://github.com/brianjimenez/lightdock/blob/master/README.md#3-installation"
+    btn_label: "Read Installation Guide"
     btn_class: "btn--primary"
 
 ---
