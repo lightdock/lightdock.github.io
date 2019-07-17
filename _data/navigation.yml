@@ -3,4 +3,6 @@ main:
     url: /tutorials/
   - title: "About"
     url: /about/
+  - title: "Reference"
+    url: /reference/
 
