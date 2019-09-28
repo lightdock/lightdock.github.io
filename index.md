@@ -23,22 +23,15 @@ tutorials:
     btn_label: "Read More"
     btn_class: "btn--primary"
 
-information:
-  - image_path: /assets/images/swarms.png
-    alt: "Information image"
-    title: "How to install LightDock"
-    excerpt: 'LightDock is straightforward to install as it only depends in a few Python libraries.'
-    url: "https://github.com/lightdock/lightdock/blob/master/README.md"
-    btn_label: "Read Installation Guide"
-    btn_class: "btn--primary"
-
 ---
 
 ![LightDock Docking](assets/images/lightdock_docking.png){: .align-center}
 
 {% include feature_row id="intro" type="center" %}
 
-{% include feature_row id="tutorials" type="left" %}
+```
+pip install lightdock
+```
 
-{% include feature_row id="information" type="right" %}
+{% include feature_row id="tutorials" type="left" %}
 
