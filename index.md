@@ -9,7 +9,7 @@ header:
   actions:
     - label: "Download Latest Release"
       url: "https://github.com/lightdock/lightdock/releases/latest"
-excerpt: "The open source protein docking framework written in Python"
+excerpt: "The open-source protein docking framework written in Python"
 
 intro: 
   - excerpt: '*Protein-Protein, Protein-DNA and Protein-Peptide docking made easy*'
@@ -45,4 +45,10 @@ Alternative ways to install LightDock can be found in the official [GitHub repos
 
 LightDock is able to model different binary systems such as protein-protein, protein-DNA or protein-peptide complexes.
 
-[Learn more](/tutorials/){: .btn .btn--primary .btn--large}
+[Learn more!](/tutorials/){: .btn .btn--primary .btn--large}
+
+
+## License
+
+![GPLv3](/assets/images/gplv3.png){: .align-left}
+LightDock is free and open-source under license [GPLv3](https://www.gnu.org/licenses/quick-guide-gplv3.en.html)!
