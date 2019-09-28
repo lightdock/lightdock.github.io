@@ -34,7 +34,7 @@ information:
 
 ---
 
-{% include figure image_path="/assets/images/lightdock_docking.png" alt="LightDock docking" %}
+![LightDock Docking](assets/images/lightdock_docking.png){: .align-center}
 
 {% include feature_row id="intro" type="center" %}
 
