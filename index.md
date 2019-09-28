@@ -14,20 +14,6 @@ excerpt: "The flexible protein docking framework written in Python"
 intro: 
   - excerpt: '*Protein-Protein, Protein-DNA and Protein-Peptide docking made easy*'
 
-gallery:
-  - url: /assets/images/protein_protein.png
-    image_path: /assets/images/protein_protein.png
-    alt: "protein-protein docking"
-    title: "protein-protein docking"
-  - url: /assets/images/protein_dna.png
-    image_path: /assets/images/protein_dna.png
-    alt: "protein-dna docking"
-    title: "protein-dna docking"
-  - url: /assets/images/protein_peptide.png
-    image_path: /assets/images/protein_peptide.png
-    alt: "protein-peptide docking"
-    title: "protein-peptide docking"
-
 tutorials:
   - image_path: /assets/images/tutorials.jpg
     alt: "Tutorials image"
@@ -47,7 +33,8 @@ information:
     btn_class: "btn--primary"
 
 ---
-{% include gallery %}
+
+{% include figure image_path="/assets/images/lightdock_docking.png" alt="LightDock docking" %}
 
 {% include feature_row id="intro" type="center" %}
 
