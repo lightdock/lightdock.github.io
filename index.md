@@ -29,6 +29,7 @@ tutorials:
 
 {% include feature_row id="intro" type="center" %}
 
+
 ## Installation
 
 LightDock is distributed as a [PyPi package](https://pypi.org/project/lightdock/)!
@@ -40,5 +41,8 @@ pip install lightdock
 Alternative ways to install LightDock can be found in the official [GitHub repository](https://github.com/lightdock/lightdock/blob/master/README.md).
 
 
-{% include feature_row id="tutorials" type="left" %}
+## Tutorials
 
+LightDock is able to model different binary systems such as protein-protein, protein-DNA or protein-peptide complexes.
+
+[Learn more](/tutorials/){: .btn .btn--primary .btn--large}
