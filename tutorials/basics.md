@@ -236,7 +236,7 @@ Several scoring functions can be used simultaneously by LightDock during the min
 A file containing the name of the scoring function and its weight can be defined as this example:
 
 ```bash
-cat socring.conf
+cat scoring.conf
 sipper 0.5
 dfire 0.8
 ```
