@@ -9,7 +9,7 @@ header:
   actions:
     - label: "Download Latest Release"
       url: "https://github.com/lightdock/lightdock/releases/latest"
-excerpt: "The flexible protein docking framework written in Python"
+excerpt: "The open source protein docking framework written in Python"
 
 intro: 
   - excerpt: '*Protein-Protein, Protein-DNA and Protein-Peptide docking made easy*'
@@ -29,9 +29,16 @@ tutorials:
 
 {% include feature_row id="intro" type="center" %}
 
+## Installation
+
+LightDock is distributed as a [PyPi package](https://pypi.org/project/lightdock/)!
+
 ```
 pip install lightdock
 ```
+
+Alternative ways to install LightDock can be found in the official [GitHub repository](https://github.com/lightdock/lightdock/blob/master/README.md).
+
 
 {% include feature_row id="tutorials" type="left" %}
 
