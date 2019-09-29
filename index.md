@@ -31,6 +31,7 @@ tutorials:
 
 
 ## Installation
+[![PyPi version](https://img.shields.io/pypi/v/lightdock.svg)](https://pypi.org/project/lightdock/) [![Build Status](https://travis-ci.com/lightdock/lightdock.svg?branch=master)](https://travis-ci.com/lightdock/lightdock)
 
 LightDock is distributed as a [PyPi package](https://pypi.org/project/lightdock/)!
 
@@ -39,6 +40,10 @@ pip install lightdock
 ```
 
 Alternative ways to install LightDock can be found in the official [GitHub repository](https://github.com/lightdock/lightdock/blob/master/README.md).
+
+## Source code
+![GitHub](/assets/images/github_logo.png){: .align-left}
+Browse the source code from the [official repository](https://github.com/lightdock/lightdock).
 
 
 ## Tutorials
