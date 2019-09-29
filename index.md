@@ -41,10 +41,6 @@ pip install lightdock
 
 Alternative ways to install LightDock can be found in the official [GitHub repository](https://github.com/lightdock/lightdock/blob/master/README.md).
 
-## Source code
-![GitHub](/assets/images/github_logo.png){: .align-left}
-Browse the source code from the [official repository](https://github.com/lightdock/lightdock).
-
 
 ## Tutorials
 
@@ -57,3 +53,8 @@ LightDock is able to model different binary systems such as protein-protein, pro
 
 ![GPLv3](/assets/images/gplv3.png){: .align-left}
 LightDock is free and open-source under license [GPLv3](https://www.gnu.org/licenses/quick-guide-gplv3.en.html)!
+
+
+## Source code
+![GitHub](/assets/images/github_logo.png){: .align-left}
+Browse the source code from the [official repository](https://github.com/lightdock/lightdock).
