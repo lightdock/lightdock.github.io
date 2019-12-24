@@ -1,6 +1,9 @@
 ---
 permalink: /tutorials/basics
 title: LightDock Basics
+layout: single
+classes: wide
+
 ---
 
 #### Table of Contents
