@@ -90,13 +90,13 @@ $ cat setup.json
 
 This file is meant to be used for the simulation and reproducibility purposes. It can be also used to double check your simulation's parameters prior running LightDock. You should not modify it unless you know what you are doing ;-)
 
-Besides of <code>setup.json</code>, we find that several <code>lightdock</code> files have been generated as well as an <code>init/</code> and several <code>swarm</code> directories. The <code>init/</code> directory contains both the exact positions of the swarms (in this case a unique swarm <code>cluster_centers.pdb</code>) and the starting positions of the glowworms (in this case 10 ligand conformations <code>starting_positions_0.pdb</code>). In the latter, <code>0</code> indicates the ID of the swarm. On the other hand, once the simulation is finished, the results will appear inside each of the <code>swarm</code> directories. Please refer to the following picture for a graphical description of the setup:
+Besides of <code>setup.json</code>, we find that several <code>lightdock</code> files have been generated as well as an <code>init/</code> and several <code>swarm</code> directories. The <code>init/</code> directory contains both the exact positions of the swarms (in this case a unique swarm <code>cluster_centers.pdb</code>) and the starting positions of the glowworms (in this case 10 ligand conformations <code>starting_positions_0.pdb</code>). In the latter, <code>0</code> indicates the ID of the swarm. On the other hand, once the simulation is finished, the results will appear inside each of the <code>swarm</code> directories. Please refer to the following picture for a graphical description of the setup.
 
 <p align="center">
     <img src="../assets/images/2uuy_swarm.png">
 </p>
 
-**TIP: **If for any reason the setup stage fails, please remove all generated files before trying again. <code>rm -rf lightdock* setup.json init/ swarm_*</code>
+**TIP** If for any reason the setup stage fails, please remove all generated files before trying again. <code>rm -rf lightdock* setup.json init/ swarm_*</code>
 
 ## LightDock simulation
 Once the setup is successful, execute <code>lightdock3.py</code> script in order to run your first LightDock simulation. If you execute <code>lightdock3.py</code> without arguments a help menu will appear:
