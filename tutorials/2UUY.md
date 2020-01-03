@@ -37,7 +37,7 @@ usage: lightdock_setup [-h] [--seed_points STARTING_POINTS_SEED]
 lightdock_setup: error: too few arguments
 ```
 
-As you may notice from the displayed help, there are **4** arguments needed (the ones not enclosed by [ ]) in order to setup a quick LightDock simulation. These are the receptor and ligand PDB files (`receptor_pdb_file` and `ligand_pdb_file`), an integer corresponding to number of swarms to be generated (`swarms`) and an integer referring to the number of starting ligand conformations (`glowworms`). For a detailed description of the setup stage, please check the [LightDock basics](https://lightdock.org/tutorials/basics#2-setup-a-simulation) 
+As you may notice from the displayed help, there are **4** arguments needed (the ones not enclosed by [ ]) to setup a quick LightDock simulation. These are: (1) The receptor and (2) ligand PDB files (`receptor_pdb_file` and `ligand_pdb_file`), (3) an integer corresponding to number of swarms to be generated (`swarms`) and (4) an integer referring to the number of starting ligand conformations (`glowworms`). For a detailed description of the setup stage, please check the [LightDock basics](https://lightdock.org/tutorials/basics#2-setup-a-simulation) 
 
 For the sake of simplicity, we will generate **1 swarm** containing **10 glowworms** with the following command:
 
@@ -93,7 +93,7 @@ This file is meant to be used for the simulation and reproducibility purposes. I
 Besides of <code>setup.json</code>, we find that several <code>lightdock</code> files have been generated as well as an <code>init/</code> and several <code>swarm</code> directories. The <code>init/</code> directory contains both the exact positions of the swarms (in this case a unique swarm <code>cluster_centers.pdb</code>) and the starting positions of the glowworms (in this case 10 ligand conformations <code>starting_positions_0.pdb</code>). In the latter, <code>0</code> indicates the ID of the swarm. On the other hand, once the simulation is finished, the results will appear inside each of the <code>swarm</code> directories. Please refer to the following picture for a graphical description of the setup:
 
 <p align="center">
-    <img src="../assests/images/2uuy_swarm.png">
+    <img src="../assets/images/2uuy_swarm.png">
 </p>
 
 **TIP: **If for any reason the setup stage fails, please remove all generated files before trying again. <code>rm -rf lightdock* setup.json init/ swarm_*</code>
@@ -112,7 +112,7 @@ usage: lightdock [-h] [-f configuration_file] [-s SCORING_FUNCTION]
 lightdock: error: too few arguments
 ```
 
-There are **2** mandatory arguments (the ones not enclosed by [ ]) in order to run a quick LightDock simulation. These are the file containing all parameters for the simulation (`setup.json`) and the number of steps (`steps`). For more information about the simulation stage, please check the [LightDock basics](https://lightdock.org/tutorials/basics#3-run-a-simulation)
+There are **2** mandatory arguments (the ones not enclosed by [ ]) to run a quick LightDock simulation. These are: (1) The file containing all parameters for the simulation (`setup.json`) and (2) an integer referring to the number of steps (`steps`). For more information about the simulation stage, please check the [LightDock basics](https://lightdock.org/tutorials/basics#3-run-a-simulation)
 
 In this case, we will only perform **10 steps** of GSO optimization with the following command:
 
@@ -158,11 +158,11 @@ lightdock3.py setup.json 10
 
 By default and if no other scoring function is specified, LightDock makes use of the DFIRE scoring function. However, we recommend to make use of its fast implementation <code>fastdfire</code>. For a complete list of the current supported scoring functions, please run <code>lightdock --listscoring</code>.
 
-As you may have noticed, there is a warning on the number of CPU cores used <code>[kraken] WARNING: Number of cores has not been specified or is incorrect. Using available cores.</code>. By default, LightDock will look for the total number of available cores. If you want to specify a different number, use the flag <code>-c NUMBER_CORES</code>. **Note that MPI is also supported using the -mpi flag**.
+As you may have noticed, there is a warning on the number of CPU cores used <code>[kraken] WARNING: Number of cores has not been specified or is incorrect. Using available cores.</code> By default, LightDock will look for the total number of available cores. If you want to specify a different number, use the flag <code>-c NUMBER_CORES</code>. **NOTE** MPI is also supported using the -mpi flag.
 
 ## LightDock results
 
-If the run has been successful and the kraken is back to sleep, we will find the output files for each of the independent swarms. In this case since we only generated **1 swarm**, the results will be inside <code>swarm_0</code>. The output files will be named as <code>gso_X.out</code>, being X the step number. **NOTE: **By default, LightDock will only store the results **every 10** simulation steps (0, 10, 20, 30, ...) In our case, under <code>swarm_0</code> we will only find **2 output files** (`gso_0.out` and `gso_10.out`).
+If the run has been successful and the kraken is back to sleep, we will find the output files for each of the independent swarms. In this case since we only generated **1 swarm**, the results will be inside <code>swarm_0</code>. The output files will be named as <code>gso_X.out</code>, being X the step number. **NOTE** By default, LightDock will only store the results **every 10** simulation steps (0, 10, 20, 30, ...) In our case, under <code>swarm_0</code> we will only find **2 output files** (`gso_0.out` and `gso_10.out`).
 
 In each of the output files, every line corresponds to a glowworm agent in the algorithm. The numbers enclosed by ( ), refer to the x,y,z coordinates in the translational space + the quaternion vector (q = a + 0i + 0j + 0k) in the rotational space. If ANM were enabled, this vector would expand by the number normal modes considered for receptor and ligand respectively. The coordinates are followed by the ID of the complex and the last column refers to the scoring, in this case as calculated with DFIRE.
 
@@ -175,7 +175,7 @@ head -2 swarm_0/gso_10.out
 
 ## Generation of PDB complexes
 
-Finally, to generate the final docked PDB structures, we will use the script **lgd_generate_conformations.py**. We will need to run this script for each of the generated swarms and a given number of glowworms. Please note that, it is only possible to generated the docked conformations according to a single output file. **TIP: **If you want to generate the full trajectory for a given <code>swarm</code>, you should independently generate the conformations for every output file.
+Finally, to generate the final docked PDB structures, we will use the script <code>lgd_generate_conformations.py</code>. We will need to run this script for each of the generated swarms and a given number of glowworms. Please note that, it is only possible to generated the docked conformations according to a single output file. **TIP** If you want to generate the full trajectory for a given <code>swarm</code>, you should independently generate the conformations for every output file.
 
 ```bash
 cd swarm_0;
