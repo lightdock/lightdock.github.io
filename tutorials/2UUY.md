@@ -1,6 +1,10 @@
-![LightDock](../assets/images/lightdock_banner.png "LightDock")
+---
+permalink: /tutorials/2UUY
+title: LightDock 2UUY example
+layout: single
+classes: wide
 
-<hr>
+---
 
 # LightDock 2UUY example
 
