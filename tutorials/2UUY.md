@@ -5,13 +5,13 @@ classes: wide
 
 ---
 
-<center> <h1>LightDock BASIC DOCKING EXAMPLE</h1> </center>
+<center> <h1>Simple protein-protein docking example</h1> </center>
 
 The simplest way to perform a protein-protein docking in LightDock is to use default parameters and to only provide two [PDB](http://www.rcsb.org/pdb/static.do?p=file_formats/pdb/index.html) files for both receptor and ligand. In this basic example, we will reconstitute the [2UUY](https://www.rcsb.org/structure/2UUY) complex, starting from its unbound constituents.
 
-**IMPORTANT** Please, make sure that you have the <code>python3</code> version of LightDock installed (You can easily install it by running: <code>pip3 install lightdock</code>). In order to perform your first protein-protein docking with LightDock, please follow the next steps!
+**IMPORTANT** Please, make sure that you have the <code>python3</code> version of LightDock installed (<code>pip3 install lightdock</code>). In order to perform your first protein-protein docking with LightDock, please follow the next steps!
 
-## Copying data
+## Copying the data
 Create a directory and copy the sample data provided:
 
 ```bash

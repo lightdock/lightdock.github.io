@@ -5,7 +5,7 @@ title: LightDock Tutorials
 
 1. [LightDock basics](/tutorials/basics)
 2. [Simple protein-protein docking example](/tutorials/2UUY)
-3. [More complex protein-protein docking system with restraints](https://brianjimenez.github.io/lightdock/4G6M.html)
-4. [Protein-DNA example](https://brianjimenez.github.io/lightdock/1AZP.html)
-5. Transmembrane docking
+3. [Complex protein-protein docking with restraints](/tutorial/4G6M)
+4. [Protein-DNA docking example](/tutorial/1AZP)
+5. Transmembrane docking (work in progress)
 
