@@ -6,15 +6,12 @@ classes: wide
 
 ---
 
-# LightDock 2UUY example
-
-
-## 1. Quick and dirty Protein-protein docking
+# Quick and dirty Protein-protein docking
 The simplest way to perform a protein-protein docking in LightDock is to use default parameters and to only provide two [PDB](http://www.rcsb.org/pdb/static.do?p=file_formats/pdb/index.html) files for both receptor and ligand. In this basic example, we will reconstitute the [2UUY](https://www.rcsb.org/structure/2UUY) complex, starting from its unbound constituents.
 
 **IMPORTANT** Please, make sure that you have the <code>python3</code> version of LightDock installed (You can easily install it by running: <code>pip3 install lightdock</code>). In order to perform your first protein-protein docking with LightDock, please follow the next steps!
 
-#### 1.1. Copying data
+## Copying data
 Create a directory and copy the sample data provided:
 
 ```bash
@@ -25,7 +22,7 @@ wget https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tuto
 wget https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/2UUY/2UUY_lig.pdb;
 ```
 
-#### 1.2. LightDock setup
+## LightDock setup
 In previous versions of LightDock, a setup step was not required. This has changed from **version 0.5.0** and now a simulation setup is required. To do so, please execute <code>lightdock3_setup.py</code> script in order to prepare your LightDock simulation:
 
 ```bash
@@ -100,7 +97,7 @@ Besides of <code>setup.json</code>, we find that several <code>lightdock</code> 
 
 **TIP: **If for any reason the setup stage fails, please remove all generated files before trying again. <code>rm -rf lightdock* setup.json init/ swarm_*</code>
 
-#### 1.3. LightDock run
+## LightDock simulation
 Once the setup is successful, execute <code>lightdock3.py</code> script in order to run your first LightDock simulation. If you execute <code>lightdock3.py</code> without arguments a help menu will appear:
 
 ```bash
@@ -162,7 +159,7 @@ By default and if no other scoring function is specified, LightDock makes use of
 
 As you may have noticed, there is a warning on the number of CPU cores used <code>[kraken] WARNING: Number of cores has not been specified or is incorrect. Using available cores.</code>. By default, LightDock will look for the total number of available cores. If you want to specify a different number, use the flag <code>-c NUMBER_CORES</code>. **Note that MPI is also supported using the -mpi flag**.
 
-#### 1.4. LightDock results
+## LightDock results
 
 If the run has been successful and the kraken is back to sleep, we will find the output files for each of the independent swarms. In this case since we only generated **1 swarm**, the results will be inside <code>swarm_0</code>. The output files will be named as <code>gso_X.out</code>, being X the step number. **NOTE: **By default, LightDock will only store the results **every 10** simulation steps (0, 10, 20, 30, ...) In our case, under <code>swarm_0</code> we will only find **2 output files** (`gso_0.out` and `gso_10.out`).
 
@@ -175,7 +172,7 @@ head -2 swarm_0/gso_10.out
 (31.4171143,  1.8570079, -6.3956223, -0.1058407, -0.4849369,  0.5997430, -0.6276482)    0    0  11.25395618  0 4.200   7.52800101
 ```
 
-### 1.5. Generation of PDB complexes
+## Generation of PDB complexes
 
 Finally, to generate the final docked PDB structures, we will use the script **lgd_generate_conformations.py**. We will need to run this script for each of the generated swarms and a given number of glowworms. Please note that, it is only possible to generated the docked conformations according to a single output file. **TIP: **If you want to generate the full trajectory for a given <code>swarm</code>, you should independently generate the conformations for every output file.
 
@@ -199,7 +196,7 @@ CONGRATS! You have successfully run your first docking simulation with LightDock
 ```
 
 
-## 2. References
+# References
 For a more complete description of the algorithm as well as different tutorials, please refer to [LightDock](https://lightdock.org/), or check the following references:
 
 **LightDock: a new multi-scale approach to protein–protein docking**<br>
