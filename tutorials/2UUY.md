@@ -5,7 +5,7 @@ classes: wide
 
 ---
 
-<center> <h1>LightDock basic docking example</h1> </center>
+<center> <h1>LightDock BASIC DOCKING EXAMPLE</h1> </center>
 
 The simplest way to perform a protein-protein docking in LightDock is to use default parameters and to only provide two [PDB](http://www.rcsb.org/pdb/static.do?p=file_formats/pdb/index.html) files for both receptor and ligand. In this basic example, we will reconstitute the [2UUY](https://www.rcsb.org/structure/2UUY) complex, starting from its unbound constituents.
 
@@ -172,9 +172,9 @@ $ head -2 swarm_0/gso_10.out
 (31.4171143,  1.8570079, -6.3956223, -0.1058407, -0.4849369,  0.5997430, -0.6276482)    0    0  11.25395618  0 4.200   7.52800101
 ```
 
-## Generation of PDB complexes
+## Generate docked models
 
-Finally, to generate the final docked PDB structures, we will use the script <code>lgd_generate_conformations.py</code>. We will need to run this script for each of the generated swarms and a given number of glowworms. Please note that, it is only possible to generated the docked conformations according to a single output file. **TIP** If you want to generate the full trajectory for a given <code>swarm</code>, you should independently generate the conformations for every output file.
+Finally, to generate the final docked structures in PDB format, we will use the script <code>lgd_generate_conformations.py</code>. We will need to run this script for each of the generated swarms and a given number of glowworms. Please note that, it is only possible to generated the docked conformations according to a single output file. **TIP** If you want to generate the full trajectory for a given <code>swarm</code>, you should independently generate the conformations for every output file.
 
 ```bash
 $ cd swarm_0
