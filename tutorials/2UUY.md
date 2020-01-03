@@ -2,11 +2,9 @@
 permalink: /tutorials/2UUY
 title: LightDock 2UUY example
 layout: single
-classes: wide
 
 ---
 
-# Quick and dirty Protein-protein docking
 The simplest way to perform a protein-protein docking in LightDock is to use default parameters and to only provide two [PDB](http://www.rcsb.org/pdb/static.do?p=file_formats/pdb/index.html) files for both receptor and ligand. In this basic example, we will reconstitute the [2UUY](https://www.rcsb.org/structure/2UUY) complex, starting from its unbound constituents.
 
 **IMPORTANT** Please, make sure that you have the <code>python3</code> version of LightDock installed (You can easily install it by running: <code>pip3 install lightdock</code>). In order to perform your first protein-protein docking with LightDock, please follow the next steps!
