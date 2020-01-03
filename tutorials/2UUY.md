@@ -1,12 +1,11 @@
 ---
 permalink: /tutorials/2UUY
-title: LightDock 2UUY example
 layout: single
 classes: wide
 
 ---
 
-
+<center> <h1>LightDock basic docking example</h1> </center>
 
 The simplest way to perform a protein-protein docking in LightDock is to use default parameters and to only provide two [PDB](http://www.rcsb.org/pdb/static.do?p=file_formats/pdb/index.html) files for both receptor and ligand. In this basic example, we will reconstitute the [2UUY](https://www.rcsb.org/structure/2UUY) complex, starting from its unbound constituents.
 
@@ -16,18 +15,18 @@ The simplest way to perform a protein-protein docking in LightDock is to use def
 Create a directory and copy the sample data provided:
 
 ```bash
-cd ~/Desktop;
-mkdir test;
-cd test;
-wget https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/2UUY/2UUY_rec.pdb;
-wget https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/2UUY/2UUY_lig.pdb;
+$ cd ~/Desktop
+$ mkdir test
+$ cd test
+$ wget https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/2UUY/2UUY_rec.pdb
+$ wget https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/2UUY/2UUY_lig.pdb
 ```
 
 ## LightDock setup
 In previous versions of LightDock, a setup step was not required. This has changed from **version 0.5.0** and now a simulation setup is required. To do so, please execute <code>lightdock3_setup.py</code> script in order to prepare your LightDock simulation:
 
 ```bash
-lightdock3_setup.py
+$ lightdock3_setup.py
 
 usage: lightdock_setup [-h] [--seed_points STARTING_POINTS_SEED]
                        [-ft ftdock_file] [--noxt] [-anm] [--seed_anm ANM_SEED]
@@ -42,7 +41,7 @@ As you may notice from the displayed help, there are **4** arguments needed (the
 For the sake of simplicity, we will generate **1 swarm** containing **10 glowworms** with the following command:
 
 ```bash
-lightdock3_setup.py 2UUY_rec.pdb 2UUY_lig.pdb 1 10
+$ lightdock3_setup.py 2UUY_rec.pdb 2UUY_lig.pdb 1 10
 
 [lightdock_setup] INFO: Reading structure from 2UUY_rec.pdb PDB file...
 [lightdock_setup] INFO: 1628 atoms, 223 residues read.
@@ -102,7 +101,7 @@ Besides of <code>setup.json</code>, we find that several <code>lightdock</code> 
 Once the setup is successful, execute <code>lightdock3.py</code> script in order to run your first LightDock simulation. If you execute <code>lightdock3.py</code> without arguments a help menu will appear:
 
 ```bash
-lightdock3.py
+$ lightdock3.py
 
 usage: lightdock [-h] [-f configuration_file] [-s SCORING_FUNCTION]
                  [-sg GSO_SEED] [-t TRANSLATION_STEP] [-r ROTATION_STEP] [-V]
@@ -117,7 +116,7 @@ There are **2** mandatory arguments (the ones not enclosed by [ ]) to run a quic
 In this case, we will only perform **10 steps** of GSO optimization with the following command:
 
 ```bash
-lightdock3.py setup.json 10
+$ lightdock3.py setup.json 10
 
 
 @> ProDy is configured: verbosity='info'
@@ -167,7 +166,7 @@ If the run has been successful and the kraken is back to sleep, we will find the
 In each of the output files, every line corresponds to a glowworm agent in the algorithm. The numbers enclosed by ( ), refer to the x,y,z coordinates in the translational space + the quaternion vector (q = a + 0i + 0j + 0k) in the rotational space. If ANM were enabled, this vector would expand by the number normal modes considered for receptor and ligand respectively. The coordinates are followed by the ID of the complex and the last column refers to the scoring, in this case as calculated with DFIRE.
 
 ```bash
-head -2 swarm_0/gso_10.out
+$ head -2 swarm_0/gso_10.out
 
 #Coordinates  RecID  LigID  Luciferin  Neighbor's number  Vision Range  Scoring
 (31.4171143,  1.8570079, -6.3956223, -0.1058407, -0.4849369,  0.5997430, -0.6276482)    0    0  11.25395618  0 4.200   7.52800101
@@ -178,8 +177,8 @@ head -2 swarm_0/gso_10.out
 Finally, to generate the final docked PDB structures, we will use the script <code>lgd_generate_conformations.py</code>. We will need to run this script for each of the generated swarms and a given number of glowworms. Please note that, it is only possible to generated the docked conformations according to a single output file. **TIP** If you want to generate the full trajectory for a given <code>swarm</code>, you should independently generate the conformations for every output file.
 
 ```bash
-cd swarm_0;
-lgd_generate_conformations.py ../2UUY_rec.pdb ../2UUY_lig.pdb gso_10.out 10
+$ cd swarm_0
+$ lgd_generate_conformations.py ../2UUY_rec.pdb ../2UUY_lig.pdb gso_10.out 10
 
 @> ProDy is configured: verbosity='info'
 [generate_conformations] INFO: Reading ../lightdock_2UUY_rec.pdb receptor PDB file...
