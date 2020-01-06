@@ -222,7 +222,7 @@ Inside the <code>swarm_0</code> folder, we will find 10 new PDB structures corre
 ```bash
 CONGRATS! You have successfully run your first docking simulation with LightDock!
 ```
-
+<br>
 
 # References
 For a more complete description of the algorithm as well as different tutorials, please refer to [LightDock](https://lightdock.org/), or check the following references:
