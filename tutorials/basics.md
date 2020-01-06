@@ -40,6 +40,7 @@ In LightDock, the receptor molecule is kept fixed (despite atoms' positions coul
     <img src="../assets/images/1vfb_swarms_centers.png">
 </p>
 
+### 1.3. Glowworms
 For each of these swarm centers, a given number *N* of glowworms, the algorithm agents, are disposed in a random way (if residue restraints are not specified). Every glowworm represents a possible ligand conformation. In the following figure a set of 300 glowworms is displayed in a single swarm:
 
 <p align="center">
@@ -52,6 +53,10 @@ More in detail, each glowworm is represented as a 3D-axis object in its center o
     <img src="../assets/images/1e6e_swarm.png">
 </p>
 
+### 1.4. Optimization
+LightDock, based on the GSO algortihm, will optimize the poses according to the emitted Luciferin (score). Poses will evolve in translational, rotational and ANM spaces towards better energetical regions:
+
+<center><embed src="../assets/video/1ay7.avi"></embed></center>
 
 ## 2. Setup a simulation
 
@@ -66,7 +71,6 @@ usage: lightdock_setup [-h] [--seed_points STARTING_POINTS_SEED]´
                        [-anm_lig ANM_LIG] [-rst restraints] [-membrane]
                        receptor_pdb_file ligand_pdb_file swarms glowworms
 lightdock_setup: error: the following arguments are required: receptor_pdb_file, ligand_pdb_file, swarms, glowworms
-
 ```
 
 The mandatory arguments (not enclosed by `[` and `]`)  are:
@@ -78,7 +82,7 @@ The mandatory arguments (not enclosed by `[` and `]`)  are:
 
 In the [LightDock first publication](https://doi.org/10.1093/bioinformatics/btx555), for each complex of the [Protein-Protein Benchmark v5](https://zlab.umassmed.edu/benchmark/) analyzed, the number of swarms and glowworms were:
 
-```
+```bash
 Number of swarms: 400
 Number of glowworms per swarm: 300
 ```
@@ -121,7 +125,7 @@ From version `0.6.0`, distance restraints on both receptor and/or ligand have be
 
 From a `restraints_file` file containing the following information:
 
-```
+```bash
 R A.SER.150 
 R A.TYR.151 P
 L B.LYS.2
@@ -167,7 +171,7 @@ lightdock: error: the following arguments are required: setup_file, steps
 The simplest way to execute a LightDock simulation is:
 
 ```bash
-lightdock3.py setup.json 10
+$ lightdock3.py setup.json 10
 ```
 
 The first parameter is the configuration file generated on the setup step, the second is the number of steps of the simulation.
@@ -176,7 +180,7 @@ The rest of possible arguments which `lightdock3.py` accepts is:
 
 - **-f** *configuration_file*: This is a special file containing the different parameters of the GSO algorithm. By default, this is not necessary to change, but advanced users might change some of the values. Here it is an example of the content of this file:
 
-```
+```bash
 ##
 #
 # GlowWorm configuration file - algorithm parameters
@@ -245,19 +249,22 @@ Several scoring functions can be used simultaneously by LightDock during the min
 A file containing the name of the scoring function and its weight can be defined as this example:
 
 ```bash
-cat scoring.conf
+$ cat scoring.conf
+
 sipper 0.5
 dfire 0.8
 ```
 
 For each pose, the scoring would be in this example the linear combination of both functions:
 
-```Scoring = 0.5*SIPPER + 0.8*DFIRE```
+```bash
+Scoring = 0.5*SIPPER + 0.8*DFIRE
+```
   
 
 ### 3.3. Tips and tricks
 
-- All the available scoring fundtions can be found at the path `$LIGHTDOCK_HOME/lightdock/scoring`. Each scoring function has its own directory.
+All the available scoring fundtions can be found at the path `$LIGHTDOCK_HOME/lightdock/scoring`. Each scoring function has its own directory.
 
 
 
@@ -266,7 +273,8 @@ For each pose, the scoring would be in this example the linear combination of bo
 Once the simulation has completed, the predicted models can be generated as PDB structure files. In order to do so, execute the `lgd_generate_conformations.py` command:
 
 ```bash
-lgd_generate_conformations.py 
+$ lgd_generate_conformations.py
+ 
 usage: conformer_conformations [-h]
                                receptor_structure ligand_structure
                                lightdock_output glowworms
@@ -276,9 +284,9 @@ conformer_conformations: error: too few arguments
 For example, to generate the 10 models predicted in the step 5 in a swarm populated by 10 glowworms of the 2UUY example:
 
 ```bash
-cd $LIGHTDOCK_HOME/examples/2UUY
-cd swarm_0
-lgd_generate_conformations.py ../2UUY_rec.pdb ../2UUY_lig.pdb gso_5.out 10
+$ cd $LIGHTDOCK_HOME/examples/2UUY
+$ cd swarm_0
+$ lgd_generate_conformations.py ../2UUY_rec.pdb ../2UUY_lig.pdb gso_5.out 10
 ```
 
 **IMPORTANT:** note that the structures used by this command are the originals used in the `lightdock3_setup.py` command.
@@ -290,13 +298,13 @@ There are two different methods for clustering the predicted models implemented:
 For each swarm, you can execute the `lgd_cluster_bsas.py` command. For example:
 
 ```bash
-cd swarm_0
-lgd_cluster_bsas.py gso_5.out
+$ cd swarm_0
+$ lgd_cluster_bsas.py gso_5.out
 ```
 
 The output would be:
 
-```
+```bash
 Reading CA from lightdock_3.pdb
 Reading CA from lightdock_6.pdb
 Reading CA from lightdock_0.pdb
@@ -365,8 +373,9 @@ New cluster 7
 
 A new file in CSV format is created with the clustering information:
 
-```
-cat cluster.repr
+```bash
+$ cat cluster.repr
+
 0:2: 9.87810:3:lightdock_3.pdb
 1:1: 9.66368:6:lightdock_6.pdb
 2:1: 7.52192:0:lightdock_0.pdb
@@ -379,7 +388,17 @@ cat cluster.repr
 
 For each line, the information is:
 
-```
+```bash
 cluster_id : population : best_scoring : glowworm_id : representative PDB structure
 ```
+<br>
+## 6. References
+For a more complete description of the algorithm as well as different tutorials, please refer to [LightDock](https://lightdock.org/), or check the following references:
 
+- **LightDock: a new multi-scale approach to protein–protein docking**<br>
+[Brian Jiménez-García](http://bjimenezgarcia.com), Jorge Roel-Touris, Miguel Romero-Durana, Miquel Vidal, Daniel Jiménez-González and Juan Fernández-Recio<br>
+*Bioinformatics*, Volume 34, Issue 1, 1 January 2018, Pages 49–55, [https://doi.org/10.1093/bioinformatics/btx555](https://doi.org/10.1093/bioinformatics/btx555)
+
+- **LightDock goes information-driven**<br>
+Jorge Roel-Touris, Alexandre M.J.J. Bonvin and [Brian Jiménez-García](http://bjimenezgarcia.com)<br>
+*Bioinformatics*, btz642; doi: [https://doi.org/10.1093/bioinformatics/btz642](https://doi.org/10.1093/bioinformatics/btz642)
