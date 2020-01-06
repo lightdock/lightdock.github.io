@@ -36,11 +36,13 @@ usage: lightdock_setup [-h] [--seed_points STARTING_POINTS_SEED]
 lightdock_setup: error: too few arguments
 ```
 
-As you may notice from the displayed help, there are **4** arguments needed (the ones not enclosed by [ ]) to setup a quick LightDock simulation. These are: 
-(1) *receptor_pdb_file*, the PDB file of your receptor molecule (usually the largest) 
-(2) *ligand_pdb_file*, the PDB file of your ligand molecule (usually the smallest)
-(3) *swarms*, an integer corresponding to number of swarms to be generated
-(4) *glowworms*, an integer referring to the number of starting ligand conformations
+As you may notice from the displayed help, there are **4** arguments needed (the ones not enclosed by [ ]) to setup a quick LightDock simulation. These are:
+ 
+- (1) *receptor_pdb_file*, the PDB file of your receptor molecule (usually the largest) 
+- (2) *ligand_pdb_file*, the PDB file of your ligand molecule (usually the smallest)
+- (3) *swarms*, an integer corresponding to number of swarms to be generated
+- (4) *glowworms*, an integer referring to the number of starting ligand conformations
+
 For the sake of simplicity, we will generate **1 swarm** containing **10 glowworms** with the following command.
 
  ```bash
@@ -68,7 +70,7 @@ $ lightdock3_setup.py 2UUY_rec.pdb 2UUY_lig.pdb 1 10
 
 **NOTE** For a detailed description of the setup stage, please check the [LightDock basics](https://lightdock.org/tutorials/basics#2-setup-a-simulation) 
 
-If the setup is successful, we wiil find a file called <code>setup.json</code>, which includes all the details about LightDock simulation.
+If the setup is successful, we will find a file called <code>setup.json</code>, which includes all the details about LightDock simulation.
 
 ```bash
 $ cat setup.json
@@ -96,8 +98,10 @@ This file is meant to be used for the simulation and reproducibility purposes. I
 
 **IMPORTANT** You should not modify it unless you know what you are doing ;-)
 
-Besides of <code>setup.json</code>, we find that several `lightdock*` files have been generated as well as an <code>init/</code> and several `swarm_*` directories. 
-The <code>init/</code> directory contains both the exact positions of the swarms (in this case a unique swarm: `cluster_centers.pdb`) and the starting positions of the glowworms (in this case 10 ligand conformations `starting_positions_0.pdb`). In the latter, the suffix *0* indicates the ID of the swarm. 
+Besides of <code>setup.json</code>, we find that several `lightdock*` files have been generated as well as an <code>init/</code> and several `swarm_*` directories.
+
+The <code>init/</code> directory contains both the exact positions of the swarms (in this case a unique swarm: `cluster_centers.pdb`) and the starting positions of the glowworms (in this case 10 ligand conformations `starting_positions_0.pdb`). In the latter, the suffix *0* indicates the ID of the swarm.
+
 Once the simulation is finished, the results will appear inside each of the `swarm_*` directories. Please refer to the following picture for a graphical description of the setup.
 
 <p align="center">
@@ -120,9 +124,10 @@ usage: lightdock [-h] [-f configuration_file] [-s SCORING_FUNCTION]
 lightdock: error: too few arguments
 ```
 
-There are **2** mandatory arguments (the ones not enclosed by [ ]) to run a quick LightDock simulation. These are: 
-(1) *setup.json*, the file containing all parameters needed for the simulation
-(2) *steps*, an integer referring to the number of steps (`steps`) 
+There are **2** mandatory arguments (the ones not enclosed by [ ]) to run a quick LightDock simulation. These are:
+
+- (1) *setup.json*, the file containing all parameters needed for the simulation
+- (2) *steps*, an integer referring to the number of steps (`steps`)
 
 In this case, we will only perform **10 steps** of GSO optimization with the following command.
 
@@ -191,8 +196,10 @@ $ head -2 swarm_0/gso_10.out
 ## Generate docked models
 
 Finally, to generate the resulting docked structures in PDB format, we will use the script <code>lgd_generate_conformations.py</code>. We will need to run this script for each of the generated swarms and provide two different arguments:
-(1) *lightdock_output*, the output file (usually the last one)
-(2) *glowworms*, an integer indicating the number of complexes to generate (=< number of glowworms used in the simulation)
+
+- (1) *lightdock_output*, the output file (usually the last one)
+- (2) *glowworms*, an integer indicating the number of complexes to generate (=< number of glowworms used in the simulation)
+
 Please note that, it is only possible to generate the docked conformations according to a single output file. 
 
 **TIP** If you want to generate the full trajectory for a given <code>swarm</code>, you should independently generate the conformations for every output file.
@@ -220,10 +227,10 @@ CONGRATS! You have successfully run your first docking simulation with LightDock
 # References
 For a more complete description of the algorithm as well as different tutorials, please refer to [LightDock](https://lightdock.org/), or check the following references:
 
-**LightDock: a new multi-scale approach to protein–protein docking**<br>
+- **LightDock: a new multi-scale approach to protein–protein docking**<br>
 [Brian Jiménez-García](http://bjimenezgarcia.com), Jorge Roel-Touris, Miguel Romero-Durana, Miquel Vidal, Daniel Jiménez-González and Juan Fernández-Recio<br>
 *Bioinformatics*, Volume 34, Issue 1, 1 January 2018, Pages 49–55, [https://doi.org/10.1093/bioinformatics/btx555](https://doi.org/10.1093/bioinformatics/btx555)
 
- **LightDock goes information-driven**<br>
+- **LightDock goes information-driven**<br>
  Jorge Roel-Touris, Alexandre M.J.J. Bonvin and [Brian Jiménez-García](http://bjimenezgarcia.com)<br>
  *Bioinformatics*, btz642; doi: [https://doi.org/10.1093/bioinformatics/btz642](https://doi.org/10.1093/bioinformatics/btz642)
