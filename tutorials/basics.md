@@ -56,7 +56,7 @@ More in detail, each glowworm is represented as a 3D-axis object in its center o
 ### 1.4. Optimization
 LightDock, based on the GSO algortihm, will optimize the poses according to the emitted Luciferin (score). Poses will evolve in translational, rotational and ANM spaces towards better energetical regions:
 
-<center><embed src="../assets/video/1ay7.avi"></embed></center>
+<center><video src="../assets/video/1ay7.avi"></video></center>
 
 ## 2. Setup a simulation
 
