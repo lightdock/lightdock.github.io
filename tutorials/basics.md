@@ -6,7 +6,7 @@ classes: wide
 
 ---
 
-#### Table of Contents
+## Table of Contents
 
 - [1. Introduction](#1-introduction)
 - [2. Setup a simulation](#2-setup-a-simulation)

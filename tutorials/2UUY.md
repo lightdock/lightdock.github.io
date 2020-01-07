@@ -1,11 +1,10 @@
 ---
 permalink: /tutorials/2UUY
+title: Simple protein-protein docking example
 layout: single
 classes: wide
 
 ---
-
-<center> <h1>Simple protein-protein docking example</h1> </center><br>
 
 The simplest way to perform a protein-protein docking in LightDock is to use default parameters and to only provide two [PDB](http://www.rcsb.org/pdb/static.do?p=file_formats/pdb/index.html) files for both receptor and ligand. In this basic example, we will model the [2UUY](https://www.rcsb.org/structure/2UUY) complex starting from its unbound constituents.
 
