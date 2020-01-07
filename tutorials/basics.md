@@ -1,10 +1,11 @@
 ---
 permalink: /tutorials/basics
-title: LightDock Basics
 layout: single
 classes: wide
 
 ---
+
+<center><h1>LightDock basics</h1></center><br>
 
 ## Table of Contents
 
