@@ -5,9 +5,9 @@ classes: wide
 
 ---
 
-<center><h1>Protein-DNA docking example</center></h1><br>
+<center><h1>Protein-DNA docking example</h1></center><br>
 
-This is a complete example of the LightDock docking protocol to model [1AZP](https://www.rcsb.org/structure/1azp) protein-DNA complex with the use of **residue restraints**.
+This is a complete example of the LightDock docking protocol to model [1AZP](https://www.rcsb.org/structure/1azp) protein-DNA complex with the use of **residue restraints**.<br>
 
 <p align="center">
     <img src="../assets/images/1azp.png">
