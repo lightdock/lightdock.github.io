@@ -9,7 +9,9 @@ classes: wide
 
 This is a complete example of the LightDock docking protocol to model [1AZP](https://www.rcsb.org/structure/1azp) protein-DNA complex with the use of **residue restraints**.
 
-<center>![1AZP](media/1azp.png "1AZP")</center>
+<p align="center">
+    <img src="../assets/images/1azp.png">
+</p>
 
 **IMPORTANT** Please, make sure that you have the <code>python3</code> version of LightDock installed (<code>pip3 install lightdock</code>). We advise you to follow the basic tutorial about how to run a quick [LightDock simulation](https://lightdock.org/tutorials/2UUY)
 
@@ -236,6 +238,7 @@ lgd_filter_restraints.py --cutoff 5.0 --fnat 0.4 rank_by_scoring.list restraints
 Once the analysis is finished, a new folder called `filtered` has been created, which contains any predicted structure which satisfies our 40% filtering. Inside of this directory, there is a file with the ranking of these structures by LightDock `dna` score (the more positive the better) `rank_filtered.list`.
 
 We provide for this example a compressed folder [1AZP.tgz](examples/1AZP.tgz) of the complete run.
+<br>
 
 # References
 For a more complete description of the algorithm as well as different tutorials, please refer to [LightDock](https://lightdock.org/), or check the following references:
@@ -247,7 +250,3 @@ For a more complete description of the algorithm as well as different tutorials,
 - **LightDock goes information-driven**<br>
 Jorge Roel-Touris, Alexandre M.J.J. Bonvin and [Brian Jiménez-García](http://bjimenezgarcia.com)<br>
 *Bioinformatics*, btz642; doi: [https://doi.org/10.1093/bioinformatics/btz642](https://doi.org/10.1093/bioinformatics/btz642)
-
-
-
-
