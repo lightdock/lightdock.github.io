@@ -59,7 +59,7 @@ LightDock, based on the GSO algortihm, will optimize the poses according to the 
 
 In the video below, you can see how **300** initial glowworms poses (x, y, z) from a **unique swarm** evolve during a extended LightDock simulation (200 steps).
 
-<center><iframe width="560" height="315" src="https://youtube.com/embed/HaA5Y1AkoVM" frameborder="0" allowfullscreen></iframe>></center>
+<center><iframe width="560" height="315" src="https://youtube.com/embed/HaA5Y1AkoVM" frameborder="0" allowfullscreen></iframe></center>
 
 ## 2. Setup a simulation
 
