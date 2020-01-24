@@ -1,6 +1,6 @@
 ---
 permalink: /tutorials/basics
-layout: single
+layout: splash
 classes: wide
 
 ---
