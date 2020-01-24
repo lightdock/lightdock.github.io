@@ -1,6 +1,6 @@
 ---
 permalink: /tutorials/2UUY
-layout: single
+layout: splash
 classes: wide
 
 ---

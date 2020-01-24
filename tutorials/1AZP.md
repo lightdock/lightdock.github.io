@@ -1,6 +1,6 @@
 ---
 permalink: /tutorials/1AZP
-layout: single
+layout: splash
 classes: wide
 
 ---
