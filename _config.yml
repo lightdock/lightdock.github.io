@@ -12,7 +12,7 @@ title: "LightDock"
 title_separator: "|"
 site.description: "A flexible multi-scale protein docking framework"
 repository: "brianjimenez/lightdock"
-logo: "/assets/images/logo_88.png"
+logo: "/assets/images/logo.png"
 
 include: ["tutorials"]
 
