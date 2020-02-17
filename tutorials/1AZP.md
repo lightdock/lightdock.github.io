@@ -23,7 +23,7 @@ $ cd Desktop
 $ mkdir test
 $ cd test
 $ wget https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/1AZP/1AZP_A.pdb
-$ wget https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/1AZP/1AZP_A.pdb
+$ wget https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/1AZP/1AZP_B.pdb
 ```
 
 ## Specifying residue restraints
