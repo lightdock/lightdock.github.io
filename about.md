@@ -27,3 +27,11 @@ LightDock is in continuous development and improvement. If you experience any pr
 
 ## License
 LightDock is available under [GPLv3 License](https://github.com/lightdock/lightdock/blob/master/LICENSE). If you have any doubt, please don't hesitate to contact us at <b.jimenezgarcia@uu.nl>.
+
+## Logo
+Please use the following image in PNG format (transparent background):
+
+<p align="center">
+    <img src="../assets/images/lightdock_logo.png">
+</p>
+
