@@ -17,7 +17,7 @@ classes: wide
 ## 1. General
 
 ### 1.1. What is *ab initio*?
-Blinded docking or *ab initio* is the protocol to execute when no additional information is provided for performing the docking (residue restraints, etc.).
+Blind docking or *ab initio* is the protocol to execute when no additional information is provided for performing the docking (residue restraints, etc.).
 
 Default recommended protocol is:
 
@@ -38,7 +38,7 @@ If LightDock setup fails and no `setup.json` file is generated, all files genera
 
 ### 3.1. DFIRE fails with KeyError
 
-DFIRE scoring function fails with a similar error to this example:
+In old versions of LightDock and when using DFIRE scoring function, lightdock might fail with a similar error to this example:
 
 ```
 File "/home/software/lightdock/lightdock/scoring/dfire/driver.py", line 152, in _get_docking_model
@@ -54,3 +54,4 @@ For removing hydrogens, you can use the flag `--noh` in `lightdock_setup` comman
 reduce -Trim input.pdb > output.pdb
 ```
 
+Other scoring functions might fail for similar reasons.
