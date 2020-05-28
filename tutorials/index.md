@@ -32,4 +32,8 @@ We also demonstrate the use of information for modeling protein-DNA interactions
 We are currently working on the development of a protocol to model membrane-associated
 protein complexes, making use of an implicit representation of the membrane.
 
+- [Accelerating simulations with the LightDock-Rust implementation](/tutorials/lightdock-rust)
+
+A guide about how to compile and setup the new Rust implementation of LightDock which is way faster than the Python version and with a very scarce memory footprint.
+
 - [Frequently Asked Questions](/tutorials/faq)
