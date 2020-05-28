@@ -130,7 +130,7 @@ We will show how to run `lightdock-rust` in a real example in the next section.
  You will get an output like this:
  
  ```bash
- [lightdock_setup] INFO: Ignoring OXT atoms
+[lightdock_setup] INFO: Ignoring OXT atoms
 [lightdock_setup] INFO: Ignoring Hydrogen atoms
 [lightdock_setup] INFO: Reading structure from 1czy_protein.pdb PDB file...
 [pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue MET.335
@@ -185,6 +185,7 @@ lgd_flatten.py lightdock_lig.nm.npy lig_nm.npy
 * Now we can test `lightdock-rust` simulating the first swarm:
 
  ```bash
+cd swarm_0
 cp ../lightdock_1czy_protein.pdb ../lightdock_1czy_peptide.pdb .
 cp ../rec_nm.npy ../lig_nm.npy .
 time ../../target/release/lightdock-rust ../setup.json ../init/initial_positions_0.dat 100
