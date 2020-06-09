@@ -18,15 +18,9 @@ The LightDock framework is highly versatile, with many options that can be furth
 * Support for explicit membrane docking (experimental).
 
 
-## Help and new features request
-LightDock is in continuous development and improvement. If you experience any problem with the software, a new feature in mind or you want to collaborate, you have multiple options:
-
-1. Open a [new issue in the LightDock main repository](https://github.com/lightdock/lightdock/issues/new)
-2. Or write an email to <b.jimenezgarcia@uu.nl>
-
-
 ## License
 LightDock is available under [GPLv3 License](https://github.com/lightdock/lightdock/blob/master/LICENSE). If you have any doubt, please don't hesitate to contact us at <b.jimenezgarcia@uu.nl>.
+
 
 ## Logo
 Please use the following image in PNG format (transparent background):
