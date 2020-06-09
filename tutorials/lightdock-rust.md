@@ -17,7 +17,7 @@ classes: wide
 
 ## 1. Introduction
 
-LightDock-Rust is a new implementation of the LightDock software in the [Rust programming language](https://www.rust-lang.org/). Rust was designed for performance and reliavility, and it is amazingly fast and memory-efficient (no runtime or garbage collector).
+LightDock-Rust is a new implementation of the LightDock software in the [Rust programming language](https://www.rust-lang.org/). Rust was designed for performance and reliability, and it is amazingly fast and memory-efficient (no runtime or garbage collector).
 
 Not all LightDock has been rewritten in Rust, only the simulation part of the pipeline which is `lightdock3.py` Python script. Moreoever, this new Rust version only has support for the DFIRE scoring function. However, **residue restraints, ANM and membrane beads are fully supported**.
 
