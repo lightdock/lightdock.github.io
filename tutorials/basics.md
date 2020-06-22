@@ -174,7 +174,7 @@ lightdock: error: the following arguments are required: setup_file, steps
 The simplest way to execute a LightDock simulation is:
 
 ```bash
-$ lightdock3.py setup.json 10
+lightdock3.py setup.json 10
 ```
 
 The first parameter is the configuration file generated on the setup step, the second is the number of steps of the simulation.
@@ -252,7 +252,7 @@ Several scoring functions can be used simultaneously by LightDock during the min
 A file containing the name of the scoring function and its weight can be defined as this example:
 
 ```bash
-$ cat scoring.conf
+cat scoring.conf
 
 sipper 0.5
 dfire 0.8
@@ -276,7 +276,7 @@ All the available scoring fundtions can be found at the path `$LIGHTDOCK_HOME/li
 Once the simulation has completed, the predicted models can be generated as PDB structure files. In order to do so, execute the `lgd_generate_conformations.py` command:
 
 ```bash
-$ lgd_generate_conformations.py
+lgd_generate_conformations.py
  
 usage: conformer_conformations [-h]
                                receptor_structure ligand_structure
@@ -287,9 +287,9 @@ conformer_conformations: error: too few arguments
 For example, to generate the 10 models predicted in the step 5 in a swarm populated by 10 glowworms of the 2UUY example:
 
 ```bash
-$ cd $LIGHTDOCK_HOME/examples/2UUY
-$ cd swarm_0
-$ lgd_generate_conformations.py ../2UUY_rec.pdb ../2UUY_lig.pdb gso_5.out 10
+cd $LIGHTDOCK_HOME/examples/2UUY
+cd swarm_0
+lgd_generate_conformations.py ../2UUY_rec.pdb ../2UUY_lig.pdb gso_5.out 10
 ```
 
 **IMPORTANT:** note that the structures used by this command are the originals used in the `lightdock3_setup.py` command.
@@ -301,8 +301,8 @@ There are two different methods for clustering the predicted models implemented:
 For each swarm, you can execute the `lgd_cluster_bsas.py` command. For example:
 
 ```bash
-$ cd swarm_0
-$ lgd_cluster_bsas.py gso_5.out
+cd swarm_0
+lgd_cluster_bsas.py gso_5.out
 ```
 
 The output would be:
@@ -377,7 +377,7 @@ New cluster 7
 A new file in CSV format is created with the clustering information:
 
 ```bash
-$ cat cluster.repr
+cat cluster.repr
 
 0:2: 9.87810:3:lightdock_3.pdb
 1:1: 9.66368:6:lightdock_6.pdb
