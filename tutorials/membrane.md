@@ -87,15 +87,46 @@ rm 2hdi-phosphate.pdb 2hdi-phosphate-clean.pdb 2hdi-phosphate-clean-CA.pdb 2hdi-
  ```
 
 <p align="center">
-  <img src="../assets/images/2hdi_membrane.png">
+  <img src="../assets/images/2hdi_membrane.gif">
 </p><br>
 
 
 ## 3. Setup
 First, we need to run the setup step. We will specify a number of 400 initial swarms and 200 glowworms. We will exclude the terminal oxygens and **ALL** hydrogens (not parametrized in `fastdfire` scoring function).
 
-At this step we will enable the **membrane** `(-membrane)` mode.
+At this step we will enable the **membrane mode**. `(-membrane)`
 
 ```bash
-lightdock3_setu3.py receptor_membrane.pdb 2hdi_unbound_B.pdb 400 200 --noxt --noh -membrane
+lightdock3_setup.py receptor_membrane.pdb 2hdi_unbound_B.pdb 400 200 --noxt --noh -membrane
+[lightdock_setup] INFO: Ignoring OXT atoms
+[lightdock_setup] INFO: Ignoring Hydrogen atoms
+[lightdock_setup] INFO: Reading structure from receptor_membrane.pdb PDB file...
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue ARG.111
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue LYS.212
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue ARG.643
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue ASN.649
+[lightdock_setup] INFO: 5155 atoms, 1056 residues read.
+[lightdock_setup] INFO: Ignoring OXT atoms
+[lightdock_setup] INFO: Ignoring Hydrogen atoms
+[lightdock_setup] INFO: Reading structure from 2hdi_unbound_B.pdb PDB file...
+[lightdock_setup] INFO: 810 atoms, 103 residues read.
+[lightdock_setup] INFO: Calculating reference points for receptor receptor_membrane.pdb...
+[lightdock_setup] INFO: Done.
+[lightdock_setup] INFO: Calculating reference points for ligand 2hdi_unbound_B.pdb...
+[lightdock_setup] INFO: Done.
+[lightdock_setup] INFO: Saving processed structure to PDB file...
+[lightdock_setup] INFO: Done.
+[lightdock_setup] INFO: Saving processed structure to PDB file...
+[lightdock_setup] INFO: Done.
+[lightdock_setup] INFO: Calculating starting positions...
+[lightdock_setup] INFO: Generated 115 positions files
+[lightdock_setup] INFO: Done.
+[lightdock_setup] INFO: Number of swarms is 115 after applying restraints
+[lightdock_setup] INFO: Preparing environment
+[lightdock_setup] INFO: Done.
+[lightdock_setup] INFO: LightDock setup OK
 ```
+
+At first glance, we see that the initial number of specified swarms (400) has been reduced to 115. This means that 245 swarms have been removed as they are incompatible with the topological information provided by the membrane.
+
+Please note, that while we have not specified any residue restraint for the current example, the **membrane mode** `(-membrane)` is totally compatible with this feature. For more info, please [check](https://lightdock.org/tutorials/4G6M) 
