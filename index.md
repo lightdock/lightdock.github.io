@@ -25,7 +25,7 @@ tutorials:
 
 ---
 
-![LightDock Docking](assets/images/lightdock_docking.png){: .align-center}
+<center>![LightDock Docking](assets/images/lightdock_docking.png)</center>
 
 {% include feature_row id="intro" type="center" %}
 
