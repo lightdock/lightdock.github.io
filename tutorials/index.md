@@ -5,7 +5,7 @@ classes: wide
 
 ---
 
-<center><h1>LightDock tutorials</h1></center><br>
+<center><h1 style="margin-top:40px">LightDock tutorials</h1></center><br>
 
 - [LightDock basics](/tutorials/basics)
 

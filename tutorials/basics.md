@@ -5,7 +5,7 @@ classes: wide
 
 ---
 
-<center><h1>LightDock basics</h1></center><br>
+<center><h1 style="margin-top:40px">LightDock basics</h1></center><br>
 
 ## Table of Contents
 
