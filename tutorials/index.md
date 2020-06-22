@@ -29,7 +29,7 @@ the optimisation protocol of LightDock.
 A quick guide about how to setup a protein-DNA docking simulation with LightDock.
 We also demonstrate the use of information for modeling protein-DNA interactions.
 
-- Membrane docking (work in progress)
+- [Membrane-associated protein docking](/tutorials/membrane)
 
 A protocol to model membrane-associated protein complexes, making use of an implicit representation of the membrane.
 
