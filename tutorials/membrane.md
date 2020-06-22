@@ -5,7 +5,7 @@ classes: wide
 
 ---
 
-<center><h1>Membrane-associated protein docking</h1></center><br>
+<center><h1 style="margin-top:40px">Membrane-associated protein docking</h1></center><br>
 
 This is a complete example of the LightDock docking protocol to model the [2HDI](https://www.rcsb.org/structure/2hdi) membrane-associated protein system with the use of an **implicit membrane representation** provided by the [MemProtMD](http://memprotmd.bioch.ox.ac.uk/) database.
 
@@ -17,7 +17,7 @@ Here, we provide a complete *step-by-step* guide to model the interaction betwee
 Create a directory and copy the sample data provided.
 
 ```bash
-cd Desktop
+cd ~
 mkdir test
 cd test
 curl -O https://raw.githubusercontent.com/haddocking/MemCplxDB/master/structures/2hdi/2hdi_unbound_A.pdb
@@ -57,15 +57,15 @@ sed "s/ PO4/BJ /g" 2hdi-phosphate-clean-CA.pdb | sed "s/DPPC/ MMB /g" >> 2hdi-ph
 
 5. Replace CG transmembrane domain by the atomistic one
 
- Open `2hdi_unbound_A.pdb` and `2hdi-phosphate-clean-CA-BJ.pdb` with [PyMol](https://pymol.org/2/) 
+ Open `2hdi_unbound_A.pdb` and `2hdi-phosphate-clean-CA-BJ.pdb` with [PyMol](https://pymol.org/2/):
 
  ```bash
 pymol 2hdi_unbound_A.pdb 2hdi-phosphate-clean-CA-BJ.pdb
  ```
 
- and run the following command:
+ and run the following command **in the Pymol command line interface**:
 
- ```
+ ```python
 align 2hdi_unbound_A and name CA, 2hdi-phosphate-clean-CA-BJ and name CA
  ```
  
@@ -179,9 +179,9 @@ At this stage, we provide a compressed folder [2HDI-lightdock](examples/2HDI/2HD
 
 Once the simulation has finished, we need to analyze theresults as:
 
-- (1) Generate the structures per swarm (200 glowworms per swarm in this example)
-- (2) Cluster the predictions per swarm
-- (3) Generate the ranking files
+1. Generate the structures per swarm (200 glowworms per swarm in this example)
+2. Cluster the predictions per swarm
+3. Generate the ranking files
 
 Here there is a PBS script to do so:
 
@@ -252,7 +252,7 @@ LightDock is also available in the [Rust](https://lightdock.org/tutorials/lightd
 # References
 For a more complete description of the algorithm as well as different tutorials, please refer to [LightDock](https://lightdock.org/), or check the following references:
 
-- **bioRxiv paper**
+- **bioRxiv paper** (*in preparation*)
 
 - **LightDock goes information-driven**<br>
 Jorge Roel-Touris, Alexandre M.J.J. Bonvin and [Brian Jiménez-García](http://bjimenezgarcia.com)<br>
