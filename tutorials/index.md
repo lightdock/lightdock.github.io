@@ -27,10 +27,9 @@ the optimisation protocol of LightDock.
 A quick guide about how to setup a protein-DNA docking simulation with LightDock.
 We also demonstrate the use of information for modeling protein-DNA interactions.
 
-- Transmembrane docking (work in progress)
+- Membrane docking (work in progress)
 
-We are currently working on the development of a protocol to model membrane-associated
-protein complexes, making use of an implicit representation of the membrane.
+A protocol to model membrane-associated protein complexes, making use of an implicit representation of the membrane.
 
 - [Accelerating simulations with the LightDock-Rust implementation](/tutorials/lightdock-rust)
 
