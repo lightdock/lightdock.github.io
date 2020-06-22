@@ -86,10 +86,11 @@ cat 2hdi_unbound_A_aligned.pdb membrane.pdb >> receptor_membrane.pdb
 rm 2hdi-phosphate.pdb 2hdi-phosphate-clean.pdb 2hdi-phosphate-clean-CA.pdb 2hdi-phosphate-clean-CA-BJ.pdb 2hdi_unbound_A_aligned.pdb 2hdi-phosphate-clean-CA-BJ_aligned.pdb membrane.pdb
  ```
 
+An animation of the receptor embedded into the bead bilayer can be found below:
+
 <p align="center">
   <img src="../assets/images/2hdi_membrane.gif">
-</p><br>
-
+</p>
 
 ## 3. Setup
 First, we need to run the setup step. We will specify a number of 400 initial swarms and 200 glowworms. We will exclude the terminal oxygens and **ALL** hydrogens (not parametrized in `fastdfire` scoring function).
@@ -128,6 +129,12 @@ lightdock3_setup.py receptor_membrane.pdb 2hdi_unbound_B.pdb 400 200 --noxt --no
 [lightdock_setup] INFO: LightDock setup OK
 ```
 
-At first glance, we see that the initial number of specified swarms (400) has been reduced to 115. This means that 245 swarms have been removed as they are incompatible with the topological information provided by the membrane.
+At first glance, we see that the initial number of specified swarms (400) has been reduced to 115. This means that 285 swarms have been removed as they are incompatible with the topological information provided by the membrane.
 
-Please note, that while we have not specified any residue restraint for the current example, the **membrane mode** `(-membrane)` is totally compatible with this feature. For more info, please [check](https://lightdock.org/tutorials/4G6M) 
+Please note, that while we have not specified any residue restraint for the current example, the **membrane mode** `(-membrane)` is totally compatible with this feature. For more info, please check our [antibody](https://lightdock.org/tutorials/4G6M) example.
+
+An animation of the `setup`, with the geometrical centers of the `swarms` depicted in blue, can be found below:
+
+<p align="center">
+  <img src="../assets/images/2hdi_setup.gif">
+</p>
