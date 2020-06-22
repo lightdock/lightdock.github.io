@@ -1,7 +1,5 @@
 remote_theme: mmistakes/minimal-mistakes
 
-markdown: GFM
-
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
