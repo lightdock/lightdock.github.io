@@ -165,7 +165,7 @@ For example, create a `submit_job.sh` file containing:
 lightdock3.py setup.json 100 -s fastdfire -c 16
 ```
 
-This script tells the PBS queue manager to use 16 cores of a single node in a queue with name `medium`, with job name `LigthDock-4G6M` and with standard output to `lightdock.out` and error output redirected to `lightdock.err`.
+This script tells the PBS queue manager to use 16 cores of a single node in a queue with name `medium`, with job name `LigthDock-2HDI` and with standard output to `lightdock.out` and error output redirected to `lightdock.err`.
 
 To run this script you can do it as:
 
@@ -180,7 +180,7 @@ At this stage, we provide a compressed folder [2HDI-lightdock](examples/2HDI/2HD
 Once the simulation has finished, we need to analyze theresults as:
 
 - (1) Generate the structures per swarm (200 glowworms per swarm in this example)
-- (2) Clusterize the predictions per swarm
+- (2) Cluster the predictions per swarm
 - (3) Generate the ranking files
 
 Here there is a PBS script to do so:
