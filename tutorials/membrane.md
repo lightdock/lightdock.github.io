@@ -56,9 +56,18 @@ sed "s/ PO4/BJ /g" 2hdi-phosphate-clean-CA.pdb | sed "s/DPPC/ MMB /g" >> 2hdi-ph
 
 - (5) Replace CG transmembrane domain by the atomistic one
 
-Open *2hdi_unbound_A.pdb* and *2hdi-phosphate-clean-CA-BJ.pdb* with [PyMol](https://pymol.org/2/) and run the following command <br> <br>
+Open *2hdi_unbound_A.pdb* and *2hdi-phosphate-clean-CA-BJ.pdb* with [PyMol](https://pymol.org/2/) 
+
+```bash
+pymol 2hdi_unbound_A.pdb 2hdi-phosphate-clean-CA-BJ.pdb
+```
+
+and run the following command <br> <br>
 <code> align 2hdi_unbound_A and name CA, 2hdi-phosphate-clean-CA-BJ and name CA </code> <br> <br>
-Now, do save both molecules as *2hdi_unbound_A_aligned.pdb* and *2hdi-phosphate-clean-CA-BJ_aligned.pdb* to combine both files
+Now, do save both molecules as *2hdi_unbound_A_aligned.pdb* and *2hdi-phosphate-clean-CA-BJ_aligned.pdb* under PyMOL>File>Export Molecule... <br>
+**IMPORTANT** Select the proper PDB file extension <code> PDB (*\.pdb *\pdb.gz) </code> <br> <br>
+
+Finally, combine both files
 
 ```bash
 grep -v "MMB" 2hdi-phosphate-clean-CA-BJ_aligned.pdb >> membrane.pdb
@@ -70,3 +79,12 @@ cat 2hdi_unbound_A_aligned.pdb membrane.pdb >> receptor_membrane.pdb
 ```bash
 rm 2hdi-phosphate.pdb 2hdi-phosphate-clean.pdb 2hdi-phosphate-clean-CA.pdb 2hdi-phosphate-clean-CA-BJ.pdb 2hdi_unbound_A_aligned.pdb 2hdi-phosphate-clean-CA-BJ_aligned.pdb membrane.pdb
 ```
+
+<p align="center">
+  <img src="../assets/images/2hdi_membrane.png">
+</p><br>
+
+## Setup
+First, we need to run the setup step. We will specify a number of 400 initial swarms and 200 glowworms. We will exclude the termiinal oxygens and **ALL** hydrogens (not parametrized in `fastdfire` scoring function) and enable the **membrane** <code>- membrane</code> mode.
+
+
