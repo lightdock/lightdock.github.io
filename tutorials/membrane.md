@@ -65,7 +65,7 @@ pymol 2hdi_unbound_A.pdb 2hdi-phosphate-clean-CA-BJ.pdb
 and run the following command <br> <br>
 <code> align 2hdi_unbound_A and name CA, 2hdi-phosphate-clean-CA-BJ and name CA </code> <br> <br>
 Now, do save both molecules as *2hdi_unbound_A_aligned.pdb* and *2hdi-phosphate-clean-CA-BJ_aligned.pdb* (PyMOL>File>Export Molecule...) <br> <br>
-**IMPORTANT** Select the proper PDB file extension <code> PDB (*\.pdb *\pdb.gz) </code> <br> <br>
+**IMPORTANT** Select the proper PDB file extension <code> PDB (*\.pdb *\pdb.gz) </code> <br>
 
 Finally, combine both files
 
@@ -85,6 +85,11 @@ rm 2hdi-phosphate.pdb 2hdi-phosphate-clean.pdb 2hdi-phosphate-clean-CA.pdb 2hdi-
 </p><br>
 
 ## Setup
-First, we need to run the setup step. We will specify a number of 400 initial swarms and 200 glowworms. We will exclude the termiinal oxygens and **ALL** hydrogens (not parametrized in `fastdfire` scoring function) and enable the **membrane** <code>- membrane</code> mode.
+First, we need to run the setup step. We will specify a number of 400 initial swarms and 200 glowworms. We will exclude the terminal oxygens and **ALL** hydrogens (not parametrized in `fastdfire` scoring function).
 
+At this step we will enable the **membrane** <code>(- membrane)</code> mode.
 
+```bash
+lightdock3_setu3.py receptor_membrane.pdb 2hdi_unbound_B.pdb 400 200 --noxt --noh -membrane
+
+```
