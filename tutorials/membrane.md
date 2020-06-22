@@ -98,6 +98,7 @@ At this step we will enable the **membrane mode**. `(-membrane)`
 
 ```bash
 lightdock3_setup.py receptor_membrane.pdb 2hdi_unbound_B.pdb 400 200 --noxt --noh -membrane
+
 [lightdock_setup] INFO: Ignoring OXT atoms
 [lightdock_setup] INFO: Ignoring Hydrogen atoms
 [lightdock_setup] INFO: Reading structure from receptor_membrane.pdb PDB file...

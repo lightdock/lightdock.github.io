@@ -89,7 +89,7 @@ First, we need to run the setup step. We will specify a number of 400 initial sw
 At this step, we need to also specify the residue restraints that will bias the docking simulation.
 
 ```bash
-lightdock_setup3.py 1AZP_A_h.pdb 1AZP_B.pdb 400 200 -anm -rst restraints.list
+lightdock3_setup.py 1AZP_A_h.pdb 1AZP_B.pdb 400 200 -anm -rst restraints.list
 
 @> ProDy is configured: verbosity='info'
 [lightdock_setup] INFO: Reading structure from 1AZP_A_h.pdb PDB file...
