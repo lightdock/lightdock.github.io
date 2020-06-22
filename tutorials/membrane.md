@@ -56,7 +56,7 @@ $ sed "s/ PO4/BJ /g" 2hdi-phosphate-clean-CA.pdb | sed "s/DPPC/ MMB /g >> 2hdi-p
 
 - (5) Replace CG transmembrane domain by the atomistic one
 
-Open *2hdi_unbound_A.pdb* and *2hdi-phosphate-clean-CA-BJ.pdb* with [PyMol](https://pymol.org/2/) and run the following command <br>
+Open *2hdi_unbound_A.pdb* and *2hdi-phosphate-clean-CA-BJ.pdb* with [PyMol](https://pymol.org/2/) and run the following command <br> <br>
 <code> align 2hdi_unbound_A and name CA, 2hdi-phosphate-clean-CA-BJ and name CA </code> <br> <br>
 Now, do save both molecules as *2hdi_unbound_A_aligned.pdb* and *2hdi-phosphate-clean-CA-BJ_aligned.pdb* to combine both files
 
