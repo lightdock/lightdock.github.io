@@ -64,9 +64,10 @@ pymol 2hdi_unbound_A.pdb 2hdi-phosphate-clean-CA-BJ.pdb
  ```
 
  and run the following command:
- <br><br>
- `align 2hdi_unbound_A and name CA, 2hdi-phosphate-clean-CA-BJ and name CA`
- <br><br>
+
+ ```
+align 2hdi_unbound_A and name CA, 2hdi-phosphate-clean-CA-BJ and name CA
+ ```
  
  Now, do save each of the molecules as `2hdi_unbound_A_aligned.pdb` and `2hdi-phosphate-clean-CA-BJ_aligned.pdb` (PyMOL>File>Export Molecule...).
 
