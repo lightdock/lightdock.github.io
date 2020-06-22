@@ -133,8 +133,132 @@ At first glance, we see that the initial number of specified swarms (400) has be
 
 Please note, that while we have not specified any residue restraint for the current example, the **membrane mode** `(-membrane)` is totally compatible with this feature. For more info, please check our [antibody](https://lightdock.org/tutorials/4G6M) example.
 
-An animation of the `setup`, with the geometrical centers of the `swarms` depicted in blue, can be found below:
+An animation of the setup, with the geometrical centers of the `swarms` depicted in blue, can be found below:
 
 <p align="center">
   <img src="../assets/images/2hdi_setup.gif">
 </p>
+
+## 4. Simulation
+
+We can run our simulation in a local machine or in a HPC cluster. For the first option, simply run the following command:
+
+```bash
+lightdock3.py setup.json 100 -s fastdfire -c 8
+```
+
+Where the flag `-c 8` indicates LightDock to use 8 available cores. For this example we will run `100` steps of the protocol and the C implementation of the DFIRE function `-s fastdfire`.
+
+To run a LightDock job on a HPC cluster, a Portable Batch System (PBS) file can be generated. This PBS file defines the commands and cluster resources used for the job. A PBS file is a plain-text file that can be easily edited with any UNIX editor.
+
+For example, create a `submit_job.sh` file containing:
+
+```bash
+#PBS -N LightDock-2HDI
+#PBS -q medium
+#PBS -l nodes=1:ppn=16
+#PBS -S /bin/bash
+#PBS -d ./
+#PBS -e ./lightdock.err
+#PBS -o ./lightdock.out
+
+lightdock3.py setup.json 100 -s fastdfire -c 16
+```
+
+This script tells the PBS queue manager to use 16 cores of a single node in a queue with name `medium`, with job name `LigthDock-4G6M` and with standard output to `lightdock.out` and error output redirected to `lightdock.err`.
+
+To run this script you can do it as:
+
+```bash
+qsub < submit_job.sh
+```
+
+At this stage, we provide a compressed folder [2HDI-lightdock](examples/2HDI/2HDI-lightdock.tgz) with the output of the simulation, so that you can continue directly with the analysis.
+
+## 5. Analysis
+
+Once the simulation has finished, we need to analyze theresults as:
+
+- (1) Generate the structures per swarm (200 glowworms per swarm in this example)
+- (2) Clusterize the predictions per swarm
+- (3) Generate the ranking files
+
+Here there is a PBS script to do so:
+
+```bash
+#PBS -N 2HDI-anal
+#PBS -q medium
+#PBS -l nodes=1:ppn=8
+#PBS -S /bin/bash
+#PBS -d ./
+#PBS -e ./analysis.err
+#PBS -o ./analysis.out
+
+### Calculate the number of swarms ###
+
+s=`ls -d ./swarm_* | wc -l`
+swarms=$((s-1))
+
+### Create files for Ant-Thony ###
+
+for i in $(seq 0 $swarms)
+  do
+    echo "cd swarm_${i}; lgd_generate_conformations.py ../receptor_membrane.pdb ../2hdi_unbound_B.pdb  gso_100.out 200 >     /dev/null 2> /dev/null;" >> generate_lightdock.list;
+  done
+
+for i in $(seq 0 $swarms)
+  do
+    echo "cd swarm_${i}; lgd_cluster_bsas.py gso_100.out > /dev/null 2> /dev/null;" >> cluster_lightdock.    list;
+  done
+
+### Clustering BSAS (rmsd) within swarm ###
+
+ant_thony.py -c 8 cluster_lightdock.list;
+
+### Generate ranking files for filtering ###
+
+lgd_rank.py $s 100;
+
+### Copy structures for further analysis ###
+
+lgd_copy_structures.py rank_by_scoring.list > /dev/null 2> /dev/null;
+```
+
+**NOTE** You can also run the previous commands locally in a sequential way.
+
+Once the analysis is finished, a new folder called `clustered` has been created, which contains the predicted structures. Inside of this directory, there is a file with the ranking of these structures by LightDock DFIRE (fastdfire) score (the more positive the better) `rank_clustered.list`.
+
+We provide for this example a compressed `clustered` folder [clustered.tgz](examples/2HDI/clustered.tgz) which contains (when decompressed) a ranking `lgd_clustered_rank.list` file together with the **top 100** LightDock predictions.
+
+For all the filtered structures, interface RMSD (i-RMSD), ligand RMSD (l-RMSD) and fraction of native contacts (fnc) according to CAPRI criteria have been calculated.
+
+```bash
+head lgd_clustered_rank.list
+# structure		fnc 		i-RMSD  l-RMSD	Score
+swarm_43_170.pdb	0.409639	2.185	6.910	28.431
+swarm_18_50.pdb		0		14.745	29.396	27.645
+swarm_55_140.pdb	0		15.434	32.565	27.554
+swarm_45_194.pdb	0		15.537	48.099	27.373
+swarm_11_156.pdb	0.0963855	9.740	27.417	26.849
+swarm_112_26.pdb	0		16.233	32.469	26.366
+swarm_92_122.pdb	0		15.928	30.716	26.022
+swarm_33_43.pdb		0.0722892	5.512	20.906	25.714
+swarm_112_178.pdb	0		15.599	32.351	25.138
+swarm_18_160.pdb	0		11.311	22.666	25.006
+```
+
+LightDock is also available in the [Rust](https://lightdock.org/tutorials/lightdock-rust) programming language, which significantly accelerates the simulations and fully supports **membrane docking**.
+
+# References
+For a more complete description of the algorithm as well as different tutorials, please refer to [LightDock](https://lightdock.org/), or check the following references:
+
+- **bioRxiv paper**
+
+- **LightDock goes information-driven**<br>
+Jorge Roel-Touris, Alexandre M.J.J. Bonvin and [Brian Jiménez-García](http://bjimenezgarcia.com)<br>
+*Bioinformatics*, Volume 36, Issue 3, 1 February 2020, Pages 950-952; doi: [https://doi.org/10.1093/bioinformatics/btz642](https://doi.org/10.1093/bioinformatics/btz642)
+
+- **LightDock: a new multi-scale approach to protein–protein docking**<br>
+[Brian Jiménez-García](http://bjimenezgarcia.com), Jorge Roel-Touris, Miguel Romero-Durana, Miquel Vidal,Daniel Jiménez-González and Juan Fernández-Recio<br>
+*Bioinformatics*, Volume 34, Issue 1, 1 January 2018, Pages 49–55, [https://doi.org/10.1093/bioinformatics/btx555](https://doi.org/10.1093/bioinformatics/btx555)
+
