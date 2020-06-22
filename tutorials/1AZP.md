@@ -19,11 +19,11 @@ This is a complete example of the LightDock docking protocol to model [1AZP](htt
 Create a directory and copy the sample data provided.
 
 ```bash
-$ cd Desktop
-$ mkdir test
-$ cd test
-$ wget https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/1AZP/1AZP_A.pdb
-$ wget https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/1AZP/1AZP_B.pdb
+cd Desktop
+mkdir test
+cd test
+curl -0 https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/1AZP/1AZP_A.pdb
+curl -0 https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/1AZP/1AZP_B.pdb
 ```
 
 ## Specifying residue restraints
@@ -61,8 +61,8 @@ L B.DA.70 P
 For the sake of simplicity, we will use a list of residue restraints already formatted.
 
 ```bash
-$ wget https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/1AZP/restraints.list
-$ cat restraints.list
+curl -0 https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/1AZP/restraints.list
+cat restraints.list
 
 R A.TRP.24
 R A.VAL.26
@@ -78,8 +78,8 @@ First of all, we need the protein partner to have the correct hydrogen atoms as 
 We remove the previous hydrogens and them rebuild them according to reduce.
 
 ```bash
-$ reduce -Trim 1AZP_A.pdb > 1AZP_A_noh.pdb
-$ reduce -BUILD 1AZP_A_noh.pdb > 1AZP_A_h.pdb
+reduce -Trim 1AZP_A.pdb > 1AZP_A_noh.pdb
+reduce -BUILD 1AZP_A_noh.pdb > 1AZP_A_h.pdb
 ```
 
 ## Setup
@@ -89,7 +89,7 @@ First, we need to run the setup step. We will specify a number of 400 initial sw
 At this step, we need to also specify the residue restraints that will bias the docking simulation.
 
 ```bash
-$ lightdock_setup3.py 1AZP_A_h.pdb 1AZP_B.pdb 400 200 -anm -rst restraints.list
+lightdock_setup3.py 1AZP_A_h.pdb 1AZP_B.pdb 400 200 -anm -rst restraints.list
 
 @> ProDy is configured: verbosity='info'
 [lightdock_setup] INFO: Reading structure from 1AZP_A_h.pdb PDB file...
@@ -143,7 +143,7 @@ At the moment, LightDock is not checking the structure of the nucleotides but ra
 We can run our simulation in a local machine or in a HPC cluster. For the first option, simply run the following command.
 
 ```bash
-$ lightdock3.py setup.json 100 -s dna -c 8
+lightdock3.py setup.json 100 -s dna -c 8
 ```
 
 Where the flag `-c 8` indicates LightDock to use 8 available cores. For this example we will run `100` steps of the protocol and the DNA scoring function `-s dna`.
