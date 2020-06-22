@@ -1,5 +1,7 @@
 ---
 permalink: /tutorials/
+layout: splash
+classes: wide
 
 ---
 
