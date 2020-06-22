@@ -22,8 +22,8 @@ Create a directory and copy the sample data provided.
 cd Desktop
 mkdir test
 cd test
-curl -0 https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/1AZP/1AZP_A.pdb
-curl -0 https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/1AZP/1AZP_B.pdb
+curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/1AZP/1AZP_A.pdb
+curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/1AZP/1AZP_B.pdb
 ```
 
 ## Specifying residue restraints
@@ -61,7 +61,7 @@ L B.DA.70 P
 For the sake of simplicity, we will use a list of residue restraints already formatted.
 
 ```bash
-curl -0 https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/1AZP/restraints.list
+curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/1AZP/restraints.list
 cat restraints.list
 
 R A.TRP.24

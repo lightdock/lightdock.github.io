@@ -20,9 +20,9 @@ Create a directory and copy the sample data provided.
 cd Desktop
 mkdir test
 cd test
-curl -0  https://raw.githubusercontent.com/haddocking/MemCplxDB/master/structures/2hdi/2hdi_unbound_A.pdb
-curl -0 https://raw.githubusercontent.com/haddocking/MemCplxDB/master/structures/2hdi/2hdi_unbound_B.pdb
-curl -0 https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/2HDI/2hdi-coarsegrain.pdb
+curl -O https://raw.githubusercontent.com/haddocking/MemCplxDB/master/structures/2hdi/2hdi_unbound_A.pdb
+curl -O https://raw.githubusercontent.com/haddocking/MemCplxDB/master/structures/2hdi/2hdi_unbound_B.pdb
+curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/2HDI/2hdi-coarsegrain.pdb
 ```
 
 Where *2hdi_unbound_A.pdb* corresponds to the *beta*-barrel receptor structure, *2hdi_unbound_B.pdb* is the receptor binding domain and *2hdi-coarsegrain.pdb* the representative coarse-grained [snapshot](http://memprotmd.bioch.ox.ac.uk/_ref/PDB/2hdi/_sim/2hdi_default_dppc/) of the 2HDI receptor.
