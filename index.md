@@ -9,7 +9,7 @@ header:
   actions:
     - label: "Download Latest Release"
       url: "https://github.com/lightdock/lightdock/releases/latest"
-excerpt: "The open-source protein docking framework written in Python"
+excerpt: "The open-source protein docking framework written in Python (<a href="https://github.com/lightdock/lightdock-rust">and Rust</a>)"
 
 intro: 
   - excerpt: '*Protein-Protein, Protein-DNA and Protein-Peptide docking made easy*'
