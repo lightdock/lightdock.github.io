@@ -76,7 +76,7 @@ align 2hdi_unbound_A and name CA, 2hdi-phosphate-clean-CA-BJ and name CA
  Finally, combine both files
 
  ```bash
-grep -v "MMB" 2hdi-phosphate-clean-CA-BJ_aligned.pdb >> membrane.pdb
+grep "MMB" 2hdi-phosphate-clean-CA-BJ_aligned.pdb >> membrane.pdb
 cat 2hdi_unbound_A_aligned.pdb membrane.pdb >> receptor_membrane.pdb
  ```
 
