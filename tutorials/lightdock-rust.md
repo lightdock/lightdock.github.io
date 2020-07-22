@@ -95,14 +95,15 @@ You may test a real docking example:
 
 ```bash
 cd example/1ppe
-time ../../target/release/lightdock-rust setup_1ppe.json initial_positions_0.dat 100
+cp -R ../../data .
+time ../../target/release/lightdock-rust setup_1ppe.json initial_positions_0.dat 100 dfire
 ```
 
 If you execute the binary, you will get a description of the arguments needed:
 
 ```bash
 ./target/release/lightdock-rust 
-Wrong command line. Usage: ./target/release/lightdock-rust setup_filename swarm_filename steps
+Wrong command line. Usage: ./target/release/lightdock-rust setup_filename swarm_filename steps method
 ```
 
 `lightdock-rust` is intended to be used per swarm. For example, if `lightdock3_setup.py` has genearted 10 swarms, you may need to run `lightdock-rust` for each of the swarms, from `swarm_0` to `swarm_9`.
@@ -188,7 +189,8 @@ lgd_flatten.py lightdock_lig.nm.npy lig_nm.npy
 cd swarm_0
 cp ../lightdock_1czy_protein.pdb ../lightdock_1czy_peptide.pdb .
 cp ../rec_nm.npy ../lig_nm.npy .
-time ../../target/release/lightdock-rust ../setup.json ../init/initial_positions_0.dat 100
+cp -R ../../../data .
+time ../../../target/release/lightdock-rust ../setup.json ../init/initial_positions_0.dat 100 dfire
  ```
  
  Output should be similar to this:
@@ -230,9 +232,8 @@ Create a new `execution.sh` file with the following content:
 ```bash
 #!/bin/bash
 
-# Edit only the number of cores and steps to use for this simulation:
+# Edit only the number of cores to use for this simulation
 NUM_CORES=4
-STEPS=10
 
 # LightDock setup
 lightdock3_setup.py 1czy_protein.pdb 1czy_peptide.pdb 400 200 --noxt --noh -anm -rst restraints.list
@@ -245,11 +246,17 @@ lgd_flatten.py lightdock_lig.nm.npy lig_nm.npy
 s=`ls -d swarm_* | wc -l`
 swarms=$((s-1))
 
+# Copy binary
+cp ../../target/release/lightdock-rust .
+
 # Create a task.list file for ant_thony
-for i in `seq 0 $swarms`;do echo "cd swarm_${i}; cp ../lightdock_1czy_protein.pdb .; cp ../lightdock_1czy_peptide.pdb .;cp ../rec_nm.npy .;cp ../lig_nm.npy .;../lightdock-rust ../setup.json ../init/initial_positions_${i}.dat ${STEPS}; rm -rf lightdock_*.pdb *.npy;" >> task.list; done
+for i in `seq 0 $swarms`;do echo "cd swarm_${i}; cp ../lightdock_1czy_protein.pdb .; cp ../lightdock_1czy_peptide.pdb .;cp ../rec_nm.npy .;cp ../lig_nm.npy .;cp -R ../../../data .;../lightdock-rust ../setup.json ../init/initial_positions_${i}.dat 10 dfire; rm -rf lightdock_*.pdb *.npy data;" >> task.list; done
 
 # Let ant_thony run
-ant_thony.py --cores ${NUM_CORES} task.list 
+ant_thony.py --cores ${NUM_CORES} task.list
+
+# Clean task.list
+rm -rf task.list
 
 ```
 
