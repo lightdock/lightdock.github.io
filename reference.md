@@ -13,3 +13,9 @@ Jorge Roel-Touris, Alexandre M.J.J. Bonvin and [Brian Jiménez-García](http://b
 **LightDock: a new multi-scale approach to protein–protein docking**<br>
 [Brian Jiménez-García](http://bjimenezgarcia.com), Jorge Roel-Touris, Miguel Romero-Durana, Miquel Vidal, Daniel Jiménez-González and Juan Fernández-Recio<br>
 *Bioinformatics*, Volume 34, Issue 1, 1 January 2018, Pages 49–55, doi: [https://doi.org/10.1093/bioinformatics/btx555](https://doi.org/10.1093/bioinformatics/btx555)
+
+A new preprint is available:
+
+**Integrative Modeling of Membrane-associated Protein Assemblies**<br>
+Jorge Roel-Touris, [Brian Jiménez-García](http://bjimenezgarcia.com), Alexandre M.J.J. Bonvin<br>
+bioRxiv 2020.07.20.211987; doi: [https://doi.org/10.1101/2020.07.20.211987](https://doi.org/10.1101/2020.07.20.211987)
