@@ -252,7 +252,9 @@ LightDock is also available in the [Rust](https://lightdock.org/tutorials/lightd
 # References
 For a more complete description of the algorithm as well as different tutorials, please refer to [LightDock](https://lightdock.org/), or check the following references:
 
-- **bioRxiv paper** (*in preparation*)
+- **Integrative Modeling of Membrane-associated Protein Assemblies**<br>
+Jorge Roel-Touris, [Brian Jiménez-García](http://bjimenezgarcia.com), Alexandre M.J.J. Bonvin<br>
+bioRxiv 2020.07.20.211987; doi: [https://doi.org/10.1101/2020.07.20.211987](https://doi.org/10.1101/2020.07.20.211987)
 
 - **LightDock goes information-driven**<br>
 Jorge Roel-Touris, Alexandre M.J.J. Bonvin and [Brian Jiménez-García](http://bjimenezgarcia.com)<br>
