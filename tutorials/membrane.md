@@ -203,7 +203,7 @@ swarms=$((s-1))
 
 for i in $(seq 0 $swarms)
   do
-    echo "cd swarm_${i}; lgd_generate_conformations.py ../receptor_membrane.pdb ../2hdi_unbound_B.pdb  gso_100.out 200 >     /dev/null 2> /dev/null;" >> generate_lightdock.list;
+    echo "cd swarm_${i}; lgd_generate_conformations.py ../receptor_membrane.pdb ../2hdi_unbound_B.pdb  gso_100.out 200 > /dev/null 2> /dev/null;" >> generate_lightdock.list;
   done
 
 for i in $(seq 0 $swarms)
