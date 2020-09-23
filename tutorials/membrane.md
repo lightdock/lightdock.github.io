@@ -208,8 +208,12 @@ for i in $(seq 0 $swarms)
 
 for i in $(seq 0 $swarms)
   do
-    echo "cd swarm_${i}; lgd_cluster_bsas.py gso_100.out > /dev/null 2> /dev/null;" >> cluster_lightdock.    list;
+    echo "cd swarm_${i}; lgd_cluster_bsas.py gso_100.out > /dev/null 2> /dev/null;" >> cluster_lightdock.list;
   done
+
+### Generate LightDock models ###
+
+ant_thony.py -c 8 generate_lightdock.list;
 
 ### Clustering BSAS (rmsd) within swarm ###
 
