@@ -13,9 +13,9 @@ The LightDock framework is highly versatile, with many options that can be furth
 * Backbone flexibility can enabled/disabled for receptor and ligand molecules in an independent way.
 * Can use local gradient-free minimization.
 * The simulation can be restrained from the beginning to focus on user-assigned interacting regions, for example, transmembrane domains or highly-variable loops in antibody-antigen systems.
-* **Residue restraints in both receptor and ligand partners**.
+* [**Residue restraints in both receptor and ligand partners**](https://doi.org/10.1093/bioinformatics/btz642).
 * Support for the use of pre-calculated conformers for both receptor and ligand.
-* Support for explicit membrane docking (experimental).
+* Support for explicit [membrane docking](https://www.nature.com/articles/s41467-020-20076-5).
 
 
 ## License
