@@ -25,7 +25,8 @@ LightDock is available under [GPLv3 License](https://github.com/lightdock/lightd
 
 <p align="center">
     <a href="https://bioexcel.eu/" target="_blank"><img src="../assets/images/bioexcel_logo.png"></a>
-    <a href="https://www.eosc-hub.eu/" target="_blank"><img src="../assets/images/eosc_hub_logo.png" style="padding-left:20px"></a>
+    <br>
+    <a href="https://www.eosc-hub.eu/" target="_blank"><img src="../assets/images/eosc_hub_logo.png"></a>
 </p>
 
 
