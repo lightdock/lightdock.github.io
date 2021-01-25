@@ -22,7 +22,7 @@ Blind docking or *ab initio* is the protocol to execute when no additional infor
 Default recommended protocol is:
 
 * **Swarms**: 400
-* **Glowworms**: 300
+* **Glowworms**: 200
 * **Steps**: 100
 
 In the [original publication](https://academic.oup.com/bioinformatics/article/34/1/49/4103399) the number of steps was equal to 200, but quality of the results is not affected using 100 steps. The reason behind performing 200 steps was for benchmarking the method. 
@@ -54,4 +54,4 @@ For removing hydrogens, you can use the flag `--noh` in `lightdock_setup` comman
 reduce -Trim input.pdb > output.pdb
 ```
 
-Other scoring functions might fail for similar reasons.
+**Other scoring functions might fail for similar reasons.**
