@@ -125,7 +125,7 @@ We will show how to run `lightdock-rust` in a real example in the next section.
 * Now run `lightdock3_setup.py`:
 
  ```bash
- lightdock3_setup.py 1czy_protein.pdb 1czy_peptide.pdb 400 200 --noxt --noh -anm -rst restraints.lis
+ lightdock3_setup.py 1czy_protein.pdb 1czy_peptide.pdb 400 200 --noxt --noh -anm -rst restraints.list
  ```
  
  You will get an output like this:
