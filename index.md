@@ -39,6 +39,12 @@ LightDock is distributed as a [PyPi package](https://pypi.org/project/lightdock/
 pip install lightdock
 ```
 
+For members of the [SBGrid](https://sbgrid.org/) consortium, LightDock can be also installed using the [CLI client](https://sbgrid.org/software/titles/lightdock):
+
+```bash
+sbgrid-cli install lightdock
+```
+
 Alternative ways to install LightDock can be found in the official [GitHub repository](https://github.com/lightdock/lightdock/blob/master/README.md).
 
 
