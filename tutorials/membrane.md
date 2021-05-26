@@ -31,7 +31,7 @@ Where `2hdi_unbound_A.pdb` corresponds to the *beta*-barrel receptor structure, 
 ## 2. Pre-processing of input structures
 Next, we need to prepare the input structures.
 
-- Remove all CG beads except those representing the phospate beads
+- Remove all CG beads except those representing the phosphate beads
 
  ```bash
 grep -v "C4B" 2hdi-coarsegrain.pdb | grep -v "C3B" | grep -v "C2B" | grep -v "C1B" | grep -v "C4A" | grep -v "C3A" | grep -v "C2A" | grep -v "C1A" | grep -v "GL2" | grep -v "GL1" | grep -v "NC3" >> 2hdi-phosphate.pdb
