@@ -66,6 +66,72 @@ For more information about LightDock, please visit the [tutorials section](https
 
 In order to run this tutorial you will need to have the following software installed: [LightDock][link-lightdock], [pdb-tools][link-pdbtools] and [PyMOL][link-pymol].
 
+### 3.1. Installing LightDock
+
+LightDock is distributed as a Python package through the [Python Package Index](https://pypi.org/project/lightdock/) (PyPI) repository.
+
+#### 3.1.1. Command line
+Installing LightDock is as simple as creating a virtual environment for **Python 3.6+** and running `pip` command (make sure your instances of `virtualenv` and `pip` are for Python 3.6+ versions). We will install the version *0.9.0* of LightDock which is the first released version with support for the membrane protocol and execution in [Jupyter Notebooks](https://jupyter.org/) (see next section):
+
+```bash
+virtualenv venv
+source venv/bin/activate
+pip install numpy && pip install lightdock==0.9.0
+```
+
+If the installation finished without errors, you should be able to execute LightDock in the terminal:
+
+```bash
+lightdock3.py -v
+```
+
+and to see an output similar to this:
+
+```bash
+lightdock3 0.9.0
+```
+
+#### 3.1.2. Jupyter Notebook and Google Colab
+
+Another option to use LightDock is through [Google Colaboratory](https://colab.research.google.com) ("Colab" for short) which allows you to write and execute Python in the browser using *notebooks*. In case of choosing this option, simply execute in a new notebook in the first cell the following command:
+
+```
+!pip install lightdock==0.9.0
+```
+
+### 3.2. Installing PDB-Tools
+
+PDB-Tools is a set of Python scripts for manipulating PDB files following the philosophy of *one script, one task*. For different manipulating tasks on a PDB file, the procedure would be to *pipe* the different PDB-Tools scripts to accomplish the different tasks. 
+
+PDB-Tools is distributed as a PyPI package. To install it, simply:
+
+```bash
+pip install pdb-tools
+```
+
+or alternatively in a Google Colab notebook:
+
+```
+!pip install pdb-tools
+```
+
+### 3.3. Tutorial Notebook
+
+We have prepared a Colab Notebook ready to be imported. Download it: [tutorial.ipynb](data/tutorial.ipynb)
+
+In case of using the provided Colab notebook, go to the [Colab site](https://colab.research.google.com) and upload the provided notebook (see A):
+
+<center>
+    <img src="colab.png">
+    <br>
+</center>
+
+Once imported, click on the icon pointed in (B) and upload the required files as marked in (C) by the orange arrow. The two required files ([3x29_receptor_membrane.pdb](data/3x29_receptor_membrane.pdb) and [3x29_ligand.pdb](data/3x29_ligand.pdb)) should appear now as in (D). 
+
+Then, run one by one each of the code cells as several libraries will be installed in the first code cells.
+
+<hr>
+
 
 
 [link-pymol]: https://www.pymol.org/ "PyMOL"
