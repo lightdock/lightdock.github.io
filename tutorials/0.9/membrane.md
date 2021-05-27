@@ -494,6 +494,13 @@ Click on the **Download structure** link and save the PDB structure (by default 
 
 <p class="notice--info"><strong>Question:</strong> Why is there a central bead in the generated membrane?</p>
 
+At this point, you may go back to [section 5](#5-lightdock-simulation) and repeat the simulation but using this new structure as the receptor. A different approach could be to use the [Lightdock server](https://server.lightdock.org).
+
+Using the LightDock server is really easy and it does not require registration for [quick tests](https://server.lightdock.org/job/quick/step/1), but blind docking is only available upon registration. Nonetheless, we have prepared a [simulation for you](https://server.lightdock.org/job/run/c5e7c59d8bf0f3a7738d25345ad75dc78b35135b0a14452d8be53f91c70ef0ac).
+
+<p class="notice--info">Download the results and have a look at the <em>top</em> directory</p>
+
+<p class="notice--info"><strong>Question:</strong> Do you observe differences between the top structures of this simulation compared to the previous one on this tutorial?</p>
 
 
 ## 8. Conclusions
