@@ -85,9 +85,9 @@ lightdock3.py -v
 
 and to see an output similar to this:
 
-<pre style="background-color:#DAE4E7">
+<p class="notice--info">
 lightdock3 0.9.0
-</pre>
+</p>
 
 #### 3.1.2. Jupyter Notebook and Google Colab
 
@@ -247,9 +247,9 @@ lightdock3_setup: error: the following arguments are required: receptor_pdb_file
 
 The setup command has generated several files and directories:
 
-<p class="notice--info">Question: What is the content of the <b>setup.json</b> file?</p>
+<p class="notice--info"><strong>Question:</strong> What is the content of the <b>setup.json</b> file?</p>
 
-<p class="notice--info">Question: What does the <b>init</b> directory contains?</p>
+<p class="notice--info"><strong>Question:</strong> What does the <b>init</b> directory contains?</p>
 
 We may visualize the distribution of swarms over the receptor:
 
@@ -264,7 +264,7 @@ pymol lightdock_3x29_receptor_membrane.pdb init/swarm_centers.pdb
     <br><br>
 </center>
 
-<p class="notice--info">Question: Is this a regid-body or a flexible simulation?</p>
+<p class="notice--info"><strong>Question:</strong> Is this a regid-body or a flexible simulation?</p>
 
 
 ### 5.2. Running the simulation
@@ -285,7 +285,7 @@ For your convenience, you can [download the full run](data/simulation.zip) as a 
 
 Once the simulation has finished, navigate to the `swarm_60` directory (or the one you have selected) and list the directory.
 
-<p class="notice--info">Question: How many <b>gso_*</b> files have been generated? Which one corresponds to the last step of the simulation?</p>
+<p class="notice--info"><strong>Question:</strong> How many <b>gso_*</b> files have been generated? Which one corresponds to the last step of the simulation?</p>
 
 
 ### 5.3. Generating models
@@ -355,7 +355,7 @@ Open the best predicted model for this swarm in PyMOL and have a look.
 pymol swarm_60/lightdock_115.pdb
 ```
 
-<p class="notice--info">Question: How does this model look in general? What about the side chains?</p>
+<p class="notice--info"><strong>Question:</strong> How does this model look in general? What about the side chains?</p>
 
 
 ## 6. Analysis
@@ -442,7 +442,6 @@ Which leaves a L-RMSD of 22.7Å.
 See the calculated L-RMSDs:
 </summary>
 <p class="notice--success">
-LightDock:<br>
 swarm_22_112.pdb 22.551&Aring;<br>
 swarm_37_11.pdb  11.850&Aring;<br>
 swarm_39_11.pdb  13.424&Aring;<br>
@@ -457,7 +456,7 @@ swarm_37_83.pdb  25.857&Aring;<br>
 </details>
 <hr>
 
-<p class="notice--info">Question: Which is the best structure in terms of L-RMSD in the LightDock ranking?</p>
+<p class="notice--info"><strong>Question:</strong> Which is the best structure in terms of L-RMSD in the LightDock ranking?</p>
 
 In CAPRI, the L-RMSD value defines the quality of a model:
 
@@ -466,7 +465,7 @@ In CAPRI, the L-RMSD value defines the quality of a model:
 * medium quality model: L-RMSD<5Å
 * high quality model: L-RMSD<1Å
 
-<p class="notice--info">Question: What is the quality of these models? Did any model pass the acceptable threshold?</p>
+<p class="notice--info"><strong>Question:</strong> What is the quality of these models? Did any model pass the acceptable threshold?</p>
 
 
 ## 7. Conclusions
