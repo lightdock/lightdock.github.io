@@ -87,9 +87,9 @@ lightdock3.py -v
 
 and to see an output similar to this:
 
-```bash
+<pre style="background-color:#DAE4E7">
 lightdock3 0.9.0
-```
+</pre>
 
 #### 3.1.2. Jupyter Notebook and Google Colab
 
@@ -251,9 +251,9 @@ lightdock3_setup: error: the following arguments are required: receptor_pdb_file
 
 The setup command has generated several files and directories:
 
-<span class="notice--info">What is the content of the **setup.json** file?</span>
+<p class="notice--info">Question: What is the content of the **setup.json** file?</p>
 
-<span class="notice--info">What does the **init** directory contains?</span>
+<p class="notice--info">Question: What does the **init** directory contains?</p>
 
 We may visualize the distribution of swarms over the receptor:
 
@@ -268,7 +268,7 @@ pymol lightdock_3x29_receptor_membrane.pdb init/swarm_centers.pdb
     <br><br>
 </center>
 
-<span class="notice--info">Is this a regid-body or a flexible simulation?</span>
+<p class="notice--info">Question: Is this a regid-body or a flexible simulation?</p>
 
 <hr>
 
@@ -362,7 +362,7 @@ Open the best predicted model for this swarm in PyMOL and have a look.
 pymol swarm_60/lightdock_115.pdb
 ```
 
-<span class="notice--info">How does this model look in general? What about the side chains?</span>
+<p class="notice--info">Question: How does this model look in general? What about the side chains?</p>
 
 <hr>
 
