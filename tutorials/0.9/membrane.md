@@ -51,7 +51,7 @@ LightDock protocol is divided in two main steps: **setup** and **simulation**. O
 <center>
     <img src="4g6m_restraints.png">
     <br>
-    <b>Fig.2</b> A receptor surface showing only two swarms. Each swarm contains a set of glowworms representing a possible receptor-ligand pose.
+    <b>Fig.2</b> A receptor protein showing only two swarms. Each swarm (orange mesh sphere) contains a set of glowworms representing a possible receptor-ligand pose.
     <br><br>
 </center>
 
@@ -249,7 +249,7 @@ The setup command has generated several files and directories:
 
 <p class="notice--info"><strong>Question:</strong> What is the content of the <b>setup.json</b> file?</p>
 
-<p class="notice--info"><strong>Question:</strong> What does the <b>init</b> directory contains?</p>
+<p class="notice--info"><strong>Question:</strong> What does the <b>init</b> directory contain?</p>
 
 We may visualize the distribution of swarms over the receptor:
 
