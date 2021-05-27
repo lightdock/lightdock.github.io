@@ -138,8 +138,7 @@ We will make use of the 3X29 complex simulated in a membrane lipid bilayer from 
 
 First, browse the [3X29 complex page](http://memprotmd.bioch.ox.ac.uk/_ref/PDB/3x29/_sim/3x29_default_dppc/) at MemProtMD and locate the `Data Download` section.
 
-<a href="http://memprotmd.bioch.ox.ac.uk/data/memprotmd/simulations/3x29_default_dppc/files/structures/cg.pdb" target="_blank">
-Download the PDB file corresponding to the Coarse-grained snapshot (MARTINI representation)</a>
+**Download the PDB file corresponding to the Coarse-grained snapshot (MARTINI representation) of the [3X29](http://memprotmd.bioch.ox.ac.uk/data/memprotmd/simulations/3x29_default_dppc/files/structures/cg.pdb) complex and rename it to `3x29_default_dppc-coarsegrained.pdb`.**
 
 This file in PDB format contains the [MARTINI](http://cgmartini.nl/) coarse-grained (CG) representation of the phospholipid bilayer membrane and the protein complex. We will use the phosphate beads as the boundary for the transmembrane region for filtering the sampling region of interest in LightDock.
 
@@ -182,6 +181,191 @@ save 3x29_receptor_membrane.pdb, all
 The last PyMOL command will save the aligned atomistic 3X29 receptor to the CG lipid bilayer: <a href="data/3x29_receptor_membrane.pdb">3x29_receptor_membrane.pdb</a>.
 
 <hr>
+
+## 5. LightDock simulation
+
+### 5.1. Simulation set up
+
+The fist step in any LightDock simulation is *setup*. We will make use of `lightdock3_setup.py` command to initialize our 3X29 membrane simulation and the required input data is:
+
+* [Receptor structure PDB file](data/3x29_receptor_membrane.pdb)
+* [Ligand structure PDB file](3x29_ligand.pdb)
+
+Use the `lightdock3_setup.py` command to set up the LightDock simulation:
+
+```bash
+lightdock3_setup.py 3x29_receptor_membrane.pdb 3x29_ligand.pdb --noxt --noh --membrane
+```
+
+In short, we are indicating to the setup command to use `3x29_receptor_membrane.pdb` as the receptor partner, `3x29_ligand.pdb` as the ligand, to skip `NOXT` and hydrogen atoms and to detect membrane beads with the `--membrane` flag. The output of the command should look similar to this:
+
+```bash
+[lightdock3_setup] INFO: Ignoring OXT atoms
+[lightdock3_setup] INFO: Ignoring Hydrogen atoms
+[lightdock3_setup] INFO: Reading structure from 3x29_receptor_membrane.pdb PDB file...
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue GLN.61
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue GLN.63
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue LYS.65
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue LEU.66
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue ASP.68
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue HIS.76
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue MET.95
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue MET.102
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue LYS.103
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue LYS.115
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue ARG.117
+[lightdock3_setup] INFO: 1608 atoms, 601 residues read.
+[lightdock3_setup] INFO: Ignoring OXT atoms
+[lightdock3_setup] INFO: Ignoring Hydrogen atoms
+[lightdock3_setup] INFO: Reading structure from 3x29_ligand.pdb PDB file...
+[lightdock3_setup] INFO: 933 atoms, 117 residues read.
+[lightdock3_setup] INFO: Calculating reference points for receptor 3x29_receptor_membrane.pdb...
+[lightdock3_setup] INFO: Reference points for receptor found, skipping
+[lightdock3_setup] INFO: Done.
+[lightdock3_setup] INFO: Calculating reference points for ligand 3x29_ligand.pdb...
+[lightdock3_setup] INFO: Reference points for ligand found, skipping
+[lightdock3_setup] INFO: Done.
+[lightdock3_setup] INFO: Saving processed structure to PDB file...
+[lightdock3_setup] INFO: Done.
+[lightdock3_setup] INFO: Saving processed structure to PDB file...
+[lightdock3_setup] INFO: Done.
+[lightdock3_setup] INFO: Calculating starting positions...
+[lightdock3_setup] INFO: Generated 62 positions files
+[lightdock3_setup] INFO: Done.
+[lightdock3_setup] INFO: Number of calculated swarms is 62
+[lightdock3_setup] INFO: Preparing environment
+[lightdock3_setup] INFO: Done.
+[lightdock3_setup] INFO: LightDock setup OK
+```
+
+In previous versions of LightDock, the number of swarms of the simulated was given by the user (typically around 400), but since version `0.9.0`, the number of swarms of the simulation is automatically calculated depending on the surface area of the receptor structure. However, the number of swarms can be fixed by the user using the `-s` flag for reproducibility of old results purpose. Another difference with previous versions is that the number of glowworms is now default to 200. This value has been extensively tested on our previous work, but it may be defined by the user as well using the `-g` flag.
+
+A complete list of the `lightdock3_setup.py` command options might be obtained executing the command without arguments or with the `--help` flag:
+
+```bash
+usage: lightdock3_setup [-h] [-s SWARMS] [-g GLOWWORMS] [--seed_points STARTING_POINTS_SEED] [--noxt] [--noh] [--verbose_parser] [-anm] [--seed_anm ANM_SEED] [-ar ANM_REC]
+                        [-al ANM_LIG] [-r restraints] [-membrane] [-transmembrane] [-sp] [-sd SURFACE_DENSITY] [-sr SWARM_RADIUS]
+                        receptor_pdb_file ligand_pdb_file
+lightdock3_setup: error: the following arguments are required: receptor_pdb_file, ligand_pdb_file
+```
+
+The setup command has generated several files and directories:
+
+<span class="notice--info">What is the content of the **setup.json** file?</span>
+
+<span class="notice--info">What does the **init** directory contains?</span>
+
+We may visualize the distribution of swarms over the receptor:
+
+```bash
+pymol lightdock_3x29_receptor_membrane.pdb init/swarm_centers.pdb
+```
+
+<center>
+    <img src="3x29_membrane_swarms.gif">
+    <br>
+    <b>Fig.5</b> Distribution of swarms in the current simulation.
+    <br><br>
+</center>
+
+<span class="notice--info">Is this a regid-body or a flexible simulation?</span>
+
+<hr>
+
+### 5.2. Running the simulation
+
+The simulation is ready to run at this point. **The number of swarms after focusing on the cytosolic region of the membrane is 62.**
+
+LightDock optimization strategy (using the GSO algorithm) is agnostic of the scoring function (force-field). There are several scoring functions available at LightDock, from atomistic to coarse-grained. In this tutorial we will make use of `fastdfire`, which is the implementation of [DFIRE](https://doi.org/10.1110/ps.0217002) using the Python C API and the default one if no scoring function is specified by the user. Find [here](https://lightdock.org/tutorials/basics#32-available-scoring-functions) a complete list of the current supported scoring functions by LightDock.
+
+Simulation is the most time-consuming part of the protocol. For that reason, we will only simulate one of the 62 total swarms. Pick a swarm number between [0..61] and use that id in the `-l` argument:
+
+```bash
+lightdock3.py setup.json 100 -c 1 -s fastdfire -l 60
+```
+
+In the command above, we specify the JSON file of the simulation (`setup.json`), the number of steps of the simulation (`100`), the number of CPU cores to use (`-c 1`), the scoring function (`-s fastdfire`). If no `-l` argument is provided, the protocol would simulate all the swarms.
+
+For your convenience, you can [download the full run](data/simulation.zip) as a compressed zip file (45MB).
+
+Once the simulation has finished, navigate to the `swarm_60` directory (or the one you have selected) and list the directory.
+
+<span class="notice--info">How many `gso_*` files have been generated? Which one corresponds to the last step of the simulation?</span>
+
+<hr>
+
+### 5.3. Generating models
+
+Once the simulation has finished successfully, it is time to generate the predicted models. For each swarm, there is a `gso_100.out` file containing the information to generate as many models as `glowworms` were defined in the simulation (200 in this tutorial). The command in charge of generating the models is `lgd_generate_conformations.py`.
+
+Pick a swarm folder and generate the 200 models simulated as in step 100:
+
+```bash
+lgd_generate_conformations.py 3x29_receptor_membrane.pdb 3x29_ligand.pdb swarm_60/gso_100.out 200
+```
+
+You should see an output similar to this:
+
+```bash
+[generate_conformations] INFO: Reading ../lightdock_3x29_receptor_membrane.pdb receptor PDB file...
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue GLN.61
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue GLN.63
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue LYS.65
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue LEU.66
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue ASP.68
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue HIS.76
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue MET.95
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue MET.102
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue LYS.103
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue LYS.115
+[pdb] WARNING: Possible problem: [SideChainError] Incomplete sidechain for residue ARG.117
+[generate_conformations] INFO: 1608 atoms, 601 residues read.
+[generate_conformations] INFO: Reading ../lightdock_3x29_ligand.pdb ligand PDB file...
+[generate_conformations] INFO: 933 atoms, 117 residues read.
+[generate_conformations] INFO: Read 200 coordinate lines
+[generate_conformations] INFO: Generated 200 conformations
+```
+
+<hr>
+
+### 5.4. Clustering models
+
+To remove very similar and redundant models in the same swarm, we will cluster the 200 generated models:
+
+```bash
+lgd_cluster_bsas.py swarm_60/gso_100.out
+```
+
+After a verbose output of the command above, a new file `cluster.repr` is generated inside the `swarm_60` folder. This file should look like this:
+
+<pre style="background-color:#DAE4E7">
+0:3:26.80832:115:lightdock_115.pdb
+1:9:24.45152:42:lightdock_42.pdb
+2:62:22.70320:37:lightdock_37.pdb
+3:35:20.35832:0:lightdock_0.pdb
+4:41:16.69347:38:lightdock_38.pdb
+5:3:15.71026:79:lightdock_79.pdb
+6:7:13.89057:72:lightdock_72.pdb
+7:7:11.84427:164:lightdock_164.pdb
+8:1: 8.69611:92:lightdock_92.pdb
+9:1: 2.92199:137:lightdock_137.pdb
+10:22:-0.00771:95:lightdock_95.pdb
+11:2:-24.59441:93:lightdock_93.pdb
+12:7:-31.35821:57:lightdock_57.pdb
+</pre>
+
+Each line represents a different cluster and lines are sorted from best to worst energy. For each line, there is information about the `cluster id`, the number of structures in the cluster, the best energy of the cluster, the `glowworm id` of the model with best energy and the PDB file name of the structure with best energy.
+
+Open the best predicted model for this swarm in PyMOL and have a look.
+
+```bash
+pymol swarm_60/lightdock_115.pdb
+```
+
+<span class="notice--info">How does this model look in general? What about the side chains?</span>
+
+<hr>
+
 
 
 [link-pymol]: https://www.pymol.org/ "PyMOL"
