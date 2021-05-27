@@ -290,7 +290,7 @@ For your convenience, you can [download the full run](data/simulation.zip) as a 
 
 Once the simulation has finished, navigate to the `swarm_60` directory (or the one you have selected) and list the directory.
 
-<span class="notice--info">How many `gso_*` files have been generated? Which one corresponds to the last step of the simulation?</span>
+<p class="notice--info">Question: How many `gso_*` files have been generated? Which one corresponds to the last step of the simulation?</p>
 
 <hr>
 
@@ -366,7 +366,127 @@ pymol swarm_60/lightdock_115.pdb
 
 <hr>
 
+## 6. Analysis
 
+In the CAPRI (Critical Prediction of Interactions) [Méndez et al. 2003](https://doi.org/10.1002/prot.10393) experiment, one of the parameters used is the **Ligand root-mean-square deviation** (L-RMSD) which is calculated by superimposing the structures onto the backbone atoms of the receptor and calculating the RMSD on the backbone residues of the ligand. To calculate the L-RMSD it is possible to either use the software [Profit](http://www.bioinf.org.uk/software/profit/) or [Pymol](https://pymol.org/2/).
+
+We will have a quick look at the top 10 models predicted by LightDock and compare them with the [3X29 complex reference](data/3x29_reference.pdb). Below you will find a table with the top 10 models according to the LightDock ranking (click on a name to download):
+
+| Top  |  Docking (LightDock) |
+| ---- | ------------- |
+| 1 | [swarm_22_112.pdb](data/lightdock_top10/swarm_22_112.pdb) | 
+| 2 | [swarm_37_11.pdb](data/lightdock_top10/swarm_37_11.pdb) |
+| 3 | [swarm_39_11.pdb](data/lightdock_top10/swarm_39_11.pdb) |
+| 4 | [swarm_60_115.pdb](data/lightdock_top10/swarm_60_115.pdb) |
+| 5 | [swarm_54_167.pdb](data/lightdock_top10/swarm_54_167.pdb) |
+| 6 | [swarm_37_34.pdb](data/lightdock_top10/swarm_37_34.pdb) |
+| 7 | [swarm_55_181.pdb](data/lightdock_top10/swarm_55_181.pdb) |
+| 8 | [swarm_60_42.pdb](data/lightdock_top10/swarm_60_42.pdb) |
+| 9 | [swarm_37_169.pdb](data/lightdock_top10/swarm_37_169.pdb) |
+| 10 | [swarm_37_83.pdb](data/lightdock_top10/swarm_37_83.pdb) |
+
+You can also download as compressed files:
+
+* [LightDock docking top 10 models](data/lightdock_top10.zip)
+
+<hr>
+
+### 6.1. Visualizing and aligning in PyMOL
+
+First, open the target and reference structures in PyMOL (in this case top 1 from LightDock ranking):
+
+```bash
+pymol swarm_22_112.pdb 3x29_reference.pdb
+```
+
+Color by chain (and leave orange the membrane beads):
+
+```
+util.cbc
+color orange, swarm_22_112 and name BJ
+```
+
+Align both structures to the receptor partner (chain A):
+
+```
+align swarm_22_112 and chain A, 3x29_reference and chain A
+```
+
+Center visualization:
+
+```
+z vis
+```
+
+<hr>
+
+### 6.2. Calculating L-RMSD in PyMOL
+
+From the alignment of the previous section, we can easily calculate the L-RMSD in PyMOL:
+
+First, remove all `segid` information to let PyMOL correctly find the target chains:
+
+```
+alter all, segi = ' '  
+```
+
+And now calculate L-RMSD using `rms_cur` command:
+
+```
+rms_cur swarm_22_112 and chain B, 3x29_reference and chain B
+```
+
+Which leaves a L-RMSD of 22.7Å.
+
+<center>
+    <img src="pymol_lrmsd.png">
+    <br>
+    <b>Fig.6</b> L-RMSD calculation in PyMOL of the top 1 model against the 3X29 reference structure.
+    <br><br>
+</center>
+
+<p class="notice--info">Repeat the same process for more structure on the top 10 ranking from LightDock</p>
+
+<details style="background-color:#DAE4E7">
+<summary style="bold">
+See the calculated L-RMSDs:
+</summary>
+<pre>
+LightDock:
+swarm_22_112.pdb 22.551&Aring;
+swarm_37_11.pdb  11.850&Aring;
+swarm_39_11.pdb  13.424&Aring;
+swarm_60_115.pdb  5.735&Aring;
+swarm_54_167.pdb 25.031&Aring;
+swarm_37_34.pdb  28.587&Aring;
+swarm_55_181.pdb 20.470&Aring;
+swarm_60_42.pdb  10.801&Aring;
+swarm_37_169.pdb 14.894&Aring;
+swarm_37_83.pdb  25.857&Aring;
+</pre>
+</details>
+<hr>
+
+<p class="notice--info">Question: Which is the best structure in terms of L-RMSD in the LightDock ranking?</p>
+
+In CAPRI, the L-RMSD value defines the quality of a model:
+
+* incorrect model: L-RMSD>10Å
+* acceptable model: L-RMSD<10Å
+* medium quality model: L-RMSD<5Å
+* high quality model: L-RMSD<1Å
+
+<p class="notice--info">Question: What is the quality of these models? Did any model pass the acceptable threshold?</p>
+
+<hr>
+
+## 7. Conclusions
+
+We have demonstrated the use of membrane information on a protein docking simulation using a coarse-grained protocol.
+
+It is of paramount importance not to blindly trust docking predictions and rankings. Always inspect the results and predictions and further assess their quality using more metrics and different criteria if possible. 
+
+<hr>
 
 [link-pymol]: https://www.pymol.org/ "PyMOL"
 [link-lightdock]: https://lightdock.org "LightDock"
