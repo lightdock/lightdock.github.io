@@ -472,7 +472,11 @@ In CAPRI, the L-RMSD value defines the quality of a model:
 
 In case there is no membrane simulated in the [MemProtMD](http://memprotmd.bioch.ox.ac.uk) database, we can still generate an approximated version using the [Membrane Builder online tool](https://server.lightdock.org/membranator) (a.k.a. *Membranator*).
 
-Go to [Membrane Builder](https://server.lightdock.org/membranator) and use [3x29_receptor.pdb](data/3x29_receptor.pdb) structure in the form and pick a residue which will be the boundary of the artificial coarse-grained generated membrane (in the form is called **Anchor residue**). In Figure 7 we selected residue `A.LEU.50`. You may leave the rest of the fields as default.
+Go to [Membrane Builder](https://server.lightdock.org/membranator) and use [3x29_receptor.pdb](data/3x29_receptor.pdb) structure in the form and pick a residue which will be the boundary of the artificial coarse-grained generated membrane (in the form is called **Anchor residue**). In Figure 7 we selected residue `A.LEU.50`, but go check the [UniProt entry for this protein](https://www.uniprot.org/uniprot/Q3UNX6).
+
+<p class="notice--info"><strong>Question:</strong> A better anchor residue might be A.LEU.27. Why?</p>
+
+You may leave the rest of the fields as default.
 
 <center>
     <img src="membranator.png">
@@ -496,7 +500,7 @@ Click on the **Download structure** link and save the PDB structure (by default 
 
 At this point, you may go back to [section 5](#5-lightdock-simulation) and repeat the simulation but using this new structure as the receptor. A different approach could be to use the [Lightdock server](https://server.lightdock.org).
 
-Using the LightDock server is really easy and it does not require registration for [quick tests](https://server.lightdock.org/job/quick/step/1), but blind docking is only available upon registration. Nonetheless, we have prepared a [simulation for you](https://server.lightdock.org/job/run/c5e7c59d8bf0f3a7738d25345ad75dc78b35135b0a14452d8be53f91c70ef0ac).
+Using the LightDock server is really easy and it does not require registration for [quick tests](https://server.lightdock.org/job/quick/step/1), but blind docking is only available upon registration. Nonetheless, we have prepared a [simulation for you](https://server.lightdock.org/job/run/7309efc9f5032c369926f9f0a61a443640d29f74d3bf4099ac1da18e5185155b).
 
 <p class="notice--info">Download the results and have a look at the <em>top</em> directory</p>
 
@@ -505,9 +509,11 @@ Using the LightDock server is really easy and it does not require registration f
 
 ## 8. Conclusions
 
-We have demonstrated the use of membrane information on a protein docking simulation using a coarse-grained protocol.
+We have demonstrated an integrative modeling protocol for membrane-associated protein assemblies that accounts for the topological information provided by the membrane in the modeling process.
 
-It is of paramount importance not to blindly trust docking predictions and rankings. Always inspect the results and predictions and further assess their quality using more metrics and different criteria if possible. 
+In general, some knowledge of the putative binding interface is known to help the modeling of biomolecular interactions, often allowing to generate more accurate models. 
+
+It is of paramount importance not to blindly trust docking predictions and rankings. Always inspect the results and predictions and further assess their quality using more metrics and validate your results (if possible) agains experimental data.
 
 <hr>
 
