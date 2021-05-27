@@ -61,3 +61,13 @@ Swarms on the receptor surface can be easily filtered according to regions of in
 For more information about LightDock, please visit the [tutorials section](https://lightdock.org/tutorials/).
 
 <hr>
+
+## 3. Setup/Requirements
+
+In order to run this tutorial you will need to have the following software installed: [LightDock][link-lightdock], [pdb-tools][link-pdbtools] and [PyMOL][link-pymol].
+
+
+
+[link-pymol]: https://www.pymol.org/ "PyMOL"
+[link-lightdock]: https://lightdock.org "LightDock"
+[link-pdbtools]: https://github.com/haddocking/pdb-tools/ "PDB-Tools"
