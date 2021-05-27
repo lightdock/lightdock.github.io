@@ -264,12 +264,12 @@ pymol lightdock_3x29_receptor_membrane.pdb init/swarm_centers.pdb
     <br><br>
 </center>
 
-<p class="notice--info"><strong>Question:</strong> Is this a regid-body or a flexible simulation?</p>
+<p class="notice--info"><strong>Question:</strong> Is this a rigid-body or a flexible simulation?</p>
 
 
 ### 5.2. Running the simulation
 
-The simulation is ready to run at this point. **The number of swarms after focusing on the cytosolic region of the membrane is 62.**
+The simulation is ready to run at this point. **The number of swarms after focusing on the extramembranous region of the membrane protein is of 62.**
 
 LightDock optimization strategy (using the GSO algorithm) is agnostic of the scoring function (force-field). There are several scoring functions available at LightDock, from atomistic to coarse-grained. In this tutorial we will make use of `fastdfire`, which is the implementation of [DFIRE](https://doi.org/10.1110/ps.0217002) using the Python C API and the default one if no scoring function is specified by the user. Find [here](https://lightdock.org/tutorials/basics#32-available-scoring-functions) a complete list of the current supported scoring functions by LightDock.
 
@@ -468,7 +468,35 @@ In CAPRI, the L-RMSD value defines the quality of a model:
 <p class="notice--info"><strong>Question:</strong> What is the quality of these models? Did any model pass the acceptable threshold?</p>
 
 
-## 7. Conclusions
+## 7. What if membrane information is not available?
+
+In case there is no membrane simulated in the [MemProtMD](http://memprotmd.bioch.ox.ac.uk) database, we can still generate an approximated version using the [Membrane Builder online tool](https://server.lightdock.org/membranator) (a.k.a. *Membranator*).
+
+Go to [Membrane Builder](https://server.lightdock.org/membranator) and use [3x29_receptor.pdb](data/3x29_receptor.pdb) structure in the form and pick a residue which will be the boundary of the artificial coarse-grained generated membrane (in the form is called **Anchor residue**). In Figure 7 we selected residue `A.LEU.50`. You may leave the rest of the fields as default.
+
+<center>
+    <img src="membranator.png">
+    <br>
+    <b>Fig.7</b> The Membrane builder online tool.
+    <br><br>
+</center>
+
+Click on **Create membrane** and wait for the output (similar to figure 8).
+
+<center>
+    <img src="membranator_result.png">
+    <br>
+    <b>Fig.8</b> Generated membrane by the Membrane builder online tool.
+    <br><br>
+</center>
+
+Click on the **Download structure** link and save the PDB structure (by default is called `result.pdb`, you may rename it to [3x29_receptor_membranator.pdb](data/3x29_receptor_membranator.pdb)).
+
+<p class="notice--info"><strong>Question:</strong> Why is there a central bead in the generated membrane?</p>
+
+
+
+## 8. Conclusions
 
 We have demonstrated the use of membrane information on a protein docking simulation using a coarse-grained protocol.
 
