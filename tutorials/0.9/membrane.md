@@ -10,7 +10,6 @@ classes: wide
 * table of contents
 {:toc}
 
-<hr>
 
 ## 1. Introduction
 This tutorial demonstrates the use of [LightDock](https://lightdock.org) for predicting the structure of membrane receptor–soluble protein complex using the topological information provided by the membrane to guide the modeling process. We will be following the protocol described in [Roel-Touris *et al*, 2020](https://www.nature.com/articles/s41467-020-20076-5).
@@ -60,7 +59,6 @@ Swarms on the receptor surface can be easily filtered according to regions of in
 
 For more information about LightDock, please visit the [tutorials section](https://lightdock.org/tutorials/).
 
-<hr>
 
 ## 3. Setup/Requirements
 
@@ -130,7 +128,6 @@ Once imported, click on the icon pointed in (B) and upload the required files as
 
 Then, run one by one each of the code cells as several libraries will be installed in the first code cells.
 
-<hr>
 
 ## 4. Data preparation
 
@@ -180,7 +177,6 @@ save 3x29_receptor_membrane.pdb, all
 
 The last PyMOL command will save the aligned atomistic 3X29 receptor to the CG lipid bilayer: <a href="data/3x29_receptor_membrane.pdb">3x29_receptor_membrane.pdb</a>.
 
-<hr>
 
 ## 5. LightDock simulation
 
@@ -251,9 +247,9 @@ lightdock3_setup: error: the following arguments are required: receptor_pdb_file
 
 The setup command has generated several files and directories:
 
-<p class="notice--info">Question: What is the content of the **setup.json** file?</p>
+<p class="notice--info">Question: What is the content of the <b>setup.json</b> file?</p>
 
-<p class="notice--info">Question: What does the **init** directory contains?</p>
+<p class="notice--info">Question: What does the <b>init</b> directory contains?</p>
 
 We may visualize the distribution of swarms over the receptor:
 
@@ -270,7 +266,6 @@ pymol lightdock_3x29_receptor_membrane.pdb init/swarm_centers.pdb
 
 <p class="notice--info">Question: Is this a regid-body or a flexible simulation?</p>
 
-<hr>
 
 ### 5.2. Running the simulation
 
@@ -290,9 +285,8 @@ For your convenience, you can [download the full run](data/simulation.zip) as a 
 
 Once the simulation has finished, navigate to the `swarm_60` directory (or the one you have selected) and list the directory.
 
-<p class="notice--info">Question: How many `gso_*` files have been generated? Which one corresponds to the last step of the simulation?</p>
+<p class="notice--info">Question: How many <b>gso_*</b> files have been generated? Which one corresponds to the last step of the simulation?</p>
 
-<hr>
 
 ### 5.3. Generating models
 
@@ -326,7 +320,6 @@ You should see an output similar to this:
 [generate_conformations] INFO: Generated 200 conformations
 ```
 
-<hr>
 
 ### 5.4. Clustering models
 
@@ -338,21 +331,21 @@ lgd_cluster_bsas.py swarm_60/gso_100.out
 
 After a verbose output of the command above, a new file `cluster.repr` is generated inside the `swarm_60` folder. This file should look like this:
 
-<pre style="background-color:#DAE4E7">
-0:3:26.80832:115:lightdock_115.pdb
-1:9:24.45152:42:lightdock_42.pdb
-2:62:22.70320:37:lightdock_37.pdb
-3:35:20.35832:0:lightdock_0.pdb
-4:41:16.69347:38:lightdock_38.pdb
-5:3:15.71026:79:lightdock_79.pdb
-6:7:13.89057:72:lightdock_72.pdb
-7:7:11.84427:164:lightdock_164.pdb
-8:1: 8.69611:92:lightdock_92.pdb
-9:1: 2.92199:137:lightdock_137.pdb
-10:22:-0.00771:95:lightdock_95.pdb
-11:2:-24.59441:93:lightdock_93.pdb
-12:7:-31.35821:57:lightdock_57.pdb
-</pre>
+<p class="notice--success">
+0:3:26.80832:115:lightdock_115.pdb<br>
+1:9:24.45152:42:lightdock_42.pdb<br>
+2:62:22.70320:37:lightdock_37.pdb<br>
+3:35:20.35832:0:lightdock_0.pdb<br>
+4:41:16.69347:38:lightdock_38.pdb<br>
+5:3:15.71026:79:lightdock_79.pdb<br>
+6:7:13.89057:72:lightdock_72.pdb<br>
+7:7:11.84427:164:lightdock_164.pdb<br>
+8:1:8.69611:92:lightdock_92.pdb<br>
+9:1:2.92199:137:lightdock_137.pdb<br>
+10:22:-0.00771:95:lightdock_95.pdb<br>
+11:2:-24.59441:93:lightdock_93.pdb<br>
+12:7:-31.35821:57:lightdock_57.pdb<br>
+</p>
 
 Each line represents a different cluster and lines are sorted from best to worst energy. For each line, there is information about the `cluster id`, the number of structures in the cluster, the best energy of the cluster, the `glowworm id` of the model with best energy and the PDB file name of the structure with best energy.
 
@@ -364,7 +357,6 @@ pymol swarm_60/lightdock_115.pdb
 
 <p class="notice--info">Question: How does this model look in general? What about the side chains?</p>
 
-<hr>
 
 ## 6. Analysis
 
@@ -389,7 +381,6 @@ You can also download as compressed files:
 
 * [LightDock docking top 10 models](data/lightdock_top10.zip)
 
-<hr>
 
 ### 6.1. Visualizing and aligning in PyMOL
 
@@ -418,7 +409,6 @@ Center visualization:
 z vis
 ```
 
-<hr>
 
 ### 6.2. Calculating L-RMSD in PyMOL
 
@@ -451,19 +441,19 @@ Which leaves a L-RMSD of 22.7Å.
 <summary style="bold">
 See the calculated L-RMSDs:
 </summary>
-<pre>
-LightDock:
-swarm_22_112.pdb 22.551&Aring;
-swarm_37_11.pdb  11.850&Aring;
-swarm_39_11.pdb  13.424&Aring;
-swarm_60_115.pdb  5.735&Aring;
-swarm_54_167.pdb 25.031&Aring;
-swarm_37_34.pdb  28.587&Aring;
-swarm_55_181.pdb 20.470&Aring;
-swarm_60_42.pdb  10.801&Aring;
-swarm_37_169.pdb 14.894&Aring;
-swarm_37_83.pdb  25.857&Aring;
-</pre>
+<p class="notice--success">
+LightDock:<br>
+swarm_22_112.pdb 22.551&Aring;<br>
+swarm_37_11.pdb  11.850&Aring;<br>
+swarm_39_11.pdb  13.424&Aring;<br>
+swarm_60_115.pdb  5.735&Aring;<br>
+swarm_54_167.pdb 25.031&Aring;<br>
+swarm_37_34.pdb  28.587&Aring;<br>
+swarm_55_181.pdb 20.470&Aring;<br>
+swarm_60_42.pdb  10.801&Aring;<br>
+swarm_37_169.pdb 14.894&Aring;<br>
+swarm_37_83.pdb  25.857&Aring;<br>
+</p>
 </details>
 <hr>
 
@@ -478,7 +468,6 @@ In CAPRI, the L-RMSD value defines the quality of a model:
 
 <p class="notice--info">Question: What is the quality of these models? Did any model pass the acceptable threshold?</p>
 
-<hr>
 
 ## 7. Conclusions
 
