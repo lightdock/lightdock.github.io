@@ -1,5 +1,5 @@
 ---
-permalink: /tutorials/embo21/membrane
+permalink: /tutorials/0.9/membrane
 layout: splash
 classes: wide
 
