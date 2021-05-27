@@ -123,7 +123,7 @@ In case of using the provided Colab notebook, go to the [Colab site](https://col
 
 <center>
     <img src="colab.png">
-    <br>
+    <br><br>
 </center>
 
 Once imported, click on the icon pointed in (B) and upload the required files as marked in (C) by the orange arrow. The two required files ([3x29_receptor_membrane.pdb](data/3x29_receptor_membrane.pdb) and [3x29_ligand.pdb](data/3x29_ligand.pdb)) should appear now as in (D). 
@@ -132,6 +132,56 @@ Then, run one by one each of the code cells as several libraries will be install
 
 <hr>
 
+## 4. Data preparation
+
+We will make use of the 3X29 complex simulated in a membrane lipid bilayer from the MemProtMD database ([Newport _et al._, 2018](https://doi.org/10.1093/nar/gky1047)).
+
+First, browse the [3X29 complex page](http://memprotmd.bioch.ox.ac.uk/_ref/PDB/3x29/_sim/3x29_default_dppc/) at MemProtMD and locate the `Data Download` section.
+
+<a href="http://memprotmd.bioch.ox.ac.uk/data/memprotmd/simulations/3x29_default_dppc/files/structures/cg.pdb" target="_blank">
+Download the PDB file corresponding to the Coarse-grained snapshot (MARTINI representation)</a>
+
+This file in PDB format contains the [MARTINI](http://cgmartini.nl/) coarse-grained (CG) representation of the phospholipid bilayer membrane and the protein complex. We will use the phosphate beads as the boundary for the transmembrane region for filtering the sampling region of interest in LightDock.
+
+<center>
+    <img src="3x29_cg.png">
+    <br>
+    <b>Fig.3</b> MARTINI Coarse-grained representation of the 3X29 complex in a lipid bilayer. Protein is depicted as <span style="color:dodgerblue">blue</span> surface, CG beads for phospholipids in white, except for NC3 beads in <span style="color:darkturquoise">turquoise</span> and PO4 beads in <span style="color:orange">orange</span>.
+    <br><br>
+</center>
+
+We have prepared a Python script to parse, rename and remove non-necessary beads for the membrane protocol in LightDock: <a href="data/prepare4lightdock.py">prepare4lightdock.py</a>. You will need to execute it in your terminal using the <a href="data/3x29_default_dppc-coarsegrained.pdb">3x29_default_dppc-coarsegrained.pdb</a> PDB file as input:
+
+```bash
+python3 prepare4lightdock.py 3x29_default_dppc-coarsegrained.pdb membrane_cg.pdb
+```
+
+The output of this script is the <a href="data/membrane_cg.pdb">membrane_cg.pdb</a> PDB file (Figure 4).
+
+<center>
+    <img src="3x29_mmb.png">
+    <br>
+    <b>Fig.4</b> Lipid bilayer membrane and protein after using the `prepare4lightdock.py` script. Protein is depicted as <span style="color:dodgerblue">blue</span> surface (only CA), membrane beads ready for LightDock in <span style="color:orange">orange</span>.
+    <br><br>
+</center>
+
+The last step will be to open the just generated <a href="data/membrane_cg.pdb">membrane_cg.pdb</a> file in PyMOL to align the atomistic representation of the <a href="data/3x29_receptor.pdb">3X29 receptor partner</a> to the membrane CG bilayer:
+
+```bash
+pymol 3x29_receptor.pdb membrane_cg.pdb
+```
+
+Now execute the following commands on PyMOL to align the membrane with the atomistic receptor and saving the resulting PDB structure:
+
+```
+align 3x29_receptor and name CA, membrane_cg and name CA
+remove membrane_cg and name CA
+save 3x29_receptor_membrane.pdb, all
+```
+
+The last PyMOL command will save the aligned atomistic 3X29 receptor to the CG lipid bilayer: <a href="data/3x29_receptor_membrane.pdb">3x29_receptor_membrane.pdb</a>.
+
+<hr>
 
 
 [link-pymol]: https://www.pymol.org/ "PyMOL"
