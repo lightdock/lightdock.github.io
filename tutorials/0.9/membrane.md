@@ -504,10 +504,19 @@ Using the LightDock server is really easy and it does not require registration f
 
 <p class="notice--info">Download the results and have a look at the <em>top</em> directory</p>
 
-<p class="notice--info"><strong>Question:</strong> Do you observe differences between the top structures of this simulation compared to the previous one on this tutorial?</p>
+<p class="notice--info"><strong>Question:</strong> Do you observe differences between the top structures of this simulation compared to the previous one on this tutorial? (Hint: see next section)</p>
 
 
-## 8. Conclusions
+## 8. Bonus track: refinement
+
+LightDock can perform rigid-body docking (by default) or include flexibility of the backbone through the [Anisotropic Network Model](https://en.wikipedia.org/wiki/Anisotropic_Network_Model) if activated (`anm` flag). In both scenarios, the scoring function helps removing high-clashing poses from the prediction pool, but this does not guarantee an optimal packing of side-chains or few clashes. A common strategy to avoid these inaccuracies is to **refine the top predicted structures**.
+
+In our work *[Integrative modeling of membrane-associated protein assemblies](https://www.nature.com/articles/s41467-020-20076-5)*, the top predicted structures by LightDock were further refined using the well-known [HADDOCK web server](https://wenmr.science.uu.nl/haddock2.4/). In a [twin tutorial](https://www.bonvinlab.org/education/HADDOCK24/LightDock-membrane-proteins/), we describe step by step the [refinement protocol for removing clashes at the interface of protein complexes](https://www.bonvinlab.org/education/HADDOCK24/LightDock-membrane-proteins/#haddock-refinement) in HADDOCK. You can learn more about the HADDOCK software and all its applications at the [official education site](https://www.bonvinlab.org/education/HADDOCK24/).
+
+In the LightDock server, we have added an extra step to perform a quick relaxation molecular dynamics simulation for the top 5 or top 10 predicted structures by LightDock. The amazing [OpenMM toolkit](https://openmm.org/) is used for this purpose.
+
+
+## 9. Conclusions
 
 We have demonstrated an integrative modeling protocol for membrane-associated protein assemblies that accounts for the topological information provided by the membrane in the modeling process.
 
