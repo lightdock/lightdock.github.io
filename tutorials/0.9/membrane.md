@@ -185,7 +185,7 @@ The last PyMOL command will save the aligned atomistic 3X29 receptor to the CG l
 The fist step in any LightDock simulation is *setup*. We will make use of `lightdock3_setup.py` command to initialize our 3X29 membrane simulation and the required input data is:
 
 * [Receptor structure PDB file](data/3x29_receptor_membrane.pdb)
-* [Ligand structure PDB file](3x29_ligand.pdb)
+* [Ligand structure PDB file](data/3x29_ligand.pdb)
 
 Use the `lightdock3_setup.py` command to set up the LightDock simulation:
 
