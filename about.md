@@ -19,7 +19,7 @@ The LightDock framework is highly versatile, with many options that can be furth
 * Shared-memory (`multiprocessing`) and distributed-memory (`MPI`).
 
 ## License
-LightDock is available under [GPLv3 License](https://github.com/lightdock/lightdock/blob/master/LICENSE). If you have any doubt, please don't hesitate to contact us at <b.jimenezgarcia@uu.nl>.
+LightDock is available under [GPLv3 License](https://github.com/lightdock/lightdock/blob/master/LICENSE). If you have any doubt, please don't hesitate to contact us at <lightdocking@gmail.com>.
 
 ## With the support of:
 
