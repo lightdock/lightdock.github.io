@@ -17,7 +17,8 @@ title: "Simple Docking"
 The simplest way to perform a protein-protein docking in LightDock is to use default parameters and to only provide two [PDB](http://www.rcsb.org/pdb/static.do?p=file_formats/pdb/index.html) files for both receptor and ligand. In this basic example, we will model the [2UUY](https://www.rcsb.org/structure/2UUY) complex starting from its unbound constituents.
 
 
-## Copying the data
+## 1. Preparation
+
 Create a directory and copy the sample data provided.
 
 ```bash
@@ -27,7 +28,7 @@ curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/t
 curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/2UUY/2UUY_lig.pdb
 ```
 
-## LightDock setup
+## 2. LightDock setup
 
 Please execute the `lightdock3_setup.py` command to prepare your LightDock simulation, an output similar to this will be displayed:
 
@@ -90,6 +91,7 @@ A few seconds after we will see an output similar to this:
 ```
 
 **NOTE** For a detailed description of the setup stage, please check the [LightDock basics](https://lightdock.org/tutorials/0.9.1/basics#2-setup-a-simulation) 
+{: .notice--warning}
 
 If the setup is successful, we will find a file called `setup.json`, which includes all the details about this LightDock simulation.
 
@@ -120,6 +122,7 @@ If the setup is successful, we will find a file called `setup.json`, which inclu
 This file is meant to be used for the simulation and reproducibility purposes. It can be also used to double check your parameters prior running the simulation starts.
 
 **IMPORTANT** You should not modify it unless you know what you are doing ;-)
+{: .notice--info}
 
 Besides of `setup.json`, we find that several `lightdock*` files have been generated as well as an `init/` and several `swarm_*` directories.
 
@@ -128,9 +131,9 @@ The `init/` directory contains both the exact positions of the swarms (`swarm_ce
 Once the simulation is finished, the results will appear inside each of the `swarm_*` directories.
 
 **TIP** If for any reason the setup stage fails, please remove all generated files before trying again. E.g: `rm -rf lightdock* setup.json init/ swarm_*`
+{: .notice--info}
 
-
-## LightDock simulation
+## 3. LightDock simulation
 Once the setup is successful, execute the `lightdock3.py` command in order to run your first LightDock simulation. If you execute `lightdock3.py` without arguments a help menu will appear.
 
 ```bash
@@ -200,7 +203,7 @@ As you may have noticed, we have instructed LightDock to use only 1 CPU core (`-
 **NOTE** For more information about the simulation stage, please check the [LightDock basics](https://lightdock.org/tutorials/0.9.1./basics#3-run-a-simulation)
 
 
-## LightDock results
+## 4. LightDock results
 
 If the run is successful and the *Kraken* is back to sleep, we will find the output files for each of the independent swarms. In this case since we only simulated **1 swarm**, the results will be inside `swarm_0`. The output files will be named as `gso_X.out`, being `X` is the step number.
 
@@ -219,7 +222,7 @@ head -2 swarm_0/gso_100.out
 ( 8.3619938, -9.0568297, -23.0839562, -0.6368250, -0.1214085,  0.4488531, -0.6150161,  5.2922640,  4.6293871,  5.1679589,  3.6238049,  3.9717360,  7.2390017,  4.5821031,  5.4562578,  1.9734713,  2.9626742,  1.0323748,  5.8207747,  3.4377706,  2.6552282,  4.8705878,  3.0931470,  3.4670304,  3.9487060,  2.4948334,  4.5626560)    0    0  27.83190014  6 0.320  18.65982945
 ```
 
-## Generate predicted models
+## 5. Generate predicted models
 
 Finally, to generate the resulting docked structures in PDB format, we will use the script `lgd_generate_conformations.py`. We will need to run this script for each of the generated swarms and provide four different arguments:
 
@@ -257,9 +260,12 @@ Inside the `swarm_0` folder, we will find 200 new PDB structures corresponding t
 
 You can find all the simulation data already generated here: [simulation.tgz](/tutorials/0.9.1/simple_docking/data/simulation.tgz)
 
+**Attention!** In this simple example we did not cluster predicted structures for the different swarms (`swarm_0` in this case), but **for realistic simulations it is critical to always cluster intra-swarm structures**.
+{: .notice--danger}
+
 <br>
 
-# References
+# 6. References
 For a more complete description of the algorithm as well as different tutorials, please refer to [LightDock](https://lightdock.org/), or check the following references:
 
 - **Integrative Modeling of Membrane-associated Protein Assemblies**<br>
