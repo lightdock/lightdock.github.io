@@ -17,6 +17,13 @@ feature_row:
     url: "/tutorials/0.9.1/basics"
     btn_label: "Go"
     btn_class: "btn--primary"
+  - image_path: /tutorials/0.9.1/images/tree.png
+    alt: "Changelog"
+    title: "Previous versions"
+    excerpt: "Find tutorials for previous versions of LightDock."
+    url: "/tutorials/previous"
+    btn_label: "Go"
+    btn_class: "btn--primary"
   - image_path: /tutorials/0.9.1/images/faq.jpg 
     alt: "FAQ"
     title: "FAQ"
