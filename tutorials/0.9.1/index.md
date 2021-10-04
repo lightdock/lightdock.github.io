@@ -15,21 +15,21 @@ feature_row:
     title: "LightDock Basics"
     excerpt: "Here you can learn the basic principles of the framework, as well as important details on how to address your modeling."
     url: "/tutorials/0.9.1/basics"
-    btn_label: "Go"
+    btn_label: "Learn the basics"
     btn_class: "btn--primary"
   - image_path: /tutorials/0.9.1/images/tree.png
     alt: "Changelog"
     title: "Previous versions"
     excerpt: "Find tutorials for previous versions of LightDock."
     url: "/tutorials/previous"
-    btn_label: "Go"
+    btn_label: "Take me to the past"
     btn_class: "btn--primary"
   - image_path: /tutorials/0.9.1/images/faq.jpg 
     alt: "FAQ"
     title: "FAQ"
-    excerpt: "Frequently Asked Questions."
+    excerpt: "Browse previous or frequently asked questions by other LightDock users."
     url: "/tutorials/0.9.1/faq"
-    btn_label: "Go"
+    btn_label: "Browse FAQ"
     btn_class: "btn--primary"
 
 simple_docking:
