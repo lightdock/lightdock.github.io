@@ -8,7 +8,7 @@ title: "Simple Docking"
 <center><h1 style="margin-top:40px">Simple protein-protein docking example</h1></center><br>
 
 <center>
-    <img src="2uuy.png">
+    <img src="/tutorials/0.9.1/simple_docking/2uuy.png">
 </center>
 
 * table of contents
@@ -249,7 +249,7 @@ lgd_generate_conformations.py ../2UUY_rec.pdb ../2UUY_lig.pdb gso_100.out 200
 Inside the `swarm_0` folder, we will find 200 new PDB structures corresponding to the 200 glowworm agents used in the current example. Try opening them on PyMOL and have a quick look at them:
 
 <center>
-    <img src="2uuy_swarm_0.png">
+    <img src="/tutorials/0.9.1/simple_docking/2uuy_swarm_0.png">
 </center>
 
 **Congratulations!** You have successfully run your first docking simulation with LightDock!
