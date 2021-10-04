@@ -16,15 +16,6 @@ excerpt: "The open-source protein docking framework written in Python ([and Rust
 intro: 
   - excerpt: '*Protein-Protein, Protein-DNA and Protein-Peptide docking made easy*'
 
-tutorials:
-  - image_path: /assets/images/tutorials.jpg
-    alt: "Tutorials image"
-    title: "Tutorials"
-    excerpt: 'How to use LightDock in different macromolecular systems.'
-    url: "/tutorials/"
-    btn_label: "Read More"
-    btn_class: "btn--primary"
-
 ---
 
 ![LightDock Docking](assets/images/lightdock_docking.png){: .align-center}
@@ -54,7 +45,7 @@ Alternative ways to install LightDock can be found in the official [GitHub repos
 
 LightDock is able to model different binary systems such as protein-protein, protein-DNA or protein-peptide complexes.
 
-[Learn more!](/tutorials/){: .btn .btn--primary .btn--large}
+[Learn more!](/tutorials/latest){: .btn .btn--primary .btn--large}
 
 
 ## License
