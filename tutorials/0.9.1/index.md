@@ -26,7 +26,7 @@ feature_row:
     btn_class: "btn--primary"
 
 simple_docking:
-  - image_path: /tutorials/0.9.1/faq/images/simple.png
+  - image_path: /tutorials/0.9.1/images/simple.png
     alt: "Simple Docking"
     title: "Simple protein-protein docking example"
     excerpt: "A quick guide about how to setup a protein docking simulation with LightDock."
