@@ -26,7 +26,7 @@ By default LightDock setup considers:
 
 About the number of steps, in the [original publication](https://academic.oup.com/bioinformatics/article/34/1/49/4103399) the number of steps was equal to 200, but quality of the results is not affected if using 100 steps. The reason behind performing 200 steps was for benchmarking the method.
 
-We recommend to use **100 steps of simulation**.
+We recommend using **100 steps of simulation**.
 
 
 ## 2. Setup

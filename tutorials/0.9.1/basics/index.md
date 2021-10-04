@@ -2,7 +2,7 @@
 permalink: /tutorials/0.9.1/basics
 layout: splash
 classes: wide
-
+title: "LightDock Basics"
 ---
 
 <center><h1 style="margin-top:40px">LightDock basics</h1></center><br>
