@@ -10,7 +10,7 @@ header:
 excerpt: "How to use LightDock version [0.9.1](https://github.com/lightdock/lightdock/releases/tag/0.9.1)"
 
 feature_row:
-  - image_path: assets/images/unsplash-gallery-image-1-th.jpg
+  - image_path: /tutorials/0.9.1/images/basics.png
     alt: "LightDock Basics"
     title: "LightDock Basics"
     excerpt: "Here you can learn the basic principles of LightDock framework, as well as important details that can help you on your modeling."
