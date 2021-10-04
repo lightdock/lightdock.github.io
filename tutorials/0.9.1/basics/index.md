@@ -38,20 +38,20 @@ LightDock is a protein-protein, protein-peptide and protein-DNA docking protocol
 In LightDock, the receptor molecule is kept fixed (despite atoms could move if ANM mode is enabled). Over its surface, a set of points is calculated. Each of these points is a swarm center which represents an independent simulation. For example, for complex [1VFB](https://www.rcsb.org/structure/1VFB), 400 swarms are calculated:
 
 <p align="center">
-    <img src="./images/1vfb_swarms_centers.png">
+    <img src="/tutorials/0.9.1/basics/images/1vfb_swarms_centers.png">
 </p>
 
 ### 1.3. Glowworms
 For each of these swarm centers, a given number *N* of glowworms, the algorithm agents, are disposed in a random way (if residue restraints are not specified). Every glowworm represents a possible ligand conformation. In the following figure a set of 300 glowworms is displayed in a single swarm:
 
 <p align="center">
-    <img src="./images/swarm.png">
+    <img src="/tutorials/0.9.1/basics/images/swarm.png">
 </p>
 
 More in detail, each glowworm is represented as a 3D-axis object in its center of mass and oriented as the actual 3D-axis orientation:
 
 <p align="center">
-    <img src="./images/1e6e_swarm.png">
+    <img src="/tutorials/0.9.1/basics/images/1e6e_swarm.png">
 </p>
 
 ### 1.4. Optimization
