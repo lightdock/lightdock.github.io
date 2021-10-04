@@ -1,10 +1,10 @@
 ---
-permalink: /tutorials/
+permalink: /tutorials/previous
 layout: splash
 classes: wide
 ---
 
-<center><h1 style="margin-top:40px">LightDock Tutorials</h1></center><br>
+<center><h1 style="margin-top:40px">LightDock Tutorials for previous versions</h1></center><br>
 
 **Tutorials here presented are valid for versions of LightDock <0.9.0.** 
 
