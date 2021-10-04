@@ -5,7 +5,7 @@ classes: wide
 title: "LightDock Basics"
 ---
 
-<center><h1 style="margin-top:40px">LightDock basics</h1></center><br>
+<center><h1 style="margin-top:40px">LightDock Basics</h1></center><br>
 
 ## Table of Contents
 

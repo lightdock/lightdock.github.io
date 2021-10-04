@@ -2,7 +2,7 @@
 permalink: /tutorials/0.9.1/faq
 layout: splash
 classes: wide
-
+title: "FAQ"
 ---
 
 <center><h1 style="margin-top:40px">FAQ: Frequently Asked Questions</h1></center><br>

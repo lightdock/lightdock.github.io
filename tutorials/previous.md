@@ -6,7 +6,7 @@ classes: wide
 
 <center><h1 style="margin-top:40px">LightDock Tutorials</h1></center><br>
 
-**Tutorials here presented are valid for versions of LightDock <0.9.0. Tutorials for version 0.9.0 coming soon!** 
+**Tutorials here presented are valid for versions of LightDock <0.9.0.** 
 
 - [LightDock basics](/tutorials/basics)
 
