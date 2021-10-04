@@ -18,7 +18,6 @@ feature_row:
     btn_label: "Go"
     btn_class: "btn--primary"
   - image_path: /tutorials/0.9.1/images/faq.jpg 
-    image_caption: "FAQ"
     alt: "FAQ"
     title: "FAQ"
     excerpt: "Frequently Asked Questions"
@@ -53,8 +52,6 @@ feature_row4:
     btn_label: "Read More"
     btn_class: "btn--primary"
 ---
-
-<center><h1 style="margin-top:40px">LightDock Tutorials (v0.9.1)</h1></center><br>
 
 {% include feature_row id="intro" type="center" %}
 
