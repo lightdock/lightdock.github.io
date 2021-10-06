@@ -49,7 +49,7 @@ LightDock is a macromolecular docking software written in the Python programming
 LightDock protocol is divided in two main steps: **setup** and **simulation**. On setup step, input PDB structures for receptor and ligand partners are parsed and prepared for the simulation. Moreover, a set of *swarms* is arranged around the receptor surface. Each of these swarms represents an independent simulation in LightDock where a fixed number of agents, called *glowworms*, encodes for a possible receptor-ligand pose. During the simulation step, each of these glowworms will sample a given region of the energetic landscape depending on its neighboring glowworms. 
 
 <center>
-    <img src="4g6m_restraints.png">
+    <img src="membrane/4g6m_restraints.png">
     <br>
     <b>Fig.2</b> A receptor protein showing only two swarms. Each swarm (orange mesh sphere) contains a set of glowworms representing a possible receptor-ligand pose.
     <br><br>
@@ -120,7 +120,7 @@ We have prepared a Colab Notebook ready to be imported. Download it: [tutorial.i
 In case of using the provided Colab notebook, go to the [Colab site](https://colab.research.google.com) and upload the provided notebook (see A):
 
 <center>
-    <img src="colab.png">
+    <img src="membrane/colab.png">
     <br><br>
 </center>
 
@@ -140,7 +140,7 @@ First, browse the [3X29 complex page](http://memprotmd.bioch.ox.ac.uk/_ref/PDB/3
 This file in PDB format contains the [MARTINI](http://cgmartini.nl/) coarse-grained (CG) representation of the phospholipid bilayer membrane and the protein complex. We will use the phosphate beads as the boundary for the transmembrane region for filtering the sampling region of interest in LightDock.
 
 <center>
-    <img src="3x29_cg.png">
+    <img src="membrane/3x29_cg.png">
     <br>
     <b>Fig.3</b> MARTINI Coarse-grained representation of the 3X29 complex in a lipid bilayer. Protein is depicted as <span style="color:dodgerblue">blue</span> surface, CG beads for phospholipids in white, except for NC3 beads in <span style="color:darkturquoise">turquoise</span> and PO4 beads in <span style="color:orange">orange</span>.
     <br><br>
@@ -155,7 +155,7 @@ python3 prepare4lightdock.py 3x29_default_dppc-coarsegrained.pdb membrane_cg.pdb
 The output of this script is the <a href="data/membrane_cg.pdb">membrane_cg.pdb</a> PDB file (Figure 4).
 
 <center>
-    <img src="3x29_mmb.png">
+    <img src="membrane/3x29_mmb.png">
     <br>
     <b>Fig.4</b> Lipid bilayer membrane and protein after using the `prepare4lightdock.py` script. Protein is depicted as <span style="color:dodgerblue">blue</span> surface (only CA), membrane beads ready for LightDock in <span style="color:orange">orange</span>.
     <br><br>
@@ -259,7 +259,7 @@ pymol lightdock_3x29_receptor_membrane.pdb init/swarm_centers.pdb
 ```
 
 <center>
-    <img src="3x29_membrane_swarms.gif">
+    <img src="membrane/3x29_membrane_swarms.gif">
     <br>
     <b>Fig.5</b> Distribution of swarms in the current simulation.
     <br><br>
@@ -430,7 +430,7 @@ rms_cur swarm_22_112 and chain B, 3x29_reference and chain B
 Which leaves a L-RMSD of 22.7Å.
 
 <center>
-    <img src="pymol_lrmsd.png">
+    <img src="membrane/pymol_lrmsd.png">
     <br>
     <b>Fig.6</b> L-RMSD calculation in PyMOL of the top 1 model against the 3X29 reference structure.
     <br><br>
@@ -480,7 +480,7 @@ Go to [Membrane Builder](https://server.lightdock.org/membranator) and use [3x29
 You may leave the rest of the fields as default.
 
 <center>
-    <img src="membranator.png">
+    <img src="membrane/membranator.png">
     <br>
     <b>Fig.7</b> The Membrane builder online tool.
     <br><br>
@@ -489,7 +489,7 @@ You may leave the rest of the fields as default.
 Click on **Create membrane** and wait for the output (similar to figure 8).
 
 <center>
-    <img src="membranator_result.png">
+    <img src="membrane/membranator_result.png">
     <br>
     <b>Fig.8</b> Generated membrane by the Membrane builder online tool.
     <br><br>

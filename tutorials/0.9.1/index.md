@@ -46,7 +46,7 @@ membrane_docking:
     alt: "Membrane Docking"
     title: "Membrane-associated protein docking"
     excerpt: "This tutorial demonstrates the use of LightDock for predicting the structure of a membrane receptor–soluble protein complex."
-    url: "/tutorials/0.9.1/simple_docking"
+    url: "/tutorials/0.9.1/membrane"
     btn_label: "Read More"
     btn_class: "btn--primary"
 
