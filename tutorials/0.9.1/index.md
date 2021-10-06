@@ -50,6 +50,14 @@ membrane_docking:
     btn_label: "Read More"
     btn_class: "btn--primary"
 
+restraints_docking:
+  - image_path: /tutorials/0.9.1/images/restraints.png
+    alt: "Restraints Docking"
+    title: "Protein-protein docking using residue restraints"
+    excerpt: "This is a complete example of the LightDock docking protocol to model the 4G6M protein complex making use of residue restraints."
+    url: "/tutorials/0.9.1/restraints"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 ---
 
 {% include feature_row id="intro" type="center" %}
@@ -59,3 +67,6 @@ membrane_docking:
 {% include feature_row id="simple_docking" type="left" %}
 
 {% include feature_row id="membrane_docking" type="left" %}
+
+{% include feature_row id="restraints_docking" type="left" %}
+
