@@ -40,6 +40,15 @@ simple_docking:
     url: "/tutorials/0.9.1/simple_docking"
     btn_label: "Read More"
     btn_class: "btn--primary"
+    
+membrane_docking:
+  - image_path: /tutorials/0.9.1/images/membrane.png
+    alt: "Membrane Docking"
+    title: "Membrane-associated protein docking"
+    excerpt: "This tutorial demonstrates the use of LightDock for predicting the structure of a membrane receptor–soluble protein complex."
+    url: "/tutorials/0.9.1/simple_docking"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 
 ---
 
@@ -49,3 +58,4 @@ simple_docking:
 
 {% include feature_row id="simple_docking" type="left" %}
 
+{% include feature_row id="membrane_docking" type="left" %}

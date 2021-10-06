@@ -17,7 +17,7 @@ This tutorial demonstrates the use of [LightDock](https://lightdock.org) for pre
 Membrane proteins are among the most challenging systems to study with experimental structural biology techniques, thus computational techniques such as docking might offer invaluable insights on the modeling of those systems.
 
 <center>
-    <img src="3x29_membrane.png">
+    <img src="membrane/3x29_membrane.png">
     <br>
     <b>Fig.1</b> 3X29 complex in a lipid bilayer as simulated by <a href="http://memprotmd.bioch.ox.ac.uk/_ref/PDB/3x29" target="_blank">MemProtMD</a>.
     <br><br>
