@@ -146,13 +146,13 @@ This file in PDB format contains the [MARTINI](http://cgmartini.nl/) coarse-grai
     <br><br>
 </center>
 
-We have prepared a Python script to parse, rename and remove non-necessary beads for the membrane protocol in LightDock: <a href="data/prepare4lightdock.py">prepare4lightdock.py</a>. You will need to execute it in your terminal using the <a href="data/3x29_default_dppc-coarsegrained.pdb">3x29_default_dppc-coarsegrained.pdb</a> PDB file as input:
+We have prepared a Python script to parse, rename and remove non-necessary beads for the membrane protocol in LightDock: <a href="data/prepare4lightdock.py">prepare4lightdock.py</a>. You will need to execute it in your terminal using the [3x29_default_dppc-coarsegrained.pdb](data/3x29_default_dppc-coarsegrained.pdb) PDB file as input:
 
 ```bash
 python3 prepare4lightdock.py 3x29_default_dppc-coarsegrained.pdb membrane_cg.pdb
 ```
 
-The output of this script is the <a href="data/membrane_cg.pdb">membrane_cg.pdb</a> PDB file (Figure 4).
+The output of this script is the [membrane_cg.pdb](data/membrane_cg.pdb) PDB file (Figure 4).
 
 <center>
     <img src="membrane/3x29_mmb.png">
@@ -161,7 +161,7 @@ The output of this script is the <a href="data/membrane_cg.pdb">membrane_cg.pdb<
     <br><br>
 </center>
 
-The last step will be to open the just generated <a href="data/membrane_cg.pdb">membrane_cg.pdb</a> file in PyMOL to align the atomistic representation of the <a href="data/3x29_receptor.pdb">3X29 receptor partner</a> to the membrane CG bilayer:
+The last step will be to open the just generated [membrane_cg.pdb](data/membrane_cg.pdb) file in PyMOL to align the atomistic representation of the [3X29 receptor partner](data/3x29_receptor.pdb) to the membrane CG bilayer:
 
 ```bash
 pymol 3x29_receptor.pdb membrane_cg.pdb
@@ -175,7 +175,7 @@ remove membrane_cg and name CA
 save 3x29_receptor_membrane.pdb, all
 ```
 
-The last PyMOL command will save the aligned atomistic 3X29 receptor to the CG lipid bilayer: <a href="data/3x29_receptor_membrane.pdb">3x29_receptor_membrane.pdb</a>.
+The last PyMOL command will save the aligned atomistic 3X29 receptor to the CG lipid bilayer: [3x29_receptor_membrane.pdb](data/3x29_receptor_membrane.pdb).
 
 
 ## 5. LightDock simulation
