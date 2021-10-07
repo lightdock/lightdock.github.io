@@ -58,6 +58,15 @@ restraints_docking:
     url: "/tutorials/0.9.1/restraints"
     btn_label: "Read More"
     btn_class: "btn--primary"
+
+lightdock-rust:
+  - image_path: /tutorials/0.9.1/images/rust.png
+    alt: "LightDock+Rust"
+    title: "Accelerating LightDock with Rust"
+    excerpt: "LightDock-Rust is a new implementation of the LightDock software in the Rust programming language."
+    url: "/tutorials/0.9.1/rust"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
 ---
 
 {% include feature_row id="intro" type="center" %}
@@ -69,4 +78,6 @@ restraints_docking:
 {% include feature_row id="membrane_docking" type="left" %}
 
 {% include feature_row id="restraints_docking" type="left" %}
+
+{% include feature_row id="lightdock-rust" type="left" %}
 
