@@ -29,6 +29,8 @@ LightDock is available under [GPLv3 License](https://github.com/lightdock/lightd
     <a href="https://www.eosc-hub.eu/" target="_blank"><img src="../assets/images/eosc_hub_logo.png"></a>
     <br>
     <a href="https://sbgrid.org/" target="_blank"><img src="../assets/images/sbgrid_logo.png"></a>
+    <br>
+    <a href="https://zymvol.com" target="_blank"><img src="../assets/images/zymvol_logo.jpg"</a>
 </p>
 
 
