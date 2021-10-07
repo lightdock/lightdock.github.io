@@ -71,7 +71,7 @@ curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/t
 
 ## 3. Setup
 
-First, we need to run the setup step. We will enable flexibility (`anm`), exclude the terminal oxygens (`--noxt`) and **all** hydrogens (`--noh`) and water (`--now`) since those atoms are not parametrized in the `fastdfire` scoring function.
+First, we need to run the setup step. We will enable flexibility (`-anm`), exclude the terminal oxygens (`--noxt`) and **all** hydrogens (`--noh`) and water (`--now`) since those atoms are not parametrized in the `fastdfire` scoring function.
 
 At this step, we need to also specify the residue restraints that will bias the docking simulation.
 
@@ -101,7 +101,7 @@ You should see an output similar to this:
 [lightdock_setup] INFO: Number of receptor restraints is: 20 (active), 0 (passive)
 [lightdock_setup] INFO: Number of ligand restraints is: 21 (active), 0 (passive)
 [lightdock_setup] INFO: Calculating starting positions...
-[lightdock_setup] INFO: Generated 84 positions files
+[lightdock_setup] INFO: Generated 55 positions files
 [lightdock_setup] INFO: Done.
 [lightdock_setup] INFO: Number of swarms is 55 after applying restraints
 [lightdock_setup] INFO: Preparing environment
@@ -282,25 +282,8 @@ lgd_filter_restraints.py --cutoff 5.0 --fnat 0.4 rank_by_scoring.list restraints
 Once the clustering and filtering steps have finished, a new directory called `filtered` has been created, which contains any predicted structure which satisfies our 40% filtering. Inside of this directory, there is a file with the ranking of these structures by LightDock DFIRE (`fastdfire`) score (the more positive the better) called `rank_filtered.list`.
 
 
-# 6. Analysis
 
-We provide for this example a compressed filtered folder [filtered.tgz](data/filtered.tgz) which contains (when decompressed) a ranking `lgd_filtered_rank.list` file. 
-
-For all the filtered structures, interface RMSD (i-RMSD), ligand RMSD (l-RMSD) and fraction of native contacts (fnc) according to CAPRI criteria have been calculated.
-
-```bash
-head lgd_filtered_rank.list
-```
-
-```csv
-# structure      i-RMSD    l-RMSD    fnc    Score
-
-```
-
-As you may observe, by using this specific information, LightDock is able to generate very high quality models. Some of them sharing >60% of contacts as compared to the crystal structure.
-
-
-# 7. References
+# 6. References
 For a more complete description of the algorithm as well as different tutorials, please refer to [LightDock](https://lightdock.org/), or check the following references:
 
 - **Integrative Modeling of Membrane-associated Protein Assemblies**<br>
