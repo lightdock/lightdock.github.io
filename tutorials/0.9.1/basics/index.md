@@ -7,13 +7,8 @@ title: "LightDock Basics"
 
 <center><h1 style="margin-top:40px">LightDock Basics</h1></center><br>
 
-## Table of Contents
-
-- [1. Introduction](#1-introduction)
-- [2. Setup a simulation](#2-setup-a-simulation)
-- [3. Run a simulation](#3-run-a-simulation)
-- [4. Generate models](#4-generate-models)
-- [5. Clustering](#5-clustering)
+* table of contents
+{:toc}
 
 
 ## 1. Introduction
@@ -406,7 +401,18 @@ cluster_id : population : best_scoring : glowworm_id : representative PDB struct
 
 <br>
 
-## 6. References
+## 6. Summary
+
+In summary, these are the main steps of any LightDock simulation:
+
+<p align="center">
+    <img src="/tutorials/0.9.1/basics/images/summary.png">
+</p>
+
+<br>
+
+
+## 7. References
 For a more complete description of the algorithm as well as different tutorials, please refer to [LightDock](https://lightdock.org/), or check the following references:
 
 - **Integrative Modeling of Membrane-associated Protein Assemblies**<br>
