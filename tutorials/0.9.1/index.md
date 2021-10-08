@@ -13,7 +13,7 @@ feature_row:
   - image_path: /tutorials/0.9.1/images/basics.png
     alt: "LightDock Basics"
     title: "LightDock Basics"
-    excerpt: "Here you can learn the basic principles of the framework, as well as important details on how to address your modeling."
+    excerpt: "Learn the basics of the framework, as well as more advanced details."
     url: "/tutorials/0.9.1/basics"
     btn_label: "Learn the basics"
     btn_class: "btn--primary"
