@@ -56,7 +56,7 @@ Residue restraints might also be defined at the nucleic ligand level.
 
 ## 3. Protonation
 
-### 3.1 Protein
+### 3.1. Protein
 First of all, we need the protein partner to have the correct hydrogen atoms as parametrized in our `dna` scoring function (`dna` scoring function is based in the AMBER94 force-field). To do it so, we will use the software `reduce` which can be downloaded from [GitHub](https://github.com/rlabduke/reduce).
 
 We remove the previous hydrogens and them rebuild them according to reduce.
