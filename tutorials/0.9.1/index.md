@@ -59,6 +59,15 @@ restraints_docking:
     btn_label: "Read More"
     btn_class: "btn--primary"
 
+dna_docking:
+  - image_path: /tutorials/0.9.1/images/dna.png
+    alt: "Protein-DNA Docking"
+    title: "Protein-DNA docking using residue restraints"
+    excerpt: "This is a complete example of the LightDock docking protocol to model the 1AZP protein-DNA complex making use of residue restraints and flexibility through ANM model."
+    url: "/tutorials/0.9.1/dna_docking"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+
 lightdock-rust:
   - image_path: /tutorials/0.9.1/images/rust.png
     alt: "LightDock+Rust"
@@ -78,6 +87,8 @@ lightdock-rust:
 {% include feature_row id="membrane_docking" type="left" %}
 
 {% include feature_row id="restraints_docking" type="left" %}
+
+{% include feature_row id="dna_docking" type="left" %}
 
 {% include feature_row id="lightdock-rust" type="left" %}
 
