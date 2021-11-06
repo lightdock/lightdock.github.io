@@ -146,7 +146,7 @@ This file in PDB format contains the [MARTINI](http://cgmartini.nl/) coarse-grai
     <br><br>
 </center>
 
-We have prepared a Python script to parse, rename and remove non-necessary beads for the membrane protocol in LightDock: <a href="data/prepare4lightdock.py">prepare4lightdock.py</a>. You will need to execute it in your terminal using the [3x29_default_dppc-coarsegrained.pdb](data/3x29_default_dppc-coarsegrained.pdb) PDB file as input:
+We have prepared a Python script to parse, rename and remove non-necessary beads for the membrane protocol in LightDock: [prepare4lightdock.py](data/prepare4lightdock.py). You will need to execute it in your terminal using the [3x29_default_dppc-coarsegrained.pdb](data/3x29_default_dppc-coarsegrained.pdb) PDB file as input:
 
 ```bash
 python3 prepare4lightdock.py 3x29_default_dppc-coarsegrained.pdb membrane_cg.pdb
