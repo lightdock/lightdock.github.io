@@ -68,6 +68,15 @@ dna_docking:
     btn_label: "Read More"
     btn_class: "btn--primary"
 
+sbgrid_seminar:
+  - image_path: /tutorials/0.9.1/images/sbgrid_logo.png
+    alt: "SBGrid Consortium"
+    title: "SBGrid LightDock seminar"
+    excerpt: "Watch the LightDock seminar at SBGrid Consortium Youtube channel"
+    url: "/tutorials/0.9.1/sbgrid_seminar"
+    btn_label: "Watch now"
+    btn_class: "btn--primary"
+
 lightdock-rust:
   - image_path: /tutorials/0.9.1/images/rust.png
     alt: "LightDock+Rust"
@@ -89,6 +98,8 @@ lightdock-rust:
 {% include feature_row id="restraints_docking" type="left" %}
 
 {% include feature_row id="dna_docking" type="left" %}
+
+{% include feature_row id="sbgrid_seminar" type="left" %}
 
 {% include feature_row id="lightdock-rust" type="left" %}
 
