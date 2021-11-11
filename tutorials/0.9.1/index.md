@@ -72,7 +72,7 @@ sbgrid_seminar:
   - image_path: /tutorials/0.9.1/images/sbgrid_logo.png
     alt: "SBGrid Consortium"
     title: "SBGrid LightDock seminar"
-    excerpt: "Watch the LightDock seminar at SBGrid Consortium Youtube channel"
+    excerpt: "Watch the LightDock seminar at the SBGrid Consortium Youtube channel"
     url: "/tutorials/0.9.1/sbgrid_seminar"
     btn_label: "Watch now"
     btn_class: "btn--primary"
