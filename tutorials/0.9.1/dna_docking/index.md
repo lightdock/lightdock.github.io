@@ -69,7 +69,7 @@ reduce -BUILD 1AZP_A_noh.pdb > 1AZP_A_h.pdb
 We have renumbered the atoms of the protein receptor partner using the PDB-Tools ([web server](https://bianca.science.uu.nl/pdbtools/) or [Python Package](https://github.com/haddocking/pdb-tools/)):
 
 ```bash
-pdb_reatom 1AZP_A_h.pdb > protein.pdb
+pdb_atom_renumber 1AZP_A_h.pdb > protein.pdb
 ```
 
 You can find this file already generated for you here: [protein.pdb](data/protein.pdb)
