@@ -70,14 +70,14 @@ if __name__ == "__main__":
                 if line.startswith("ATOM  "):
                     atom = read_atom_line(line)
                     if atom.residue_name not in atoms_per_residue:
-                        print(f"Not supported atom: {atom}")
+                        print(f"Not supported atom: {atom.residue_name}.{atom.name}")
                     else:
                         if atom.name not in atoms_per_residue[atom.residue_name] and atom.is_hydrogen():
                             try:
                                 atom.name = translation[atom.name]
                                 write_atom_line(atom, oh)
                             except KeyError:
-                                print(f"Atom not found in mapping: {atom}")
+                                print(f"Atom not found in mapping: {atom.residue_name}.{atom.name}")
                         else:
                             write_atom_line(atom, oh)
 
