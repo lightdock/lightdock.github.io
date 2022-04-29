@@ -24,9 +24,9 @@ intro:
 
 
 ## Installation
-[![PyPi version](https://img.shields.io/pypi/v/lightdock.svg)](https://pypi.org/project/lightdock/) [![Build Status](https://travis-ci.com/lightdock/lightdock.svg?branch=master)](https://travis-ci.com/lightdock/lightdock)
+[![PyPi version](https://img.shields.io/pypi/v/lightdock.svg)](https://pypi.org/project/lightdock/) [![Build Status](https://travis-ci.com/lightdock/lightdock.svg?branch=master)](https://travis-ci.com/lightdock/lightdock)<a class="github-button" href="https://github.com/lightdock/lightdock" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star lightdock/lightdock on GitHub">Star</a>&nbsp;<a class="github-button" href="https://github.com/lightdock/lightdock/archive/HEAD.zip" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-download" aria-label="Download lightdock/lightdock on GitHub">Download</a>
 
-LightDock is distributed as a [PyPi package](https://pypi.org/project/lightdock/)!
+LightDock is distributed as a [PyPi package](https://pypi.org/project/lightdock/), installation is as simply as executing the following from the command line:
 
 ```
 pip install lightdock
@@ -51,9 +51,9 @@ LightDock is able to model different binary systems such as protein-protein, pro
 ## License
 
 ![GPLv3](/assets/images/gplv3.png){: .align-left}
-LightDock is free and open-source under license [GPLv3](https://www.gnu.org/licenses/quick-guide-gplv3.en.html)!
+LightDock is free and open-source under license [GPLv3](https://www.gnu.org/licenses/quick-guide-gplv3.en.html) and it has been integrated in different packages and pipelines.
 
 
 ## Source code
 ![GitHub](/assets/images/github_logo.png){: .align-left}
-Browse the source code from the [official repository](https://github.com/lightdock/lightdock).
+Browse the source code from the [official repository](https://github.com/lightdock/lightdock) and the [Rust faster version](https://github.com/lightdock/lightdock-rust).
