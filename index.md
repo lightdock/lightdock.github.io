@@ -24,7 +24,7 @@ intro:
 
 
 ## Installation
-[![PyPi version](https://img.shields.io/pypi/v/lightdock.svg)](https://pypi.org/project/lightdock/) [![Build Status](https://travis-ci.com/lightdock/lightdock.svg?branch=master)](https://travis-ci.com/lightdock/lightdock)<a class="github-button" href="https://github.com/lightdock/lightdock" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star lightdock/lightdock on GitHub">Star</a>&nbsp;<a class="github-button" href="https://github.com/lightdock/lightdock/archive/HEAD.zip" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-download" aria-label="Download lightdock/lightdock on GitHub">Download</a>
+[![PyPi version](https://img.shields.io/pypi/v/lightdock.svg)](https://pypi.org/project/lightdock/) [![Build Status](https://travis-ci.com/lightdock/lightdock.svg?branch=master)](https://travis-ci.com/lightdock/lightdock) ![code size](https://img.shields.io/github/languages/code-size/lightdock/lightdock) ![Stars](https://img.shields.io/github/stars/lightdock/lightdock?style=social)
 
 LightDock is distributed as a [PyPi package](https://pypi.org/project/lightdock/), installation is as simply as executing the following from the command line:
 
