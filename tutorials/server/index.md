@@ -92,4 +92,4 @@ In order to get access to a personal workspace, you must first register. Please,
 Once your account is activated, you can log in into your personal workspace. In this space, you will be able to manage past, present and future jobs. You can start a new job, or list all of your active or outdated jobs. Also, you can go to the results page by clicking on the job name or you can cancel/delete any of your jobs. 
 
 
-Should you have any questions, please join us on [Slack](https://join.slack.com/t/lightdock/shared_invite/zt-14ezmx2hv-Opr3OgN99~5OfSWeNmUl2A).
+Should you have questions, please join us on [Slack](https://join.slack.com/t/lightdock/shared_invite/zt-14ezmx2hv-Opr3OgN99~5OfSWeNmUl2A).
