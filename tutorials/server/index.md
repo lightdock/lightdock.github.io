@@ -29,7 +29,7 @@ You can also learn more about [LightDock](https://lightdock.org/); the docking e
 </center>
 
 
-First, you are asked to input a job name and two PDB formatted files for your receptor and ligand molecules. These molecules can be proteins, peptides or nucleic acids. After clicking on *Next Step* and if there are no inconsistencies on the data, you will be directed the next step.
+First, you are asked to input a job name and two PDB formatted files for your receptor and ligand molecules. These molecules can be proteins, peptides or nucleic acids. After clicking on *Next Step*, and if there are no inconsistencies on the data, you will be directed the next step.
 
 
 ## Step 2
@@ -39,7 +39,7 @@ First, you are asked to input a job name and two PDB formatted files for your re
 </center>
 
 
-Here, you are able to inspect your molecules and you are required to select the molecule type of your receptor. In this case, we select *Protein* for both the receptor and ligand. Next, if wanted, you can fine residue restraints for either the receptor or both the receptor and ligand. Retraints are defined in the form of *E.24,E.25*, where E stands for the chain ID and the number for the residue number. Please note that defining restraints only on the ligand is not allowed to avoid wasting precious computational resources. If this is the case, simply swap both inputs on *Step 1* by clicking on *Start over*. After clicking on *Next Step* and if there are no inconsistencies on the data, you will be directed the next step.
+Here, you are able to inspect your molecules and you are required to select the molecule type of your molecules. In this case, we select *Protein* for both the receptor and ligand. Next, if wanted, you can define residue restraints for either the receptor or both the receptor and ligand. Retraints are defined in the form of *E.24,E.25*, where E stands for the chain ID and the number for the residue number. Please note that defining restraints only on the ligand is not allowed to avoid wasting precious computational resources. If this is the case, simply swap both inputs on *Step 1* by clicking on *Start over*. After clicking on *Next Step* and if there are no inconsistencies on the data, you will be directed the next step.
 
 
 ## Step 3
@@ -50,4 +50,27 @@ Here, you are able to inspect your molecules and you are required to select the 
 </center>
 
 
-In this screen, the residue restraints defined in the previous step will show as *ball and stick* representation (pink) and molecules can be inspected for the last time before submission. Also, in this step you can enable (disabled by default) flexibility on either or both molecules. Once everything is set, you can submit your docking by clicking on *Submit Job*
+In this screen, the residue restraints defined in the previous step will show as *ball and stick* representation (pink) and molecules can be inspected for the last time before submission. Also, in this step you can enable (disabled by default) flexibility on either or both molecules. Once everything is set, you can submit your docking by clicking on *Submit Job*.
+
+
+## Results
+
+
+<center>
+    <img src="/tutorials/server/images/running.png">
+</center>
+
+
+Once submitted, the server will inform you about the status of your run. This is the time where you should bookmark the URL in order to retrieve the results once done. If you are a registered users, storing the URL is not needed as it will be automatically stored in your personal workspace.
+
+
+<center>
+    <img src="/tutorials/server/images/finished_1.png">
+    <img src="/tutorials/server/images/finished_2.png">
+</center>
+
+
+As soon as the run finishes, results will automatically show up. The Top 5 models according to the score might be visually inspected *in situ*. Moreover, the full run might be downloaded as a compressed file. On the bottom of the results page, all results are showed in a table format and each individual complex can be downloaded by clicking on its corresponding scoring value. 
+
+
+## Workspace
