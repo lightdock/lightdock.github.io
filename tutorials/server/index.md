@@ -61,7 +61,7 @@ In this screen, the residue restraints defined in the previous step will show as
 </center>
 
 
-Once submitted, the server will inform you about the status of your run. This is the time where you should bookmark the URL in order to retrieve the results once done. If you are a registered users, storing the URL is not needed as it will be automatically stored in your personal workspace.
+Once submitted, the server will inform you about the status of your run. This is the time where you should bookmark the URL in order to retrieve the resultslater on. If you are a registered user, the job will be automatically stored in your personal workspace.
 
 
 <center>
@@ -70,7 +70,26 @@ Once submitted, the server will inform you about the status of your run. This is
 </center>
 
 
-As soon as the run finishes, results will automatically show up. The Top 5 models according to the score might be visually inspected *in situ*. Moreover, the full run might be downloaded as a compressed file. On the bottom of the results page, all results are showed in a table format and each individual complex can be downloaded by clicking on its corresponding scoring value. 
+As soon as the run finishes, results will automatically show. The Top 5 models will show in the graphical interface for inspection. Moreover, the full run might be downloaded as a compressed file. On the bottom of the results page, all results are showed in a table and each individual complex can be downloaded by clicking on its corresponding scoring value. 
 
 
 ## Workspace
+
+
+<center>
+    <img src="/tutorials/server/images/registration.png">
+</center>
+
+
+In order to get access to a personal workspace, you must first register. Please, check our [privacy policy](https://server2.lightdock.org/privacy_policy) in advance. As shown in the screenshot above, you must indicate your full name, provide an username and password, as well as a valid email address together with your country of residence and research institute or company. 
+
+
+<center>
+    <img src="/tutorials/server/images/workspace.png">
+</center>
+
+
+Once your account is activated, you can log in into your personal workspace. In this space, you will be able to manage past, present and future jobs. You can start a new job, or list all of your active or outdated jobs. Also, you can go to the results page by clicking on the job name or you can cancel/delete any of your jobs. 
+
+
+Should you have any questions, please join us on [Slack](https://join.slack.com/t/lightdock/shared_invite/zt-14ezmx2hv-Opr3OgN99~5OfSWeNmUl2A).
