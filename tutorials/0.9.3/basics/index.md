@@ -1,5 +1,5 @@
 ---
-permalink: /tutorials/0.9.2/basics
+permalink: /tutorials/0.9.3/basics
 layout: splash
 classes: wide
 title: "LightDock Basics"

@@ -1,5 +1,5 @@
 ---
-permalink: /tutorials/0.9.2/membrane
+permalink: /tutorials/0.9.3/membrane
 layout: splash
 classes: wide
 title: "Membrane Docking"
@@ -69,12 +69,12 @@ In order to run this tutorial you will need to have the following software insta
 LightDock is distributed as a Python package through the [Python Package Index](https://pypi.org/project/lightdock/) (PyPI) repository.
 
 #### 3.1.1. Command line
-Installing LightDock is as simple as creating a virtual environment for **Python 3.6+** and running `pip` command (make sure your instances of `virtualenv` and `pip` are for Python 3.6+ versions). We will install the version *0.9.0* of LightDock which is the first released version with support for the membrane protocol and execution in [Jupyter Notebooks](https://jupyter.org/) (see next section):
+Installing LightDock is as simple as creating a virtual environment for **Python 3.6+** and running `pip` command (make sure your instances of `virtualenv` and `pip` are for Python 3.6+ versions). We will install the version *0.9.3.post1* of LightDock which is the latest version with support for the membrane protocol and execution in [Jupyter Notebooks](https://jupyter.org/) (see next section):
 
 ```bash
 virtualenv venv
 source venv/bin/activate
-pip install lightdock==0.9.2
+pip install lightdock==0.9.3.post1
 ```
 
 If the installation finished without errors, you should be able to execute LightDock in the terminal:
@@ -86,7 +86,7 @@ lightdock3.py -v
 and to see an output similar to this:
 
 <p class="notice--info">
-lightdock3 0.9.2
+lightdock3 0.9.3.post1
 </p>
 
 #### 3.1.2. Jupyter Notebook and Google Colab
@@ -94,7 +94,7 @@ lightdock3 0.9.2
 Another option to use LightDock is through [Google Colaboratory](https://colab.research.google.com) ("Colab" for short) which allows you to write and execute Python in the browser using *notebooks*. In case of choosing this option, simply execute in a new notebook in the first cell the following command:
 
 ```
-!pip install lightdock==0.9.2
+!pip install lightdock==0.9.3.post1
 ```
 
 ### 3.2. Installing PDB-Tools

@@ -1,5 +1,5 @@
 ---
-permalink: /tutorials/0.9.2/rust
+permalink: /tutorials/0.9.3/rust
 layout: splash
 classes: wide
 title: "LightDock-Rust"
@@ -8,7 +8,7 @@ title: "LightDock-Rust"
 <center><h1 style="margin-top:40px">LightDock-Rust</h1></center><br>
 
 <center>
-    <img src="/tutorials/0.9.2/rust/rust.png">
+    <img src="/tutorials/0.9.3/rust/rust.png">
 </center>
 
 * table of contents

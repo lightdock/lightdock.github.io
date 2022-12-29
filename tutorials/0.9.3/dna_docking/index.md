@@ -1,5 +1,5 @@
 ---
-permalink: /tutorials/0.9.2/dna_docking
+permalink: /tutorials/0.9.3/dna_docking
 layout: splash
 classes: wide
 title: "Protein-DNA Docking"
@@ -26,8 +26,8 @@ Create a directory and copy the sample data provided.
 ```bash
 mkdir 1azp
 cd 1azp
-curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/0.9.2/dna_docking/data/1AZP_A.pdb
-curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/0.9.2/dna_docking/data/1AZP_B.pdb
+curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/0.9.3/dna_docking/data/1AZP_A.pdb
+curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/0.9.3/dna_docking/data/1AZP_B.pdb
 ```
 
 ## 2. Specifying residue restraints
@@ -37,7 +37,7 @@ LightDock is able to use information derived from either experimental informatio
 To do it so, we first need to create a `restraints.list` file. For the sake of simplicity, we will use a list of residue restraints (3) already formatted for you:
 
 ```bash
-curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/0.9.2/dna_docking/data/restraints.list
+curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/0.9.3/dna_docking/data/restraints.list
 ```
 
 The file `restraints.list` contains three residue restrains on the receptor (protein partner):

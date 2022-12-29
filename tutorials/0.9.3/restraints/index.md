@@ -1,5 +1,5 @@
 ---
-permalink: /tutorials/0.9.2/restraints
+permalink: /tutorials/0.9.3/restraints
 layout: splash
 classes: wide
 title: "Residue-Restraints Docking"
@@ -16,7 +16,7 @@ title: "Residue-Restraints Docking"
 
 This is a complete example of the LightDock docking protocol to model the [4G6M](https://www.rcsb.org/structure/4g6m) protein complex with the use of **residue restraints**.
 
-**IMPORTANT** Before starting with this tutorial, we advise you to follow the [LightDock basics](/tutorials/0.9.2/basics) and [simple docking](/tutorials/0.9.2/simple_docking) tutorials.
+**IMPORTANT** Before starting with this tutorial, we advise you to follow the [LightDock basics](/tutorials/0.9.3/basics) and [simple docking](/tutorials/0.9.3/simple_docking) tutorials.
 
 
 ## 1. Copying the data
@@ -25,8 +25,8 @@ Create a directory and copy the sample data provided.
 ```bash
 mkdir test
 cd test
-curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/0.9.2/restraints/data/4G6M_rec.pdb
-curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/0.9.2/restraints/data/4G6M_lig.pdb
+curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/0.9.3/restraints/data/4G6M_rec.pdb
+curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/0.9.3/restraints/data/4G6M_lig.pdb
 ```
 
 ## 2. Specifying residue restraints
@@ -66,7 +66,7 @@ L B.VAL.70 P
 For the sake of simplicity, we will use a list of residue restraints already formatted:
 
 ```bash
-curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/0.9.2/restraints/data/restraints.list
+curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/0.9.3/restraints/data/restraints.list
 ```
 
 ## 3. Setup
