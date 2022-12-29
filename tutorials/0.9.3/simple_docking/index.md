@@ -24,8 +24,8 @@ Create a directory and copy the sample data provided.
 ```bash
 mkdir test
 cd test
-curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/2UUY/2UUY_rec.pdb
-curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/examples/2UUY/2UUY_lig.pdb
+curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/0.9.3/simple_docking/data/2UUY_rec.pdb
+curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/tutorials/0.9.3/simple_docking/data/2UUY_lig.pdb
 ```
 
 ## 2. LightDock setup
@@ -33,11 +33,11 @@ curl -O https://raw.githubusercontent.com/lightdock/lightdock.github.io/master/t
 Please execute the `lightdock3_setup.py` command to prepare your LightDock simulation, an output similar to this will be displayed:
 
 ```bash
-usage: lightdock3_setup [-h] [-s SWARMS] [-g GLOWWORMS] [--seed_points STARTING_POINTS_SEED]
-                        [--noxt] [--noh] [--now] [--verbose_parser] [-anm] 
-                        [--seed_anm ANM_SEED] [-ar ANM_REC] [-al ANM_LIG] [-r restraints] 
-                        [-membrane] [-transmembrane] [-sp] [-sd SURFACE_DENSITY]
-                        [-sr SWARM_RADIUS] [-flip]
+usage: lightdock3_setup [-h] [-s SWARMS] [-g GLOWWORMS] [--seed_points STARTING_POINTS_SEED] [--noxt] [--noh] [--now]
+                        [--verbose_parser] [-anm] [--seed_anm ANM_SEED] [--anm_rec_rmsd ANM_REC_RMSD]
+                        [--anm_lig_rmsd ANM_LIG_RMSD] [-ar ANM_REC] [-al ANM_LIG] [-r restraints] [-membrane]
+                        [-transmembrane] [-sp] [-sd SURFACE_DENSITY] [-sr SWARM_RADIUS] [-flip] [-fd FIXED_DISTANCE]
+                        [-spr SWARMS_PER_RESTRAINT] [--ds] [-V]
                         receptor_pdb_file ligand_pdb_file
 lightdock3_setup: error: the following arguments are required: receptor_pdb_file, ligand_pdb_file
 ```
@@ -133,6 +133,7 @@ Once the simulation is finished, the results will appear inside each of the `swa
 
 **TIP** If for any reason the setup stage fails, please remove all generated files before trying again. E.g: `rm -rf lightdock* setup.json init/ swarm_*`
 {: .notice--info}
+
 
 ## 3. LightDock simulation
 Once the setup is successful, execute the `lightdock3.py` command in order to run your first LightDock simulation. If you execute `lightdock3.py` without arguments a help menu will appear.
