@@ -6,6 +6,16 @@ classes: wide
 
 <center><h1 style="margin-top:40px">LightDock Tutorials for previous versions</h1></center><br>
 
+| LightDock Version          |
+|----------------------------|
+|    < 0.9 (see below)       |
+| [0.9](/tutorials/0.9/)     |
+| [0.9.1](/tutorials/0.9.1/) |
+| [0.9.2](/tutorials/0.9.2/) |
+| [0.9.3](/tutorials/0.9.3/) |
+
+<hr>
+
 **Tutorials here presented are valid for versions of LightDock <0.9.0.** 
 
 - [LightDock basics](/tutorials/basics)
