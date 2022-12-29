@@ -1,5 +1,5 @@
 ---
-permalink: /tutorials/0.9.2/sbgrid_seminar
+permalink: /tutorials/0.9.3/sbgrid_seminar
 layout: splash
 classes: wide
 title: "LightDock SBGrid Seminar"

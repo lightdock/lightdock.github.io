@@ -1,5 +1,5 @@
 ---
-permalink: /tutorials/0.9.2/simple_docking
+permalink: /tutorials/0.9.3/simple_docking
 layout: splash
 classes: wide
 title: "Simple Docking"
@@ -8,7 +8,7 @@ title: "Simple Docking"
 <center><h1 style="margin-top:40px">Simple protein-protein docking example</h1></center><br>
 
 <center>
-    <img src="/tutorials/0.9.2/simple_docking/2uuy.png">
+    <img src="/tutorials/0.9.3/simple_docking/2uuy.png">
 </center>
 
 * table of contents
@@ -90,7 +90,7 @@ A few seconds after we will see an output similar to this:
 [lightdock3_setup] INFO: LightDock setup OK
 ```
 
-**NOTE** For a detailed description of the setup stage, please check the [LightDock basics](https://lightdock.org/tutorials/0.9.2/basics#2-setup-a-simulation) 
+**NOTE** For a detailed description of the setup stage, please check the [LightDock basics](https://lightdock.org/tutorials/0.9.3/basics#2-setup-a-simulation) 
 {: .notice--warning}
 
 If the setup is successful, we will find a file called `setup.json`, which includes all the details about this LightDock simulation.
@@ -201,7 +201,7 @@ By default, and if no other scoring function is specified, LightDock makes use o
 
 As you may have noticed, we have instructed LightDock to use only 1 CPU core (`-c 1`). By default, LightDock will look for the total number of available cores. If you want to specify a different number, use the flag `-c`. MPI is also supported by using the `-mpi` flag.
 
-**NOTE** For more information about the simulation stage, please check the [LightDock basics](https://lightdock.org/tutorials/0.9.2./basics#3-run-a-simulation)
+**NOTE** For more information about the simulation stage, please check the [LightDock basics](https://lightdock.org/tutorials/0.9.3/basics#3-run-a-simulation)
 
 
 ## 4. LightDock results
@@ -253,13 +253,13 @@ lgd_generate_conformations.py ../2UUY_rec.pdb ../2UUY_lig.pdb gso_100.out 200
 Inside the `swarm_0` folder, we will find 200 new PDB structures corresponding to the 200 glowworm agents used in the current example. Try opening them on PyMOL and have a quick look at them:
 
 <center>
-    <img src="/tutorials/0.9.2/simple_docking/2uuy_swarm_0.png">
+    <img src="/tutorials/0.9.3/simple_docking/2uuy_swarm_0.png">
 </center>
 
 **Congratulations!** You have successfully run your first docking simulation with LightDock!
 {: .notice--success}
 
-You can find all the simulation data already generated here: [simulation.tgz](/tutorials/0.9.2/simple_docking/data/simulation.tgz)
+You can find all the simulation data already generated here: [simulation.tgz](/tutorials/0.9.3/simple_docking/data/simulation.tgz)
 
 **Attention!** In this simple example we did not cluster predicted structures for the different swarms (`swarm_0` in this case), but **for realistic simulations it is critical to always cluster intra-swarm structures**.
 {: .notice--danger}
