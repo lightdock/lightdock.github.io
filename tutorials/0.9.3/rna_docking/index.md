@@ -264,10 +264,21 @@ Swarm  Glowworm  ...  Luciferin  Neigh    VR  RMSD                PDB  Clashes  
 We can sort this file by the `Scoring` variable and get the `.pdb` files of the top scoring structures. One way of doing this is by means of the [get_top_structures.py](data/get_top_structures.py) Python script:
 
 ```bash
-./get_top_structures solutions.list
+./get_top_structures.py solutions.list
 ```
 
 This creates the `top_structures` directory with the top 10 scoring structures, prefixed by their order (being the `0` prefixed structure the best, and the `9` prefixed structure the worst).
+
+We can compare the goodness of our docking simulation by aligning our best model with the crystal structure, by means of `pymol`'s `align` command. The output is somethin like this:
+
+```bash
+ Match: read scoring matrix.
+ Match: assigning 77 x 75 pairwise scores.
+ MatchAlign: aligning residues (77 vs 75)...
+ MatchAlign: score 511.500
+ ExecutiveAlign: 1429 atoms aligned.
+ Executive: RMSD =    3.354 (1429 to 1429 atoms)
+```
 
 We provide for this example a complete [simulation.tgz](data/simulation.tgz) compressed file of the complete run.
 
