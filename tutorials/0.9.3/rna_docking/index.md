@@ -282,6 +282,7 @@ We can compare the goodness of our docking simulation by aligning our best model
 
 We provide for this example a complete [simulation.tgz](data/simulation.tgz) compressed file of the complete run.
 
+<em>Tutorial contributed by Lucas Goiriz Beltrán.</em>
 <br>
 
 
