@@ -68,6 +68,15 @@ dna_docking:
     btn_label: "Read More"
     btn_class: "btn--primary"
 
+rna_docking:
+  - image_path: /tutorials/0.9.3/images/rna.png
+    alt: "Protein-RNA Docking"
+    title: "Protein-RNA docking"
+    excerpt: "This is an example of the LightDock docking protocol to model the 1A1T protein-RNA complex with flexibility through ANM model."
+    url: "/tutorials/0.9.3/rna_docking"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+
 sbgrid_seminar:
   - image_path: /tutorials/0.9.3/images/sbgrid_logo.png
     alt: "SBGrid Consortium"

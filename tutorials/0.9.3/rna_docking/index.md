@@ -15,7 +15,7 @@ This is a complete example of the LightDock docking protocol to model the [1A1T]
 <br>
 
 <p align="center">
-    <img src="dna_docking/1a1t.png">
+    <img src="rna_docking/1a1t.png">
 </p>
 
 
