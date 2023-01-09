@@ -108,6 +108,8 @@ lightdock-rust:
 
 {% include feature_row id="dna_docking" type="left" %}
 
+{% include feature_row id="rna_docking" type="left" %}
+
 {% include feature_row id="sbgrid_seminar" type="left" %}
 
 {% include feature_row id="lightdock-rust" type="left" %}

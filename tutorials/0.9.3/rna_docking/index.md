@@ -12,6 +12,10 @@ title: "Protein-RNA Docking"
 
 This is a complete example of the LightDock docking protocol to model the [1A1T](https://www.rcsb.org/structure/1a1t) protein-RNA complex.
 
+This tutorial has been contributed by [Lucas Goiriz Beltrán](https://github.com/luksgrin), and makes use of several additional Python scripts and LightDock hacks. **Please note that protein-RNA docking is very experimental in LightDock**.
+
+You may contact Lucas Goiriz by [email](lucas.goiriz@csic.es) for doubts and insights about this tutorial and protocol.
+
 <br>
 
 <p align="center">
@@ -71,7 +75,7 @@ reduce -BUILD 1A1T_B_noh.pdb > 1A1T_B_h.pdb
 
 There are several problems we must address in order to continue:
 - Hydrogen atoms produced by `reduce` for nucleic acids are not 100% name-compatible with the AMBER94 force-field.
-- In addition, `reduce` adds the extremal hydrogens (3' and/or 5' extremal hydrogens) to RNA, which causes conflicts in the with the AMBER94 force-field.
+- In addition, `reduce` adds the extremal hydrogens (3' and/or 5' extremal hydrogens) to RNA, which causes conflicts with the AMBER94 force-field.
 - Finally, the AMBER94 force-field needs RNA residues to be labelled with an `R` as a prefix.
 
 We have prepared three simple Python scripts:
@@ -194,7 +198,7 @@ mv lightdock_rna.pdb lightdock_rna_tagged.pdb
 mv lightdock_rna_untagged.pdb lightdock_rna.pdb
 ```
 
-Now we can proceed with generateing the structures of the predictions and clustering them per swarm.
+Now we can proceed with generating the structures of the predictions and clustering them per swarm.
 
 Here there is a PBS script to do all steps at once:
 
@@ -269,7 +273,7 @@ We can sort this file by the `Scoring` variable and get the `.pdb` files of the 
 
 This creates the `top_structures` directory with the top 10 scoring structures, prefixed by their order (being the `0` prefixed structure the best, and the `9` prefixed structure the worst).
 
-We can compare the goodness of our docking simulation by aligning our best model with the crystal structure, by means of `pymol`'s `align` command. The output is somethin like this:
+We can compare the goodness of our docking simulation by aligning our best model with the crystal structure, by means of `pymol`'s `align` command. The output is something like this:
 
 ```bash
  Match: read scoring matrix.
@@ -282,7 +286,6 @@ We can compare the goodness of our docking simulation by aligning our best model
 
 We provide for this example a complete [simulation.tgz](data/simulation.tgz) compressed file of the complete run.
 
-<em>Tutorial contributed by Lucas Goiriz Beltrán.</em>
 <br>
 
 
