@@ -5,6 +5,11 @@ title: Cite LightDock
 
 Please cite these references if you use LightDock in your research:
 
+**The LightDock Server: Artificial Intelligence-powered modeling of macromolecular interactions**<br>
+[Brian Jiménez-García](https://bjimenezgarcia.com), Jorge Roel-Touris, & Didier Barradas-Bautista<br>
+*Nucleic Acids Research*, 2023;, gkad327, doi: [https://doi.org/10.1093/nar/gkad327](https://doi.org/10.1093/nar/gkad327)
+
+
 **Integrative Modeling of Membrane-associated Protein Assemblies**<br>
 Jorge Roel-Touris, [Brian Jiménez-García](https://bjimenezgarcia.com) & Alexandre M.J.J. Bonvin<br>
 *Nat Commun* **11**, 6210 (2020); doi: [https://doi.org/10.1038/s41467-020-20076-5](https://doi.org/10.1038/s41467-020-20076-5)
