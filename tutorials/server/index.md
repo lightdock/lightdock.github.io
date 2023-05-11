@@ -17,9 +17,9 @@ LightDock is a fully open-source framework for flexible protein-protein, protein
     <img src="/tutorials/server/images/landing-page.png">
 </center>
 
-This is the landing page. In the top left corner you can find the LightDock logo that, when clicked, it will get you back to the landing page. In the top left corner you can check the status of the [queue](https://server2.lightdock.org/job/queue), make use of our *in house* [membrane builder](https://server2.lightdock.org/membranator), get [help](https://server2.lightdock.org/help) about certain features of the server, check four different [examples](https://server2.lightdock.org/examples) with pre-calculated data and [log in](https://server2.lightdock.org/auth/login) into your personal workspace.
+This is the landing page. In the top left corner you can find the LightDock logo that, when clicked, it will get you back to the landing page. In the top left corner you can check the status of the [queue](https://server.lightdock.org/job/queue), make use of our *in house* [membrane builder](https://server.lightdock.org/membranator), get [help](https://server.lightdock.org/help) about certain features of the server, check four different [examples](https://server.lightdock.org/examples) with pre-calculated data and [log in](https://server.lightdock.org/auth/login) into your personal workspace.
 
-You can also learn more about [LightDock](https://lightdock.org/); the docking engine underneath the server. Moreover, you might check an extensive list of [tutorials](https://lightdock.org/tutorials) for the standalone version of the software and [register](https://server2.lightdock.org/auth/register), in order to have access to your personal workspace. Again, registration **is not** required. Finally, you can submit a docking run by clicking on [Submit a new run](https://server2.lightdock.org/job/quick/step/1).
+You can also learn more about [LightDock](https://lightdock.org/); the docking engine underneath the server. Moreover, you might check an extensive list of [tutorials](https://lightdock.org/tutorials) for the standalone version of the software and [register](https://server.lightdock.org/auth/register), in order to have access to your personal workspace. Again, registration **is not** required. Finally, you can submit a docking run by clicking on [Submit a new run](https://server.lightdock.org/job/quick/step/1).
 
 
 ## Step 1
@@ -81,7 +81,7 @@ As soon as the run finishes, results will automatically show. The Top 5 models w
 </center>
 
 
-In order to get access to a personal workspace, you must first register. Please, check our [privacy policy](https://server2.lightdock.org/privacy_policy) in advance. As shown in the screenshot above, you must indicate your full name, provide an username and password, as well as a valid email address together with your country of residence and research institute or company. 
+In order to get access to a personal workspace, you must first register. Please, check our [privacy policy](https://server.lightdock.org/privacy_policy) in advance. As shown in the screenshot above, you must indicate your full name, provide an username and password, as well as a valid email address together with your country of residence and research institute or company. 
 
 
 <center>
