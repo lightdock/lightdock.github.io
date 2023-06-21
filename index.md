@@ -9,7 +9,7 @@ header:
   actions:
     - label: "Download Latest Release"
       url: "https://github.com/lightdock/lightdock/releases/latest"
-    - label: "Online server (beta)"
+    - label: "Online server"
       url: "https://server.lightdock.org/"
 excerpt: "The open-source protein docking framework written in Python ([and Rust](https://github.com/lightdock/lightdock-rust))"
 
