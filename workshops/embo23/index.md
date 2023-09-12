@@ -63,7 +63,7 @@ docking_challenge:
   - image_path: /workshops/embo23/images/docking_challenge.png
     alt: "Docking Challenge"
     title: "Docking Challenge"
-    excerpt: "This is an example of the LightDock docking protocol to model the 1A1T protein-RNA complex with flexibility through ANM model."
+    excerpt: "Are you ready to model the Turkish 🇹🇷 flag?"
     url: "/workshops/embo23/docking_challenge"
     btn_label: "Go!"
     btn_class: "btn--primary"
