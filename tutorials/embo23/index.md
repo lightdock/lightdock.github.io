@@ -1,0 +1,79 @@
+---
+title: "Integrative modelling of protein interactions"
+layout: splash
+permalink: /tutorials/embo23/
+classes: wide
+header:
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /tutorials/embo23/images/embo23_header.jpg
+excerpt: "[EMBO Practical Course](https://meetings.embo.org/event/23-biomolecular-interactions)"
+
+feature_row:
+  - image_path: /tutorials/embo23/images/basics.png
+    alt: "LightDock Theory"
+    title: "LightDock Theory"
+    excerpt: "Learn the theory behind the Lightdock macromolecular docking framework"
+    url: "/tutorials/embo23/lightdock_theory"
+    btn_label: "Learn the basics"
+    btn_class: "btn--primary"
+  - image_path: /tutorials/embo23/images/faq.jpg 
+    alt: "FAQ"
+    title: "FAQ"
+    excerpt: "Browse previous or frequently asked questions by other LightDock users."
+    url: "/tutorials/embo23/faq"
+    btn_label: "Browse FAQ"
+    btn_class: "btn--primary"
+
+blind_docking:
+  - image_path: /tutorials/embo23/images/blind_docking.png
+    alt: "Blind Docking"
+    title: "Blind protein-protein docking"
+    excerpt: "A quick guide about how to setup a blind (ab initio) macromolecular docking simulation with LightDock."
+    url: "/tutorials/embo23/blind_docking"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+
+restraints_docking:
+  - image_path: /tutorials/embo23/images/restraints_docking.png
+    alt: "Restraints Docking"
+    title: "Protein-peptide docking using residue restraints"
+    excerpt: "This is a complete example on how to drive LightDock docking simulations using residue restraints."
+    url: "/tutorials/embo23/restraints_docking"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+
+membrane_docking:
+  - image_path: /tutorials/embo23/images/membrane_docking.png
+    alt: "Membrane Docking"
+    title: "Membrane-associated protein docking"
+    excerpt: "This tutorial demonstrates the use of LightDock for predicting the structure of a membrane receptor–soluble protein complex."
+    url: "/tutorials/embo23/membrane_docking"
+    btn_label: "Read More"
+    btn_class: "btn--primary"
+
+docking_challenge:
+  - image_path: /tutorials/embo23/images/docking_challenge.png
+    alt: "Docking Challenge"
+    title: "Docking Challenge"
+    excerpt: "This is an example of the LightDock docking protocol to model the 1A1T protein-RNA complex with flexibility through ANM model."
+    url: "/tutorials/embo23/docking_challenge"
+    btn_label: "Go!"
+    btn_class: "btn--primary"
+
+
+---
+
+{% include feature_row id="intro" type="center" %}
+
+{% include feature_row %}
+
+{% include feature_row id="lightdock_theory" type="left" %}
+
+{% include feature_row id="blind_docking" type="left" %}
+
+{% include feature_row id="restraints_docking" type="left" %}
+
+{% include feature_row id="membrane_docking" type="left" %}
+
+{% include feature_row id="docking_challenge" type="left" %}
