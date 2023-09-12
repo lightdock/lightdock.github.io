@@ -11,10 +11,10 @@ header:
       url: "https://github.com/lightdock/lightdock/releases/latest"
     - label: "Online server"
       url: "https://server.lightdock.org/"
-excerpt: "The open-source protein docking framework written in Python ([and Rust](https://github.com/lightdock/lightdock-rust))"
+excerpt: "The open-source macromolecular docking framework written in Python ([and Rust](https://github.com/lightdock/lightdock-rust))"
 
 intro: 
-  - excerpt: '*Protein-Protein, Protein-DNA and Protein-Peptide docking made easy*'
+  - excerpt: '*Protein-Protein, Protein-Nucleic Acids and Protein-Peptide docking made easy*'
 
 ---
 
@@ -43,7 +43,7 @@ Alternative ways to install LightDock can be found in the official [GitHub repos
 
 ## Tutorials
 
-LightDock is able to model different binary systems such as protein-protein, protein-DNA or protein-peptide complexes.
+LightDock is able to model different binary systems such as protein-protein, protein-DNA, protein-RNA, membraned-associated or protein-peptide complexes.
 
 [Learn more!](/tutorials/latest){: .btn .btn--primary .btn--large}
 
