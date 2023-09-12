@@ -7,7 +7,7 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/images/tutorials.jpg
-excerpt: "How to use LightDock version [0.9.3 & 0.9.4](https://github.com/lightdock/lightdock/releases/tag/0.9.3.post1)"
+excerpt: "How to use LightDock version [0.9.3 & 0.9.4](https://github.com/lightdock/lightdock/releases/tag/0.9.4)"
 
 feature_row:
   - image_path: /tutorials/0.9.3/images/basics.png
