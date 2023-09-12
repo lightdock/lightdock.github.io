@@ -13,14 +13,14 @@ feature_row:
   - image_path: /workshops/embo23/images/lightdock_theory.jpg
     alt: "LightDock Theory"
     title: "LightDock Theory"
-    excerpt: "Learn the theory behind the Lightdock macromolecular docking framework"
+    excerpt: "Learn the theory behind the Lightdock macromolecular docking framework."
     url: "/workshops/embo23/lightdock_theory"
     btn_label: "Learn the basics"
     btn_class: "btn--primary"
   - image_path: /workshops/embo23/images/lightdock_server.png 
     alt: "LightDock Server"
     title: "Lightdock Server"
-    excerpt: "Make use of the online LightDock Server"
+    excerpt: "Make use of the online LightDock Server to model macromolecular interactions."
     url: "https://server.lightdock.org/"
     btn_label: "Run simulations online"
     btn_class: "btn--primary"
