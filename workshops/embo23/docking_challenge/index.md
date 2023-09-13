@@ -53,7 +53,9 @@ The structure ready to use in LightDock can be downloaded here: [KEY.pdb](dockin
 Any coincidence with Patrick 𓇼 from SpongeBob is that, just a coincidence.
 
 
-### 2.3. The goal
+### 2.3. The goal 🇹🇷
+
+Is that a protein? Is that a star? No, it is the Turkish flag! 🇹🇷
 
 <p align="center">
     <img src="docking_challenge/images/turkey_molecular_flag.gif">
