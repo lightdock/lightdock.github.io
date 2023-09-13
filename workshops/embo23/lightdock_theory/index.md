@@ -10,7 +10,7 @@ title: "LightDock Theory"
 <br>
 
 <p align="center">
-    <img src="lightdock_theory/images/lightdock_theory.jpg">
+    <img style="height:350px;" src="lightdock_theory/images/lightdock_theory.jpg">
 </p>
 
 * table of contents
