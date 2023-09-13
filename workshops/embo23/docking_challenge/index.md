@@ -10,7 +10,7 @@ title: "Docking Challenge"
 <br>
 
 <p align="center">
-    <img style="height:350px;" src="lightdock_theory/images/lightdock_theory.jpg">
+    <img style="height:350px;" src="docking_challenge/images/docking_challenge.png">
 </p>
 
 * table of contents
@@ -19,4 +19,6 @@ title: "Docking Challenge"
 
 ## 1. Introduction
 
-Integrative structure modeling computationally combines data from multiple sources of information with the aim of obtaining structural insights that are not revealed by any single approach alone ((Braitbard, Schneidman-Duhovny & Kalisman, 2019)[https://doi.org/10.1146/annurev-biochem-013118-111429]).
+Integrative structure modeling computationally combines data from multiple sources of information with the aim of obtaining structural insights that are not revealed by any single approach alone ([Braitbard, Schneidman-Duhovny & Kalisman, 2019](https://doi.org/10.1146/annurev-biochem-013118-111429)).
+
+
