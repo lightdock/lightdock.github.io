@@ -24,12 +24,12 @@ feature_row:
     url: "https://server.lightdock.org/"
     btn_label: "Run simulations online"
     btn_class: "btn--primary"
-  - image_path: /workshops/embo23/images/faq.jpg 
-    alt: "FAQ"
-    title: "FAQ"
-    excerpt: "Browse previous or frequently asked questions by other LightDock users."
-    url: "/workshops/embo23/faq"
-    btn_label: "Browse FAQ"
+  - image_path: /workshops/embo23/images/help.jpg 
+    alt: "Help"
+    title: "Help"
+    excerpt: "Your LightDock simulation turned into a magical creature instead of a macromolecular complex? 🤖 Do not panic!"
+    url: "https://join.slack.com/t/lightdock/shared_invite/zt-14ezmx2hv-Opr3OgN99~5OfSWeNmUl2A"
+    btn_label: "Ask in our Slack channel"
     btn_class: "btn--primary"
 
 blind_docking:
