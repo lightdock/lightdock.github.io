@@ -71,12 +71,11 @@ Besides the initial swarms' configuration, in LightDock the membrane also plays 
 While the simulation is done, we will have the opportunity to inspect the results on the server. If minimization has been selected, note that the membrane beads have been removed. Else, they will stay. At a first glance, we see that the simulation has converged towards a binding site, exploring somewhat different orientations of the ligand, and that the binding site is not overlapping with the position of the membrane. See picture below for details.
 
 <center>
-    <img src="membrane_docking/membrane_results.png">
+    <img src="membrane_docking/membrane_results_server.png">
     <br><br>
 </center>
 
-
-
+[Here](https://server.lightdock.org/job/run/d07eb1efb360236dc27f690c7951432e079663923cdc4d89aa44157cebd060b6), you can check the results of the simulation.
 
 
 
