@@ -5,13 +5,9 @@ classes: wide
 title: "Membrane-associated protein docking"
 ---
 
-<center><h1 style="margin-top:40px">DMembrane-associated protein docking</h1></center>
+<center><h1 style="margin-top:40px">Membrane-associated protein docking</h1></center>
 
 <br>
-
-#<p align="center">
-#    <img style="height:350px;" src="lightdock_theory/images/lightdock_theory.jpg">
-#</p>
 
 * table of contents
 {:toc}
@@ -76,8 +72,6 @@ While the simulation is done, we will have the opportunity to inspect the result
 
 <center>
     <img src="membrane_docking/membrane_results.png">
-    <br>
-    <b>Results - Top 5</b>
     <br><br>
 </center>
 
