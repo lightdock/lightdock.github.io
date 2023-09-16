@@ -14,7 +14,6 @@ title: "Blind Docking"
 
 ## 1. Introduction
 
-<<<<<<< HEAD
 To get a first taste about the functionalities of LightDock, we will perform an easy-to-start *blind* docking simulation using [The LightDock Server](https://server.lightdock.org/). In the field of docking, *blind* refers to docking a ligand to the whole surface of a receptor without any prior knowledge of the target interface. In LightDock, you can perform protein-protein, protein-peptide, protein-nucleic acid, nucleic acid-nucleic acid and nucleic acid-peptide, so basically anything but small molecules. For this demonstration, we will be docking a peptide onto an RNA molecule in the absence of any information to guide the simulation (blind), in attempts to recapitulate the structure of [1a4t](https://www.rcsb.org/structure/1a4t). See animation below.
 
 <br>
@@ -104,6 +103,5 @@ The motivation of this test was to see whether the *blind* protocol of LightDock
     <br>
     <br><br>
 </center>
-=======
-PDB code: [1A4T](https://www.rcsb.org/structure/1a4t)
->>>>>>> 6f42d678fec3f7cb7b89053da9d4fc947041ba38
+
+[Here](https://server.lightdock.org/job/run/604eb52e5798ae0d011c1f799d801044925775bf612948d2a8b8e62c615b3a51), you can check the results of the simulation.
