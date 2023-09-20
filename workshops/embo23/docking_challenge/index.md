@@ -80,3 +80,5 @@ We have prepare two structures for you:
 
 * C-shaped protein prepared to be used in [Membranator](https://server.lightdock.org/membranator): [TUR2.pdb](docking_challenge/data/TUR2.pdb)
 * C-shaped protein with a fake membrane: [TUR3.pdb](docking_challenge/data/TUR3.pdb)
+
+🎁 **Bonus track:** We have also prepared for you mol2 versions of the input structures if you would like to test them in [UDock](http://udock.fr/)!
