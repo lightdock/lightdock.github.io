@@ -7,7 +7,6 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /workshops/talca24/images/uni_talca.jpg
-excerpt: "[EMBO Practical Course](https://meetings.embo.org/event/23-biomolecular-interactions)"
 
 feature_row:
   - image_path: /workshops/talca24/images/lightdock_theory.jpg
