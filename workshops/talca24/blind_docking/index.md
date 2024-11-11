@@ -33,12 +33,10 @@ The server is built in a way that reduces the complexity of setting up a simulat
 
 ### 2.1. Step 1 
 
-First things first. If you decided to register, please *Log in*. Alternatively, you can head to *Submit a new run >>*. Choose a name for your run (e.g. EMBO2023-RNA_fantasy) and upload your receptor and ligand PDB files. Once you are set, click on *Next Step*.
+First things first. If you decided to register, please *Log in*. Alternatively, you can head to *Submit a new run >>*. Choose a name for your run (e.g. protein-RNA) and upload your receptor and ligand PDB files. Once you are set, click on *Next Step*.
 
 <center>
     <img src="blind_docking/images/step1.png">
-    <br>
-    <b>Step 1</b>
     <br><br>
 </center>
 
@@ -54,8 +52,6 @@ Click on *Next Step*
 
 <center>
     <img src="blind_docking/images/step2.png">
-    <br>
-    <b>Step 2</b>
     <br><br>
 </center>
 
@@ -67,8 +63,6 @@ Also, you can enable flexibility using Anisotropic Network Model (ANM) and the n
 
 <center>
     <img src="blind_docking/images/step3.png">
-    <br>
-    <b>Step 3</b>
     <br><br>
 </center>
 
@@ -79,7 +73,6 @@ Once the simulation finishes, the top 5 models according to their scores are dis
 
 <center>
     <img src="blind_docking/images/step4.png">
-    <br>
     <br><br>
 </center>
 
@@ -89,7 +82,6 @@ If we look at the scores of the top models, we see that there are no significant
 
 <center>
     <img src="blind_docking/images/step5.png">
-    <br>
     <br><br>
 </center>
 
@@ -104,4 +96,4 @@ The motivation of this test was to see whether the *blind* protocol of LightDock
     <br><br>
 </center>
 
-[Here](https://server.lightdock.org/job/run/604eb52e5798ae0d011c1f799d801044925775bf612948d2a8b8e62c615b3a51), you can check the results of the simulation.
+[Here](https://server.lightdock.org/job/run/e3b878dd7a2f7396fd08ccca56bd4f2ab243223f4013433c89761742f301276e), you can check the results of the simulation.
