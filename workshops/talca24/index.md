@@ -58,6 +58,15 @@ membrane_docking:
     btn_label: "Read More"
     btn_class: "btn--primary"
 
+docking_challenge:
+  - image_path: /workshops/talca24/images/completo.jpg
+    alt: "Docking Challenge"
+    title: "Docking Challenge"
+    excerpt: "Are you ready for a challenge?"
+    url: "/workshops/talca24/docking_challenge"
+    btn_label: "Let's go!"
+    btn_class: "btn--primary"
+
 ---
 
 {% include feature_row id="intro" type="center" %}
@@ -71,3 +80,5 @@ membrane_docking:
 {% include feature_row id="restraints_docking" type="left" %}
 
 {% include feature_row id="membrane_docking" type="left" %}
+
+{% include feature_row id="docking_challenge" type="left" %}
