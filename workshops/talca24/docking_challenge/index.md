@@ -31,33 +31,29 @@ With the aim of practicing and testing the ISM capabilities of the LightDock sof
 ### 2.1. The bread: 🍞
 
 <p align="center">
-    <img src="docking_challenge/images/bread.png">
+    <img src="docking_challenge/images/6i2g_nanobody.png">
 </p>
 
 ### 2.2. The stuffing: 🥩🥬🍅
 
 <p align="center">
-    <img src="docking_challenge/images/stuffing.png">
+    <img src="docking_challenge/images/talca_peptide.gif">
 </p>
 
 ### 2.3. The goal: 🌭
 
-Is that a protein? Is that a star? No, it is the Turkish flag! 🇹🇷
+Is that a <em>completo</em>? Is it <em>mojado</em>? Oh, wait, it is our ***completo molecular mojado***!
 
 <p align="center">
-    <img src="docking_challenge/images/turkey_molecular_flag.gif">
+    <img src="docking_challenge/images/challenge.png">
 </p>
 
 
 ## 3. Tips & tricks
 
-1️⃣ Blind docking will probably not help a lot ([see a simulation](https://server.lightdock.org/job/run/d4431a1e054c43db83e1c2748b1f87a406dcec6f48d24bc3990fa650e607d843) we have prepared for you).
+1️⃣ Blind docking will probably help since we are able to recover a similar interface ([see a simulation](https://server.lightdock.org/job/run/97308c2b7be4279d2283417e65ac5fde3761fb98fbc44b4087a8ebe5d1e112e7) we have prepared for you).
 
-2️⃣ Docking simulations tend to maximize/minimize scoring functions by increasing the number of interactions. This usually favors larger binding interfaces, which is not the case for this challenge.
+2️⃣ Docking simulations tend to maximize/minimize scoring functions by increasing the number of interactions. This usually favors larger binding interfaces, it might be the case for this challenge.
 
-3️⃣ Residue restraints might definitely help to place our ligand in the good binding interface, but capturing this specific planar shape [is difficult](https://server.lightdock.org/job/run/8f6b5c739b6add17aa067a1a981395676a47650b928b454cb7daefe2cbce491e).
-
-We have prepare two structures for you:
-
-* <em>Bread</em> protein: [bread.pdb](docking_challenge/data/bread.pdb)
+3️⃣ Residue restraints might definitely help to place our ligand in the good binding interface, but this is a totally new interaction compared to the native complex.
 
