@@ -10,7 +10,7 @@ title: "Docking Challenge"
 <br>
 
 <p align="center">
-    <img style="height:350px;" src="docking_challenge/images/docking_challenge.png">
+    <img style="height:350px;" src="docking_challenge/images/docking_challenge.jpg">
 </p>
 
 * table of contents

@@ -59,7 +59,7 @@ membrane_docking:
     btn_class: "btn--primary"
 
 docking_challenge:
-  - image_path: /workshops/talca24/images/completo.jpg
+  - image_path: /workshops/talca24/images/docking_challenge.jpg
     alt: "Docking Challenge"
     title: "Docking Challenge"
     excerpt: "Are you ready for a challenge?"
