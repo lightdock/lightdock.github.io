@@ -28,26 +28,39 @@ With the aim of practicing and testing the ISM capabilities of the LightDock sof
 
 ## 2. The challenge
 
-### 2.1. The bread: 🍞
+We will model a ***molecular completo mojado*** by using a camelid nanobody-peptide complex as scaffold. The PDB of the complex is [6I2G](https://www.rcsb.org/3d-view/6I2G).
 
 <p align="center">
-    <img src="docking_challenge/images/6i2g_nanobody.png">
+    <img style="width:800px" src="docking_challenge/images/6i2g.png">
+</p>
+
+### 2.1. The bread: 🍞
+
+We have prepared for you the scaffold receptor structure: [6i2g_nanobody.pdb](docking_challenge/data/6i2g_nanobody.pdb)
+
+<p align="center">
+    <img style="width:800px" src="docking_challenge/images/6i2g_nanobody.png">
 </p>
 
 ### 2.2. The stuffing: 🥩🥬🍅
 
+You will need to model a T-A-L-C-A peptide:
+
 <p align="center">
     <img src="docking_challenge/images/talca_peptide.gif">
 </p>
+
+You may use [pyPept](https://github.com/Boehringer-Ingelheim/pyPept) Python package for building the peptide. Secondary structure is just a proposal!
+
+If you don't manage to build the peptide, you may download the one we have already prepared: [talca_peptide.pdb](docking_challenge/data/talca_peptide.pdb)
 
 ### 2.3. The goal: 🌭
 
 Is that a <em>completo</em>? Is it <em>mojado</em>? Oh, wait, it is our ***completo molecular mojado***!
 
 <p align="center">
-    <img src="docking_challenge/images/challenge.png">
+    <img style="width:800px" src="docking_challenge/images/challenge.png">
 </p>
-
 
 ## 3. Tips & tricks
 
