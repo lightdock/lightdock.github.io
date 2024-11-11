@@ -20,13 +20,13 @@ title: "LightDock Theory"
 ## 1. Introduction
 
 ### 1.1. What is LightDock?
-LightDock is a protein-protein, protein-peptide and protein-DNA docking protocol based on the [Glowworm Swarm Optimization](https://link.springer.com/article/10.1007/s11721-008-0021-5) (GSO) algorithm. In summary, LightDock is:
+LightDock is a protein-protein, protein-peptide and protein-nucleic docking protocol based on the [Glowworm Swarm Optimization](https://link.springer.com/article/10.1007/s11721-008-0021-5) (GSO) algorithm. In summary, LightDock is:
 
-- *Ab initio* protocol, which means that only requires the 3D coordinates of the structural partners for predicting protein-protein, protein-peptide or protein-DNA complexes.
+- *Ab initio* protocol, which means that only requires the 3D coordinates of the structural partners for predicting protein-protein, protein-peptide or protein-nucleic complexes.
 
 - Additional information (coming from experiments or bioinformatics predictions) in the form of **residue restraints** may be included during the docking calculations. The protocol is capable of taking into account this information in both receptor and/or ligand partners.
 
-- It is capable of modeling protein-protein, protein-peptide and protein-DNA interactions in rigid-body fashion or modeling backbone flexibility using [Anisotropic Network Model](https://en.wikipedia.org/wiki/Anisotropic_Network_Model) (ANM). If ANM mode is activated, LightDock calculates the Ca-Ca ANM model using the awesome [ProDy](http://prody.csb.pitt.edu/) Python library. By default, the first 10 non-trivial normal modes are calculated for both receptor and ligand (in every residue backbone and further extended to the side-chains). See [Prody ANM documentation](http://prody.csb.pitt.edu/tutorials/enm_analysis/anm.html) for an example. The number of non-trivial normal modes can be tuned by the user. 
+- It is capable of modeling protein-protein, protein-peptide and protein-nucleic interactions in rigid-body fashion or modeling backbone flexibility using [Anisotropic Network Model](https://en.wikipedia.org/wiki/Anisotropic_Network_Model) (ANM). If ANM mode is activated, LightDock calculates the Ca-Ca ANM model using the awesome [ProDy](http://prody.csb.pitt.edu/) Python library. By default, the first 10 non-trivial normal modes are calculated for both receptor and ligand (in every residue backbone and further extended to the side-chains). See [Prody ANM documentation](http://prody.csb.pitt.edu/tutorials/enm_analysis/anm.html) for an example. The number of non-trivial normal modes can be tuned by the user. 
 
 - Customizable by the user. LightDock is not only a protocol, but a framework for testing and developing custom scoring functions. The GSO optimization algorithm is agnostic of the force-field used, so in theory LightDock is capable of minimizing the docking energies in any force-field given by the user.
 
@@ -265,7 +265,7 @@ The complete list of scoring functions implemented in LightDock is:
 - `dfire`: Implementation of the [DFIRE](https://www.ncbi.nlm.nih.gov/pubmed/15162489) scoring function in Cython.
 - `fastdfire`: Implementation of the DFIRE scoring function using the Python C-API, faster than `dfire`.
 - `dfire2`: Implementation of the [DFIRE2](https://www.ncbi.nlm.nih.gov/pubmed/18469178) scoring function using the Python C-API, despite a Cython version is also included for demonstrational purposes.
-- `dna`: Implementation of the pyDockDNA scoring function (no desolvation) and custom Van der Waals weight for protein-DNA docking. Implemented using the Python C-API.
+- `dna`: Implementation of the pyDockDNA scoring function (no desolvation) and custom Van der Waals weight for protein-nucleic docking. Implemented using the Python C-API.
 - `ddna`: Implementation of the DDNA scoring function as described in C. Zhang, S. Liu, Q. Zhu, and Y. Zhou, *A knowledge-based energy function for protein-ligand, protein-protein and
 protein-DNA complexes*, J. Med. Chem. 48, 2325-2335 (2005).
 - `mj3h`: Pairwise contact energies for 20 types of residues, [Mj3h](https://www.ncbi.nlm.nih.gov/pubmed/10336383).
