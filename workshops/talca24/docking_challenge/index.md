@@ -70,3 +70,6 @@ Is that a <em>completo</em>? Is it <em>mojado</em>? Oh, wait, it is our ***compl
 
 3️⃣ Residue restraints might definitely help to place our ligand in the good binding interface, but this is a totally new interaction compared to the native complex.
 
+We have prepared a notebook ready to run on Google Colab. Have fun!
+
+* [Talca24_LightDock_Completo_Mojado.ipynb](docking_challenge/data/Talca24_LightDock_Completo_Mojado.ipynb)
